@@ -1,4 +1,4 @@
-# Alph.ai API Skills for Claude Code
+# Alph.ai API Skills for AI Agent
 
 > Alph.ai Skills，包含 208 个 API，支持代币监控、社媒监控、自动交易、代码生成和使用建议。
 
