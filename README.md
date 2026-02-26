@@ -69,9 +69,9 @@ cp -r Alph.ai_api_skills/* .claude/skills/
 /alphai 如何获取币价？
 ```
 
-### 让 Claude 自动选择
+### 让 Agent 自动选择
 
-直接提问，Claude 会自动判断并调用合适的 skill：
+直接提问，Agent 会自动判断并调用合适的 skill：
 
 ```
 帮我查询下单的 API
@@ -123,17 +123,4 @@ Alph.ai_api_skills/
 | `/alphai-smart` | 智能分析、钱包追踪 | 聪明钱包接口 |
 | `/alphai-common` | 公共、SEO、分享 | 公共配置接口 |
 
-## 常见问题
 
-**Q: Skills 不生效？**
-A: 确认安装到 `~/.claude/skills/` 并重启 Claude Code。输入 `/` 可查看所有可用命令。
-
-**Q: 如何分享给团队？**
-A: 压缩整个目录发给同事，同事解压后运行 `./install.sh`。详见 `SHARE.md`。
-
-**Q: 如何卸载？**
-A: `rm -rf ~/.claude/skills/alphai*`
-
----
-
-**Alph.ai Team 内部使用**
