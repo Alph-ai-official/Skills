@@ -1,0 +1,2099 @@
+[
+  {
+    "index": 26,
+    "name": "信号源",
+    "desc": "信号源",
+    "add_time": 1741245853,
+    "up_time": 1741245853,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/signal/rank-list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7818,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"firstPushTime\":{\"type\":\"integer\",\"description\":\"首次推送时间\"},\"token\":{\"type\":\"integer\",\"description\":\"token 地址\"},\"image\":{\"type\":\"integer\",\"description\":\"头像\"},\"code\":{\"type\":\"integer\",\"description\":\"币名\"},\"marketCapUsdt\":{\"type\":\"string\",\"description\":\"市值\"},\"multiple\":{\"type\":\"string\",\"description\":\"涨幅倍数\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "24h涨幅榜(金/银/铜)",
+        "path": "/smart-web-gateway/signal/rank-list",
+        "catid": 723,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67cbae967e7cd305a3519c69",
+            "name": "chain",
+            "value": "",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "67cbae967e7cd305a3519c68",
+            "name": "level",
+            "value": "",
+            "desc": "Gold,Silver,Copper"
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1741401598,
+        "up_time": 1741401750,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/signal/push-history",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7893,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"maxMultiple\":{\"type\":\"string\",\"description\":\"最大涨幅倍数\"},\"list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"firstPushTime\":{\"type\":\"integer\"},\"token\":{\"type\":\"string\"},\"image\":{\"type\":\"string\"},\"code\":{\"type\":\"string\"},\"marketCapUsdt\":{\"type\":\"string\"}},\"required\":[]}}}}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\",\"required\":[]}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "token 推送记录",
+        "path": "/smart-web-gateway/signal/push-history",
+        "catid": 723,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67dd3e377e7cd305a3519d35",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "67dd3e377e7cd305a3519d34",
+            "name": "token",
+            "desc": ""
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1742207012,
+        "up_time": 1742552631,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/signal/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7788,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"tokenInfo\":{\"type\":\"object\",\"properties\":{\"token\":{\"type\":\"string\",\"description\":\"token 地址\"},\"code\":{\"type\":\"string\",\"description\":\"简称\"},\"desc\":{\"type\":\"string\",\"description\":\"全称\"},\"image\":{\"type\":\"string\",\"description\":\"头像\"},\"createTime\":{\"type\":\"integer\",\"description\":\"token创建时间\"},\"priceUsdt\":{\"type\":\"string\",\"description\":\"当前价格\"},\"priceMain\":{\"type\":\"string\",\"description\":\"当前价格Main\"},\"marketCapUsdt\":{\"type\":\"string\",\"description\":\"市值\"},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"社媒 twitter,website,telegram\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"安全检查{\\\"mint\\\": true, \\\"black\\\": false, \\\"top10\\\": 0, \\\"burn_pool\\\": true}\"},\"sentence\":{\"type\":\"string\",\"description\":\"ai一句话\"},\"paragraph\":{\"type\":\"string\",\"description\":\"ai一段话\"},\"poolLiquidity\":{\"type\":\"string\",\"description\":\"池子流动性\"},\"chg24h\":{\"type\":\"string\",\"description\":\"24小时涨跌幅\"},\"vol24h\":{\"type\":\"string\",\"description\":\"24小时交易量\"},\"pump\":{\"type\":\"boolean\",\"description\":\"pump标识\"},\"label\":{\"type\":\"string\",\"description\":\"币种标签\"},\"supple\":{\"type\":\"string\",\"description\":\"发行量\"},\"pool\":{\"type\":\"object\",\"properties\":{\"poolContract\":{\"type\":\"string\",\"description\":\"池子地址\"},\"volumeToken\":{\"type\":\"string\",\"description\":\"token颗数， 流通量=volumeToken*rateToU + volumeSol*solToU + volumeUsdt\"},\"volumeMain\":{\"type\":\"string\",\"description\":\"main颗数\"},\"volumeUsdt\":{\"type\":\"string\",\"description\":\"u颗数\"},\"poolLiquidity\":{\"type\":\"number\",\"description\":\"流通量 U\"}},\"description\":\"池子\"},\"top10\":{\"type\":\"string\",\"description\":\"top10\"},\"holdings\":{\"type\":\"number\",\"description\":\"持仓人数\"}},\"description\":\"token 信息\",\"required\":[]},\"smartInfo\":{\"type\":\"object\",\"properties\":{\"holdings\":{\"type\":\"integer\",\"description\":\"聪明钱持币人数\"},\"exit\":{\"type\":\"integer\",\"description\":\"清仓人数\"},\"buyAmount\":{\"type\":\"string\",\"description\":\"总买入金额\"},\"sellAmount\":{\"type\":\"string\",\"description\":\"总卖出金额\"},\"avgBuyAmount\":{\"type\":\"string\",\"description\":\"平均买入金额 全量聪明钱买入金额/全量聪明钱买入人数\"},\"buyNum\":{\"type\":\"integer\",\"description\":\"购买次数\"},\"sellNum\":{\"type\":\"string\",\"description\":\"出售次数\"},\"smartTrades\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"wallet\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"side\":{\"type\":\"integer\",\"description\":\"交易方向 1买 2卖\"},\"amount\":{\"type\":\"string\",\"description\":\"交易金额 main\"},\"priceUsdt\":{\"type\":\"string\",\"description\":\"单价 usdt\"},\"marketCap\":{\"type\":\"string\",\"description\":\"市值 usdt\"},\"time\":{\"type\":\"integer\",\"description\":\"交易时间\"}},\"required\":[]},\"description\":\"买卖记录\"}},\"description\":\"聪明钱信息\",\"required\":[]},\"kolInfo\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"用户名\"},\"fansNum\":{\"type\":\"integer\",\"description\":\"粉丝量\"},\"level\":{\"type\":\"integer\",\"description\":\"等级 1-5\"},\"url\":{\"type\":\"string\",\"description\":\"帖子链接\"}}},\"description\":\"kol信息\"},\"firstPushTime\":{\"type\":\"integer\",\"description\":\"首推时间\"},\"multiple\":{\"type\":\"string\",\"description\":\"涨幅倍数\"},\"level\":{\"type\":\"string\",\"description\":\"分级：Gold,Silver,Copper 或者 \\\"\\\"\"},\"pushTimes\":{\"type\":\"integer\",\"description\":\"信号推送次数\"},\"pushTime\":{\"type\":\"number\",\"description\":\"信号推送时间\"},\"pushType\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"推送类型 [SMART, KOL_CALL]\"}},\"required\":[\"pushTime\"]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "信号列表 - 分页需传上页最后一条的time",
+        "path": "/smart-web-gateway/signal/list",
+        "catid": 723,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67dbc42f7e7cd305a3519cf9",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "1",
+            "_id": "67dbc42f7e7cd305a3519cf8",
+            "name": "token",
+            "example": "",
+            "desc": "ca"
+          },
+          {
+            "required": "0",
+            "_id": "67dbc42f7e7cd305a3519cf7",
+            "name": "time",
+            "desc": "页面最后一条记录的【最后推送时间】"
+          },
+          {
+            "required": "0",
+            "_id": "67dbc42f7e7cd305a3519cf6",
+            "name": "size",
+            "desc": "要查询的条数"
+          },
+          {
+            "required": "1",
+            "_id": "67dbc42f7e7cd305a3519cf5",
+            "name": "language",
+            "example": "en_US",
+            "desc": ""
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1741245853,
+        "up_time": 1742455855,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/signal/list-by-token",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7813,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"tokenInfo\":{\"type\":\"object\",\"properties\":{\"ca\":{\"type\":\"string\",\"description\":\"token 地址\"},\"code\":{\"type\":\"string\",\"description\":\"简称\"},\"desc\":{\"type\":\"string\",\"description\":\"全称\"},\"image\":{\"type\":\"string\",\"description\":\"头像\"},\"createTime\":{\"type\":\"integer\",\"description\":\"token创建时间\"},\"priceUsdt\":{\"type\":\"string\",\"description\":\"当前价格\"},\"priceMain\":{\"type\":\"string\",\"description\":\"main价格\"},\"marketCapUsdt\":{\"type\":\"string\",\"description\":\"市值\"},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"社媒 twitter,website,telegram\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"安全检查{\\\"mint\\\": true, \\\"black\\\": false, \\\"top10\\\": 0, \\\"burn_pool\\\": true}\"},\"sentence\":{\"type\":\"string\",\"description\":\"ai一句话\"},\"paragraph\":{\"type\":\"string\",\"description\":\"ai一段话\"},\"chg24h\":{\"type\":\"string\",\"description\":\"24小时涨跌幅\"},\"vol24h\":{\"type\":\"string\",\"description\":\"24小时交易量\"},\"pump\":{\"type\":\"boolean\",\"description\":\"pump标识\"},\"label\":{\"type\":\"string\",\"description\":\"币种标签\"},\"supple\":{\"type\":\"string\",\"description\":\"发行量\"},\"pool\":{\"type\":\"object\",\"properties\":{\"poolContract\":{\"type\":\"string\",\"description\":\"池子地址\"},\"volumeToken\":{\"type\":\"string\",\"description\":\"token颗数， 流通量=volumeToken*rateToU + volumeSol*solToU + volumeUsdt\"},\"volumeMain\":{\"type\":\"string\",\"description\":\"主网颗数\"},\"volumeUsdt\":{\"type\":\"string\",\"description\":\"u颗数\"},\"poolLiquidity\":{\"type\":\"string\",\"description\":\"流通量 U\"}},\"description\":\"池子\",\"required\":[]},\"top10\":{\"type\":\"string\",\"description\":\"top10\"},\"holdings\":{\"type\":\"number\",\"description\":\"持仓人数\"}},\"description\":\"token 信息\",\"required\":[]},\"smartInfo\":{\"type\":\"object\",\"properties\":{\"holdings\":{\"type\":\"integer\",\"description\":\"聪明钱持币人数\"},\"exit\":{\"type\":\"integer\",\"description\":\"清仓人数\"},\"buyAmount\":{\"type\":\"string\",\"description\":\"总买入金额\"},\"sellAmount\":{\"type\":\"string\",\"description\":\"总卖出金额\"},\"avgBuyAmount\":{\"type\":\"string\",\"description\":\"平均买入金额 全量聪明钱买入金额/全量聪明钱买入人数\"},\"buyNum\":{\"type\":\"integer\",\"description\":\"购买次数\"},\"sellNum\":{\"type\":\"string\",\"description\":\"出售次数\"},\"smartTrades\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"wallet\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"side\":{\"type\":\"integer\",\"description\":\"交易方向 1买 2卖\"},\"amount\":{\"type\":\"string\",\"description\":\"交易金额 main\"},\"priceUsdt\":{\"type\":\"string\",\"description\":\"单价 usdt\"},\"marketCap\":{\"type\":\"string\",\"description\":\"市值 usdt\"},\"time\":{\"type\":\"integer\",\"description\":\"交易时间(毫秒时间戳)\"}},\"required\":[]},\"description\":\"买卖记录\"}},\"description\":\"聪明钱信息\",\"required\":[]},\"kolInfo\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"用户名\"},\"fansNum\":{\"type\":\"integer\",\"description\":\"粉丝量\"},\"level\":{\"type\":\"integer\",\"description\":\"等级 1-5\"},\"url\":{\"type\":\"string\",\"description\":\"帖子链接\"}}},\"description\":\"kol信息\"},\"firstPushTime\":{\"type\":\"integer\",\"description\":\"首推时间\"},\"multiple\":{\"type\":\"string\",\"description\":\"涨幅倍数\"},\"level\":{\"type\":\"string\",\"description\":\"分级：Gold,Silver,Copper 或者 \\\"\\\"\"},\"pushTimes\":{\"type\":\"integer\",\"description\":\"信号推送次数\"},\"pushTime\":{\"type\":\"number\",\"description\":\"信号推送时间\"},\"pushType\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"推送类型 [SMART, KOL_CALL]\"}},\"required\":[]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "信号列表 - 指定token批量查询",
+        "path": "/smart-web-gateway/signal/list-by-token",
+        "catid": 723,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67dbc43d7e7cd305a3519cfc",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "67dbc43d7e7cd305a3519cfb",
+            "name": "tokens",
+            "desc": "多个token ca，逗号分割"
+          },
+          {
+            "required": "0",
+            "_id": "67dbc43d7e7cd305a3519cfa",
+            "name": "language",
+            "example": "en_US",
+            "desc": "语言"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1741337028,
+        "up_time": 1742455869,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/signal/list/latest",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10363,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "信号源列表前5个token",
+        "path": "/smart-web-gateway/signal/list/latest",
+        "catid": 723,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "689d478d7e7cd305a351c237",
+            "name": "chain",
+            "value": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "689d478d7e7cd305a351c236",
+            "name": "time",
+            "value": "0",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "689d478d7e7cd305a351c235",
+            "name": "size",
+            "value": "0",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "689d478d7e7cd305a351c234",
+            "name": "language",
+            "value": "",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 614,
+        "add_time": 1755137933,
+        "up_time": 1755137933,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/signal/time-axis",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7828,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"token\":{\"type\":\"string\",\"description\":\"token 地址\"},\"code\":{\"type\":\"string\",\"description\":\"简称\"},\"desc\":{\"type\":\"string\",\"description\":\"全称\"},\"image\":{\"type\":\"string\",\"description\":\"头像\"},\"firstPushTime\":{\"type\":\"integer\",\"description\":\"首推时间\"},\"multiple\":{\"type\":\"string\",\"description\":\"涨幅倍数\"},\"level\":{\"type\":\"string\",\"description\":\"分级：Gold,Silver,Copper 或者 \\\"\\\"\"},\"pushTimes\":{\"type\":\"integer\",\"description\":\"信号推送次数\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "时间轴",
+        "path": "/smart-web-gateway/signal/time-axis",
+        "catid": 723,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67cbae957e7cd305a3519c62",
+            "name": "chain",
+            "value": "",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1741401749,
+        "up_time": 1741401749,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/signal/smart-view-all",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7823,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"wallet\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"id\":{\"type\":\"number\",\"description\":\"id\"},\"side\":{\"type\":\"integer\",\"description\":\"交易方向 1买 2卖\"},\"amount\":{\"type\":\"string\",\"description\":\"交易金额 sol\"},\"priceUsdt\":{\"type\":\"string\",\"description\":\"单价 usdt\"},\"marketCap\":{\"type\":\"string\",\"description\":\"市值 usdt\"},\"time\":{\"type\":\"integer\",\"description\":\"交易时间\"}},\"required\":[]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "聪明钱买卖记录viewAll",
+        "path": "/smart-web-gateway/signal/smart-view-all",
+        "catid": 723,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67d647977e7cd305a3519cc4",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "67d647977e7cd305a3519cc3",
+            "name": "token",
+            "desc": "token地址"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1741401599,
+        "up_time": 1742096279,
+        "req_body_form": [],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 34,
+    "name": "BotController",
+    "desc": "BotController",
+    "add_time": 1735136081,
+    "up_time": 1735136081,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/bot/get-bot-list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8128,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"integer\",\"description\":\"类型\"},\"botUsername\":{\"type\":\"string\",\"description\":\"机器人名称\"},\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"icon\":{\"type\":\"string\",\"description\":\"图标\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "getBotList",
+        "path": "/smart-web-gateway/bot/get-bot-list",
+        "catid": 652,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67ea04947e7cd305a3519ff8",
+            "name": "language",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1743241585,
+        "up_time": 1743389844,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/bot/get-bot",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5913,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"integer\",\"description\":\"类型\"},\"botUsername\":{\"type\":\"string\",\"description\":\"机器人名称\"},\"title\":{\"type\":\"string\",\"description\":\"标题\"},\"icon\":{\"type\":\"string\",\"description\":\"图标\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"机器人信息\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "获取机器人",
+        "path": "/smart-web-gateway/bot/get-bot",
+        "catid": 652,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "67e7c1717e7cd305a3519f62",
+            "name": "type",
+            "value": "0",
+            "desc": "1:主要bot；2：trade机器人；"
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1735136081,
+        "up_time": 1743241585,
+        "req_body_form": [],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 35,
+    "name": "tracker",
+    "desc": null,
+    "add_time": 1749463074,
+    "up_time": 1749463074,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/follow/wallet/updateTradeRemind",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9953,
+        "method": "POST",
+        "catid": 790,
+        "title": "关注钱包开启与关闭交易提醒",
+        "path": "/smart-web-gateway/user/tracker/follow/wallet/updateTradeRemind",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "685e64357e7cd305a351bbaa",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "<p>开启与关闭交易提醒交易提醒开关，0:关 1:开</p>\n",
+        "markdown": "开启与关闭交易提醒交易提醒开关，0:关 1:开",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"address\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"tradeRemind\":{\"type\":\"integer\",\"description\":\"交易提醒开关，0:关 1:开\"}},\"required\":[\"chain\",\"address\"]}",
+        "uid": 635,
+        "add_time": 1751006496,
+        "up_time": 1751016501,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/follow/wallet/query/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9638,
+        "method": "POST",
+        "catid": 790,
+        "title": "分页查询用户关注的钱包列表",
+        "path": "/smart-web-gateway/user/tracker/follow/wallet/query/page",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 453,
+        "add_time": 1749463147,
+        "up_time": 1751017403,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "685e67bb7e7cd305a351bbab",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"createTime\":{\"type\":\"integer\",\"description\":\"关注的时间戳\"},\"address\":{\"type\":\"string\",\"description\":\"关注的钱包地址\"},\"aliasName\":{\"type\":\"string\",\"description\":\"关注的钱包地址备注\"},\"imgType\":{\"type\":\"integer\",\"description\":\"地址图片类型:1:emoji，2:url \"},\"icon\":{\"type\":\"string\",\"description\":\"钱包地址头像\"},\"balance\":{\"type\":\"string\",\"description\":\"关注的钱包余额\"},\"tradeCount30d\":{\"type\":\"integer\",\"description\":\"关注的钱包30天交易数\"},\"totalProfit\":{\"type\":\"string\",\"description\":\"总利润\"},\"lastActiveTime\":{\"type\":\"integer\",\"description\":\"最后活跃时间\"},\"tradeRemind\":{\"type\":\"integer\",\"description\":\"交易提醒开关,0,关闭，1，开启\"}}},\"description\":\"data\"}},\"required\":[]}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"}},\"required\":[\"chain\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/follow/wallet/updateWalletAddressRemark",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 1,
+        "tag": [],
+        "_id": 9653,
+        "method": "POST",
+        "catid": 790,
+        "title": "钱包编辑功能",
+        "path": "/smart-web-gateway/user/tracker/follow/wallet/updateWalletAddressRemark",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "687d9cd67e7cd305a351bf5d",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"walletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"aliasName\":{\"type\":\"string\",\"description\":\"钱包地址备注\"},\"icon\":{\"type\":\"string\",\"description\":\"图像\"}},\"required\":[\"chain\",\"walletAddress\"]}",
+        "uid": 453,
+        "add_time": 1749464989,
+        "up_time": 1753062614,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/follow/wallet/import",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 2,
+        "tag": [],
+        "_id": 9658,
+        "method": "POST",
+        "catid": 790,
+        "title": "关注钱包地址导入功能",
+        "path": "/smart-web-gateway/user/tracker/follow/wallet/import",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6858cf507e7cd305a351b913",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"totalCount\":{\"type\":\"string\",\"description\":\"导入总数\"},\"successCount\":{\"type\":\"string\",\"description\":\"导入成功数\"}},\"required\":[\"totalCount\",\"successCount\"]}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"uid\":{\"type\":\"integer\",\"description\":\"用户id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"walletAddressText\":{\"type\":\"string\",\"description\":\"钱包地址文本\"}},\"required\":[\"uid\",\"chain\",\"walletAddressText\"]}",
+        "uid": 453,
+        "add_time": 1749519599,
+        "up_time": 1750650704,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/query/hotTokenPage",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 3,
+        "tag": [],
+        "_id": 9688,
+        "method": "POST",
+        "catid": 790,
+        "title": "查询热门币种钱包列表",
+        "path": "/smart-web-gateway/user/tracker/query/hotTokenPage",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "688b30627e7cd305a351c14d",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"tokenAddress\":{\"type\":\"string\",\"description\":\"token地址\"},\"code\":{\"type\":\"string\",\"description\":\"token 简称\"},\"price\":{\"type\":\"string\",\"description\":\"价格\"},\"tradeAmount\":{\"type\":\"string\",\"description\":\"交易量\"},\"increaseDecrease\":{\"type\":\"number\",\"description\":\"涨跌幅\"},\"tradeCountBuy\":{\"type\":\"integer\",\"description\":\"买入笔数\"},\"tradeCountSell\":{\"type\":\"integer\",\"description\":\"卖出笔数\"},\"netInflow\":{\"type\":\"string\",\"description\":\"净流入量\"},\"marketCap\":{\"type\":\"string\",\"description\":\"市值\"},\"tokenIconUrl\":{\"type\":\"string\",\"description\":\"代币图标\"}},\"required\":[\"tokenAddress\",\"tradeCountBuy\",\"increaseDecrease\",\"tradeAmount\",\"price\",\"code\",\"tradeCountSell\",\"netInflow\",\"marketCap\",\"tokenIconUrl\"]}}},\"required\":[\"code\",\"msg\",\"data\"]}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"uid\":{\"type\":\"integer\",\"description\":\"用户id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"granularity\":{\"type\":\"integer\",\"description\":\"粒度 1.5m,2.1m，3.1h，4.4h，5.12h，6.24h\"},\"sortField\":{\"type\":\"integer\",\"description\":\"排序字段 1.涨跌幅，2.交易量，3.净流入量\"},\"sortType\":{\"type\":\"number\",\"description\":\"1 降序 2 升序\"}},\"required\":[\"uid\",\"chain\",\"granularity\",\"sortField\",\"sortType\"]}",
+        "uid": 635,
+        "add_time": 1749803721,
+        "up_time": 1753952354,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/wallet/activity/query/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 4,
+        "tag": [],
+        "_id": 9683,
+        "method": "POST",
+        "catid": 790,
+        "title": "分页查询用户活动钱包",
+        "path": "/smart-web-gateway/user/tracker/wallet/activity/query/page",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68663aaa7e7cd305a351bd4b",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"totalCount\":{\"type\":\"integer\",\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"imgType\":{\"type\":\"integer\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"钱包icon\"},\"walletAddressAlias\":{\"type\":\"string\",\"description\":\"钱包别名\"},\"walletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"orderType\":{\"type\":\"integer\",\"description\":\"交易类型 1 加仓 2 减仓 3 建仓 4 清仓\"},\"tokenName\":{\"type\":\"string\",\"description\":\"\"},\"tokenAddress\":{\"type\":\"string\",\"description\":\"\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"币种名称\"},\"sellContract\":{\"type\":\"string\",\"description\":\"合约地址\"},\"tradeVolume\":{\"type\":\"string\",\"description\":\"交易数量\"},\"price\":{\"type\":\"string\",\"description\":\"价格\"},\"marketCap\":{\"type\":\"string\",\"description\":\"市值\"},\"amount\":{\"type\":\"string\",\"description\":\"金额\"},\"tokenIconUrl\":{\"type\":\"string\",\"description\":\"tokenIcon\"},\"blockchainTimestamp\":{\"type\":\"integer\",\"description\":\"活跃时间戳\"}}},\"description\":\"\"},\"pageSize\":{\"type\":\"integer\",\"description\":\"\"},\"pageNum\":{\"type\":\"integer\",\"description\":\"\"},\"cursorId\":{\"type\":\"integer\"},\"cursorValue\":{\"type\":\"string\"},\"hasNext\":{\"type\":\"boolean\",\"description\":\"true-有下一页，false-没有下一页\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"chain\":{\"type\":\"string\",\"description\":\"\"},\"orderTypeList\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"},\"description\":\"交易类型 1 加仓 2 减仓 3 建仓 4 清仓\"},\"amountStart\":{\"type\":\"string\",\"description\":\"\"},\"amountEnd\":{\"type\":\"string\",\"description\":\"\"},\"address\":{\"type\":\"string\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"price、marketCap\"},\"asc\":{\"type\":\"string\",\"description\":\"asc、desc\"},\"pageSize\":{\"type\":\"integer\",\"description\":\"\"},\"cursorValue\":{\"type\":\"string\"},\"cursorId\":{\"type\":\"integer\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"required\":[]}",
+        "uid": 453,
+        "add_time": 1749803599,
+        "up_time": 1751530154,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/follow/wallet/create",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 5,
+        "tag": [],
+        "_id": 9738,
+        "method": "POST",
+        "catid": 790,
+        "title": "关注钱包(添加钱包)",
+        "path": "/smart-web-gateway/user/tracker/follow/wallet/create",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "685a0f977e7cd305a351b932",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "<p>关注钱包(添加钱包)复用一个接口，区别是添加钱包接口时icon和aliasName可能需要传参</p>\n<p><br data-tomark-pass=\"\"></p>\n<table>\n<thead>\n<tr>\n<th>code码</th>\n<th>msg</th>\n<th>说明</th>\n<th>附属错误信息</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>200</td>\n<td>-</td>\n<td>-</td>\n<td>成功</td>\n</tr>\n<tr>\n<td>500</td>\n<td>-</td>\n<td>-</td>\n<td>系统错误</td>\n</tr>\n<tr>\n<td><span class=\"colour\" style=\"color:rgb(4, 81, 165)\">500101</span></td>\n<td></td>\n<td>重复关注</td>\n<td></td>\n</tr>\n<tr>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n",
+        "markdown": "关注钱包(添加钱包)复用一个接口，区别是添加钱包接口时icon和aliasName可能需要传参\n\n<br>\n\n\n| code码 | msg | 说明 | 附属错误信息 |\n| ----- | --- | --- | ------ |\n| 200 | - | - | 成功 |\n| 500 | - | - | 系统错误 |\n| <span class=\"colour\" style=\"color:rgb(4, 81, 165)\">500101</span> |  | 重复关注 |  |\n|  |  |  |  |",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"uid\":{\"type\":\"integer\",\"description\":\"用户id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"address\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"icon\":{\"type\":\"string\",\"description\":\"钱包地址图标\"},\"aliasName\":{\"type\":\"string\",\"description\":\"钱包地址别名\"}},\"required\":[\"uid\",\"chain\",\"address\"]}",
+        "uid": 453,
+        "add_time": 1750150257,
+        "up_time": 1750732695,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/follow/wallet/cancel",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 6,
+        "tag": [],
+        "_id": 9743,
+        "method": "POST",
+        "catid": 790,
+        "title": "取消关注钱包",
+        "path": "/smart-web-gateway/user/tracker/follow/wallet/cancel",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "685e43517e7cd305a351bba2",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{}}}}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"uid\":{\"type\":\"integer\",\"description\":\"用户id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"address\":{\"type\":\"string\",\"description\":\"钱包地址\"}},\"required\":[\"uid\",\"chain\",\"address\"]}",
+        "uid": 453,
+        "add_time": 1750150463,
+        "up_time": 1751008081,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 36,
+    "name": "聪明钱包",
+    "desc": "聪明钱包",
+    "add_time": 1735177658,
+    "up_time": 1735177658,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/price",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5908,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"string\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "汇率",
+        "path": "/smart-web-gateway/smart/price",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67ed1ba17e7cd305a351a0c3",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "67ed1ba17e7cd305a351a0c2",
+            "name": "quote",
+            "desc": "usdt"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126736,
+        "up_time": 1743592353,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/hot-tokens",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10423,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"图标\"},\"tokenAddress\":{\"type\":\"string\",\"description\":\"\"},\"aiNarrativeSentence\":{\"type\":\"string\",\"description\":\"ai叙事一句话\"},\"aiNarrativeParagraph\":{\"type\":\"string\",\"description\":\"ai叙事一段话\"},\"label\":{\"type\":\"string\",\"description\":\"token 标签\"},\"tokenCreatedTime\":{\"type\":\"string\",\"description\":\"token 发布时间\",\"mock\":{\"mock\":\"@datetime\"}},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"社媒 twitter,website,telegram\"},\"marketCapUsdt\":{\"type\":\"string\",\"description\":\"市值USDT\"},\"liquidityUsdt\":{\"type\":\"string\",\"description\":\"流动性USDT\"},\"vol24h\":{\"type\":\"string\",\"description\":\"24小时交易量\"},\"followed\":{\"type\":\"boolean\",\"description\":\"是否已收藏\"},\"top10\":{\"type\":\"string\",\"description\":\"\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "1h热门代币列表",
+        "path": "/smart-web-gateway/smart/hot-tokens",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68ac1f507e7cd305a351c4ed",
+            "name": "language",
+            "value": "",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 614,
+        "add_time": 1756110672,
+        "up_time": 1756110672,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/export",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9643,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"trackedWalletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"name\":{\"type\":\"string\",\"description\":\"备注名\"},\"icon\":{\"type\":\"string\",\"description\":\"头像图片\"},\"imgType\":{\"type\":\"string\"},\"alertsOn\":{\"type\":\"string\",\"description\":\"是否开启交易提醒\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "关注的聪明钱包导出到粘贴板",
+        "path": "/smart-web-gateway/smart/export",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "685220b37e7cd305a351b7c9",
+            "name": "language",
+            "desc": "语言：en_US"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1749464436,
+        "up_time": 1750212787,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/wallet-refresh",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5888,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"string\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "刷新钱包信息",
+        "path": "/smart-web-gateway/smart/wallet-refresh",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "677d005d7e7cd305a35193e2",
+            "name": "wallet",
+            "value": "",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "677d005d7e7cd305a35193e1",
+            "name": "chain",
+            "value": "",
+            "desc": "链：sol"
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126431,
+        "up_time": 1736245341,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/search",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5878,
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"params_num\":{\"type\":\"number\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"data\":{\"type\":\"object\",\"properties\":{\"walletInfo\":{\"type\":\"object\",\"properties\":{\"wallet\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"avatarImage\":{\"type\":\"string\"},\"tagVos\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"pnl30d\":{\"type\":\"string\"},\"pnl30dU\":{\"type\":\"string\"},\"pnl30dPercent\":{\"type\":\"string\"},\"followed\":{\"type\":\"string\",\"description\":\"是否已关注 false-未关注 true-关注\"}},\"required\":[\"followed\"]},\"tokenInfoList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\"},\"tokenAddress\":{\"type\":\"string\"},\"code\":{\"type\":\"string\"},\"iconUrl\":{\"type\":\"string\"},\"poolLiquidityMain\":{\"type\":\"number\",\"description\":\"池总流动性(main)\"},\"poolLiquidityUsdt\":{\"type\":\"number\",\"description\":\"池总流动性(USDT)\"},\"vol24h\":{\"type\":\"string\",\"description\":\"24小时交易量\"},\"chg24h\":{\"type\":\"string\",\"description\":\"24小时涨跌幅\"}},\"required\":[]}}}}}}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "地址搜索",
+        "path": "/smart-web-gateway/smart/search",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "685baaa87e7cd305a351bb70",
+            "name": "address",
+            "desc": "地址"
+          },
+          {
+            "required": "0",
+            "_id": "685baaa87e7cd305a351bb6f",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "685baaa87e7cd305a351bb6e",
+            "name": "language",
+            "desc": "语言：en_US"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126431,
+        "up_time": 1750837928,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/holding-tokens",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5898,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"totalCount\":{\"type\":\"integer\",\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"token\":{\"type\":\"string\",\"description\":\"合约地址\"},\"coin\":{\"type\":\"string\",\"description\":\"币名\"},\"icon\":{\"type\":\"string\",\"description\":\"图标\"},\"unrealizedProfit\":{\"type\":\"string\",\"description\":\"未实现利润\"},\"unrealizedProfitPercent\":{\"type\":\"string\",\"description\":\"未实现利润比\"},\"profit\":{\"type\":\"string\",\"description\":\"实现利润\"},\"profitPercent\":{\"type\":\"string\",\"description\":\"实现利润比\"},\"totalProfit\":{\"type\":\"string\",\"description\":\"总利润\"},\"totalProfitPercent\":{\"type\":\"string\",\"description\":\"总利润比\"},\"balance\":{\"type\":\"string\",\"description\":\"余额 sol\"},\"volume\":{\"type\":\"string\",\"description\":\"代币数量\"},\"positionPercent\":{\"type\":\"string\",\"description\":\"持仓比\"},\"totalBuyCost\":{\"type\":\"string\",\"description\":\"总买入花费\"},\"buyAvgPrice\":{\"type\":\"string\",\"description\":\"买入均价\"},\"totalSellReceive\":{\"type\":\"string\",\"description\":\"总卖出收入\"},\"sellAvgPrice\":{\"type\":\"string\",\"description\":\"卖出均价\"},\"buyNum\":{\"type\":\"integer\",\"description\":\"买单数\"},\"sellNum\":{\"type\":\"integer\",\"description\":\"卖单数\"},\"lastTrade\":{\"type\":\"integer\",\"description\":\"最后活跃时间戳ms\"},\"noBuy\":{\"type\":\"boolean\",\"description\":\"是否未购买\"},\"smallPool\":{\"type\":\"boolean\",\"description\":\"是否是小池子\"},\"smallAmount\":{\"type\":\"boolean\",\"description\":\"是否是小额代币\"}}},\"description\":\"\"},\"pageSize\":{\"type\":\"integer\",\"description\":\"\"},\"pageNum\":{\"type\":\"integer\",\"description\":\"\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "持有代币",
+        "path": "/smart-web-gateway/smart/holding-tokens",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68f8a3e37e7cd305a351c9f6",
+            "name": "wallet",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3e37e7cd305a351c9f5",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3e37e7cd305a351c9f4",
+            "name": "language",
+            "desc": "语言：en_US"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3e37e7cd305a351c9f3",
+            "name": "sort",
+            "desc": "排序字段，返回值里面的字段名"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3e37e7cd305a351c9f2",
+            "name": "asc",
+            "desc": "正序倒序，asc，desc"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3e37e7cd305a351c9f1",
+            "name": "pageNum",
+            "desc": "页码：1"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3e37e7cd305a351c9f0",
+            "name": "pageSize",
+            "desc": "页条数：20"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126432,
+        "up_time": 1761125347,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/tags",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5868,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"标签编号\"},\"name\":{\"type\":\"string\",\"description\":\"标签名称\"},\"tagDesc\":{\"type\":\"string\",\"description\":\"描述\"},\"image\":{\"type\":\"string\",\"description\":\"图标url\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "标签列表",
+        "path": "/smart-web-gateway/smart/tags",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "67e3b4c17e7cd305a3519df3",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "67e3b4c17e7cd305a3519df2",
+            "name": "language",
+            "desc": "语言：en_US"
+          },
+          {
+            "required": "0",
+            "_id": "67e3b4c17e7cd305a3519df1",
+            "name": "firstTagId",
+            "desc": ""
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126431,
+        "up_time": 1742976193,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/wallet-activity",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5903,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"\"},\"side\":{\"type\":\"string\",\"description\":\"buy or sell，add加池子  remove减池子  burn烧币\"},\"token\":{\"type\":\"string\",\"description\":\"合约地址\"},\"coin\":{\"type\":\"string\",\"description\":\"币名\"},\"icon\":{\"type\":\"string\",\"description\":\"图标，可能为空\"},\"amount\":{\"type\":\"string\",\"description\":\"总额sol\"},\"volume\":{\"type\":\"string\",\"description\":\"数量\"},\"priceSol\":{\"type\":\"string\",\"description\":\"对sol汇率\"},\"profit\":{\"type\":\"string\",\"description\":\"利润，卖单才可能有，单位sol\"},\"lastTrade\":{\"type\":\"integer\",\"description\":\"最后活跃时间戳ms\"},\"txHash\":{\"type\":\"string\",\"description\":\"交易块\"},\"detailList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"volume\":{\"type\":\"string\",\"description\":\"数量\"},\"coin\":{\"type\":\"string\",\"description\":\"币名\"},\"token\":{\"type\":\"string\",\"description\":\"合约地址\"}},\"required\":[\"volume\",\"coin\",\"token\"]}}},\"required\":[\"detailList\"]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "交易记录",
+        "path": "/smart-web-gateway/smart/wallet-activity",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68355d857e7cd305a351b4fe",
+            "name": "wallet",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "68355d857e7cd305a351b4fd",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "68355d857e7cd305a351b4fc",
+            "name": "language",
+            "desc": "语言：en_US"
+          },
+          {
+            "required": "0",
+            "_id": "68355d857e7cd305a351b4fb",
+            "name": "pageSize",
+            "desc": "页条数：20"
+          },
+          {
+            "required": "0",
+            "_id": "68355d857e7cd305a351b4fa",
+            "name": "lastId",
+            "desc": "上一页最后一条数据的id(首页不传)"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126432,
+        "up_time": 1748327813,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/follow/wallet/updateWebSet",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9943,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"config\":{\"type\":\"object\",\"properties\":{\"toastTime\":{\"type\":\"string\",\"description\":\"提示时长，秒\"},\"soundSwitch\":{\"type\":\"string\",\"description\":\"提示音开关\"},\"soundVolume\":{\"type\":\"string\",\"description\":\"音量\"},\"pageLayoutSetting\":{\"type\":\"string\",\"description\":\"用户页面设置\"}},\"description\":\"标签编号\",\"required\":[\"toastTime\",\"soundSwitch\",\"soundVolume\",\"pageLayoutSetting\"]},\"type\":{\"type\":\"string\",\"description\":\"标签名称\"},\"tagDesc\":{\"type\":\"string\",\"description\":\"描述\"},\"image\":{\"type\":\"string\",\"description\":\"图标url\"}},\"required\":[]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "用户提示设置接口",
+        "path": "/smart-web-gateway/user/tracker/follow/wallet/updateWebSet",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "685cfb997e7cd305a351bb9b",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "685cfb997e7cd305a351bb9a",
+            "name": "type",
+            "desc": "活动类型，1，tracker"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1750921341,
+        "up_time": 1750924185,
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"type\":{\"type\":\"integer\"},\"config\":{\"type\":\"object\",\"properties\":{\"toastTime\":{\"type\":\"integer\"},\"soundSwitch\":{\"type\":\"integer\",\"description\":\"0，关，1，开\"},\"soundVolume\":{\"type\":\"integer\"}},\"required\":[\"toastTime\",\"soundVolume\",\"soundSwitch\"]}},\"required\":[\"type\",\"config\"]}",
+        "req_body_type": "json"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user/tracker/follow/wallet/getWebSet",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9648,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"config\":{\"type\":\"object\",\"properties\":{\"toastTime\":{\"type\":\"string\",\"description\":\"提示时长，秒\"},\"soundSwitch\":{\"type\":\"string\",\"description\":\"提示音开关\"},\"soundVolume\":{\"type\":\"string\",\"description\":\"音量\"},\"pageLayoutSetting\":{\"type\":\"string\",\"description\":\"用户页面设置\"}},\"description\":\"标签编号\",\"required\":[\"toastTime\",\"soundSwitch\",\"soundVolume\",\"pageLayoutSetting\"]},\"type\":{\"type\":\"string\",\"description\":\"标签名称\"},\"tagDesc\":{\"type\":\"string\",\"description\":\"描述\"},\"image\":{\"type\":\"string\",\"description\":\"图标url\"}},\"required\":[]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "用户提示设置查询接口",
+        "path": "/smart-web-gateway/user/tracker/follow/wallet/getWebSet",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "685cf5a77e7cd305a351bb93",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "685cf5a77e7cd305a351bb92",
+            "name": "type",
+            "desc": "活动类型，1，tracker"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1749464794,
+        "up_time": 1750922663,
+        "__v": 0,
+        "req_body_type": "form"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/smart-wallet",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5873,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"wallet\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"avatarImage\":{\"type\":\"string\",\"description\":\"头像图片\"},\"balance\":{\"type\":\"string\",\"description\":\"sol颗数\"},\"tagVos\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"标签编号\"},\"name\":{\"type\":\"string\",\"description\":\"标签名称\"},\"tagDesc\":{\"type\":\"string\",\"description\":\"描述\"},\"image\":{\"type\":\"string\",\"description\":\"图标url\"}}},\"description\":\"标签\"},\"pnl1d\":{\"type\":\"string\",\"description\":\"1日盈亏\"},\"pnl1dPercent\":{\"type\":\"string\",\"description\":\"1日盈亏比\"},\"pnl7d\":{\"type\":\"string\",\"description\":\"7日盈亏\"},\"pnl7dPercent\":{\"type\":\"string\",\"description\":\"7日盈亏比\"},\"pnl30d\":{\"type\":\"string\",\"description\":\"30日盈亏\"},\"pnl30dPercent\":{\"type\":\"string\",\"description\":\"30日盈亏比\"},\"winRate7d\":{\"type\":\"string\",\"description\":\"7日胜率\"},\"buyNum7d\":{\"type\":\"integer\",\"description\":\"7日买单数\"},\"sellNum7d\":{\"type\":\"integer\",\"description\":\"7日卖单数\"},\"tradeAmount7d\":{\"type\":\"string\",\"description\":\"7日交易量\"},\"pnlArray7d\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\",\"description\":\"\"},\"value\":{\"type\":\"string\",\"description\":\"\"}}},\"description\":\"7日每日盈亏\\n[{\\\"2024-12-12\\\", \\\"123.1\\\"}]\"},\"lastTrade\":{\"type\":\"integer\",\"description\":\"最后活跃时间戳ms\"},\"follow\":{\"type\":\"boolean\",\"description\":\"是否有跟单\"},\"followId\":{\"type\":\"integer\",\"description\":\"跟单id\"},\"pnl7dShow\":{\"type\":\"boolean\",\"description\":\"是否展示 pnl7d\"},\"pnl30dShow\":{\"type\":\"boolean\",\"description\":\"是否展示 pnl30d\"},\"followed\":{\"type\":\"boolean\",\"description\":\"是否已关注 false-未关注 true-关注\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "聪明钱包",
+        "path": "/smart-web-gateway/smart/smart-wallet",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7bf",
+            "name": "uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7be",
+            "name": "userDto.id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7bd",
+            "name": "userDto.inviteCode",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7bc",
+            "name": "userDto.invitedCode",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7bb",
+            "name": "userDto.status",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7ba",
+            "name": "userDto.vip",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b9",
+            "name": "userDto.loginStatus",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b8",
+            "name": "userDto.loginexpireTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b7",
+            "name": "userDto.withdrawStatus",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b6",
+            "name": "userDto.withdrawexpireTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b5",
+            "name": "userDto.lastLoginTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b4",
+            "name": "userDto.ctime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b3",
+            "name": "userDto.mtime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b2",
+            "name": "userDto.walletDtoList[0].id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b1",
+            "name": "userDto.walletDtoList[0].type",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7b0",
+            "name": "userDto.walletDtoList[0].address",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7af",
+            "name": "userDto.walletDtoList[0].uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7ae",
+            "name": "userDto.walletDtoList[0].chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7ad",
+            "name": "userDto.walletDtoList[0].suid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7ac",
+            "name": "userDto.tokenArr[0]",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7ab",
+            "name": "userDto.lang",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7aa",
+            "name": "token",
+            "desc": "当前token"
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a9",
+            "name": "tokenArr[0]",
+            "desc": "用户所有token"
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a8",
+            "name": "userWallet.key[0].id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a7",
+            "name": "userWallet.key[0].type",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a6",
+            "name": "userWallet.key[0].address",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a5",
+            "name": "userWallet.key[0].uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a4",
+            "name": "userWallet.key[0].chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a3",
+            "name": "userWallet.key[0].suid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a2",
+            "name": "sourceType",
+            "desc": "PC :PC"
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a1",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b7a0",
+            "name": "userAddress",
+            "desc": "用户钱包地址,没登录不传"
+          },
+          {
+            "required": "0",
+            "_id": "6852175b7e7cd305a351b79f",
+            "name": "language",
+            "desc": "语言：en_US"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126431,
+        "up_time": 1750210395,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/wallet",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5883,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"wallet\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"avatarImage\":{\"type\":\"string\",\"description\":\"钱包头像\"},\"balance\":{\"type\":\"string\",\"description\":\"sol颗数\"},\"tokenNum\":{\"type\":\"integer\",\"description\":\"token数量\"},\"tokenAmount\":{\"type\":\"string\",\"description\":\"token价值\"},\"walletCreateAt\":{\"type\":\"integer\",\"description\":\"钱包创建时间-为空不展示\"},\"tagVos\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"标签编号\"},\"name\":{\"type\":\"string\",\"description\":\"标签名称\"},\"image\":{\"type\":\"string\",\"description\":\"图标url\"}}},\"description\":\"标签\"},\"refreshTime\":{\"type\":\"integer\",\"description\":\"刷剧刷新时间戳ms\"},\"follow\":{\"type\":\"boolean\",\"description\":\"是否跟单\"},\"followId\":{\"type\":\"integer\",\"description\":\"跟单id\"},\"winRate\":{\"type\":\"string\",\"description\":\"胜率 7d / 30d\"},\"pnl\":{\"type\":\"string\",\"description\":\"盈亏 7d / 30d\"},\"pnlPercent\":{\"type\":\"string\",\"description\":\"盈亏比 7d / 30d\"},\"buyNum\":{\"type\":\"integer\",\"description\":\"买单数 7d / 30d\"},\"sellNum\":{\"type\":\"integer\",\"description\":\"卖单数 7d / 30d\"},\"allProfit\":{\"type\":\"string\",\"description\":\"总盈亏\"},\"allProfitPercent\":{\"type\":\"string\",\"description\":\"总盈亏比\"},\"unrealizedProfit\":{\"type\":\"string\",\"description\":\"未实现盈亏\"},\"followed\":{\"type\":\"boolean\",\"description\":\"是否已关注 false-未关注 true-关注\\t\"},\"pnlArray\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\",\"description\":\"\"},\"value\":{\"type\":\"string\",\"description\":\"\"}}},\"description\":\"每日盈亏 7d / 30d\"},\"currencyMap\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"基准币余额集合\"}},\"description\":\"data\",\"required\":[]}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "钱包信息",
+        "path": "/smart-web-gateway/smart/wallet",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75f",
+            "name": "uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75e",
+            "name": "userDto.id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75d",
+            "name": "userDto.inviteCode",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75c",
+            "name": "userDto.invitedCode",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75b",
+            "name": "userDto.status",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75a",
+            "name": "userDto.vip",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d759",
+            "name": "userDto.loginStatus",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d758",
+            "name": "userDto.loginexpireTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d757",
+            "name": "userDto.withdrawStatus",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d756",
+            "name": "userDto.withdrawexpireTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d755",
+            "name": "userDto.lastLoginTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d754",
+            "name": "userDto.ctime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d753",
+            "name": "userDto.mtime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d752",
+            "name": "userDto.walletDtoList[0].id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d751",
+            "name": "userDto.walletDtoList[0].type",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d750",
+            "name": "userDto.walletDtoList[0].address",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74f",
+            "name": "userDto.walletDtoList[0].uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74e",
+            "name": "userDto.walletDtoList[0].chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74d",
+            "name": "userDto.walletDtoList[0].suid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74c",
+            "name": "userDto.tokenArr[0]",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74b",
+            "name": "userDto.lang",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74a",
+            "name": "token",
+            "desc": "当前token"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d749",
+            "name": "tokenArr[0]",
+            "desc": "用户所有token"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d748",
+            "name": "userWallet.key[0].id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d747",
+            "name": "userWallet.key[0].type",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d746",
+            "name": "userWallet.key[0].address",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d745",
+            "name": "userWallet.key[0].uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d744",
+            "name": "userWallet.key[0].chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d743",
+            "name": "userWallet.key[0].suid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d742",
+            "name": "sourceType",
+            "desc": "PC :PC"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d741",
+            "name": "wallet",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d740",
+            "name": "userAddress",
+            "desc": "登录用户钱包"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d73f",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d73e",
+            "name": "language",
+            "desc": "语言：en_US"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d73d",
+            "name": "type",
+            "desc": "查询类型：\"DAY_7\"，\"DAY_30\""
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126431,
+        "up_time": 1762308557,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/wallet_1763316885844",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 11948,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"wallet\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"avatarImage\":{\"type\":\"string\",\"description\":\"钱包头像\"},\"balance\":{\"type\":\"string\",\"description\":\"sol颗数\"},\"tokenNum\":{\"type\":\"integer\",\"description\":\"token数量\"},\"tokenAmount\":{\"type\":\"string\",\"description\":\"token价值\"},\"walletCreateAt\":{\"type\":\"integer\",\"description\":\"钱包创建时间-为空不展示\"},\"tagVos\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"标签编号\"},\"name\":{\"type\":\"string\",\"description\":\"标签名称\"},\"image\":{\"type\":\"string\",\"description\":\"图标url\"}}},\"description\":\"标签\"},\"refreshTime\":{\"type\":\"integer\",\"description\":\"刷剧刷新时间戳ms\"},\"follow\":{\"type\":\"boolean\",\"description\":\"是否跟单\"},\"followId\":{\"type\":\"integer\",\"description\":\"跟单id\"},\"winRate\":{\"type\":\"string\",\"description\":\"胜率 7d / 30d\"},\"pnl\":{\"type\":\"string\",\"description\":\"盈亏 7d / 30d\"},\"pnlPercent\":{\"type\":\"string\",\"description\":\"盈亏比 7d / 30d\"},\"buyNum\":{\"type\":\"integer\",\"description\":\"买单数 7d / 30d\"},\"sellNum\":{\"type\":\"integer\",\"description\":\"卖单数 7d / 30d\"},\"allProfit\":{\"type\":\"string\",\"description\":\"总盈亏\"},\"allProfitPercent\":{\"type\":\"string\",\"description\":\"总盈亏比\"},\"unrealizedProfit\":{\"type\":\"string\",\"description\":\"未实现盈亏\"},\"followed\":{\"type\":\"boolean\",\"description\":\"是否已关注 false-未关注 true-关注\\t\"},\"pnlArray\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\",\"description\":\"\"},\"value\":{\"type\":\"string\",\"description\":\"\"}}},\"description\":\"每日盈亏 7d / 30d\"},\"currencyMap\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"基准币余额集合\"}},\"description\":\"data\",\"required\":[]}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "钱包信息_copy",
+        "path": "/smart-web-gateway/smart/wallet_1763316885844",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75f",
+            "name": "uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75e",
+            "name": "userDto.id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75d",
+            "name": "userDto.inviteCode",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75c",
+            "name": "userDto.invitedCode",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75b",
+            "name": "userDto.status",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d75a",
+            "name": "userDto.vip",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d759",
+            "name": "userDto.loginStatus",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d758",
+            "name": "userDto.loginexpireTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d757",
+            "name": "userDto.withdrawStatus",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d756",
+            "name": "userDto.withdrawexpireTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d755",
+            "name": "userDto.lastLoginTime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d754",
+            "name": "userDto.ctime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d753",
+            "name": "userDto.mtime",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d752",
+            "name": "userDto.walletDtoList[0].id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d751",
+            "name": "userDto.walletDtoList[0].type",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d750",
+            "name": "userDto.walletDtoList[0].address",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74f",
+            "name": "userDto.walletDtoList[0].uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74e",
+            "name": "userDto.walletDtoList[0].chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74d",
+            "name": "userDto.walletDtoList[0].suid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74c",
+            "name": "userDto.tokenArr[0]",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74b",
+            "name": "userDto.lang",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d74a",
+            "name": "token",
+            "desc": "当前token"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d749",
+            "name": "tokenArr[0]",
+            "desc": "用户所有token"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d748",
+            "name": "userWallet.key[0].id",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d747",
+            "name": "userWallet.key[0].type",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d746",
+            "name": "userWallet.key[0].address",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d745",
+            "name": "userWallet.key[0].uid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d744",
+            "name": "userWallet.key[0].chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d743",
+            "name": "userWallet.key[0].suid",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d742",
+            "name": "sourceType",
+            "desc": "PC :PC"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d741",
+            "name": "wallet",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d740",
+            "name": "userAddress",
+            "desc": "登录用户钱包"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d73f",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d73e",
+            "name": "language",
+            "desc": "语言：en_US"
+          },
+          {
+            "required": "0",
+            "_id": "690ab1cd7e7cd305a351d73d",
+            "name": "type",
+            "desc": "查询类型：\"DAY_7\"，\"DAY_30\""
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1763316886,
+        "up_time": 1763316886,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/smart/wallet-profit-loss",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 5893,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"totalCount\":{\"type\":\"integer\",\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"token\":{\"type\":\"string\",\"description\":\"合约地址\"},\"coin\":{\"type\":\"string\",\"description\":\"币名\"},\"icon\":{\"type\":\"string\",\"description\":\"图标\"},\"unrealizedProfit\":{\"type\":\"string\",\"description\":\"未实现利润\"},\"unrealizedProfitPercent\":{\"type\":\"string\",\"description\":\"未实现利润比\"},\"sellAll\":{\"type\":\"number\",\"description\":\"清仓 1是0否\"},\"profit\":{\"type\":\"string\",\"description\":\"实现利润\"},\"profitPercent\":{\"type\":\"string\",\"description\":\"实现利润比\"},\"hold\":{\"type\":\"number\",\"description\":\"持有 1是0否\"},\"totalProfit\":{\"type\":\"string\",\"description\":\"总利润\"},\"totalProfitPercent\":{\"type\":\"string\",\"description\":\"总利润比\"},\"balance\":{\"type\":\"string\",\"description\":\"余额 sol\"},\"volume\":{\"type\":\"string\",\"description\":\"代币数量\"},\"positionPercent\":{\"type\":\"string\",\"description\":\"持仓比\"},\"totalBuyCost\":{\"type\":\"string\",\"description\":\"总买入花费\"},\"buyAvgPrice\":{\"type\":\"string\",\"description\":\"买入均价\"},\"totalSellReceive\":{\"type\":\"string\",\"description\":\"总卖出收入\"},\"sellAvgPrice\":{\"type\":\"string\",\"description\":\"卖出均价\"},\"buyNum\":{\"type\":\"integer\",\"description\":\"买单数\"},\"sellNum\":{\"type\":\"integer\",\"description\":\"卖单数\"},\"lastTrade\":{\"type\":\"integer\",\"description\":\"最后活跃时间戳ms\"},\"noBuy\":{\"type\":\"boolean\",\"description\":\"是否未购买\"},\"smallPool\":{\"type\":\"boolean\",\"description\":\"是否是小池子\"},\"smallAmount\":{\"type\":\"boolean\",\"description\":\"是否是小额代币\"}},\"required\":[]},\"description\":\"\"},\"pageSize\":{\"type\":\"integer\",\"description\":\"\"},\"pageNum\":{\"type\":\"integer\",\"description\":\"\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "钱包盈亏列表",
+        "path": "/smart-web-gateway/smart/wallet-profit-loss",
+        "catid": 656,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68f8a3687e7cd305a351c9ef",
+            "name": "wallet",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3687e7cd305a351c9ee",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3687e7cd305a351c9ed",
+            "name": "language",
+            "desc": "语言：en_US"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3687e7cd305a351c9ec",
+            "name": "sort",
+            "desc": "排序字段，返回值里面的字段名"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3687e7cd305a351c9eb",
+            "name": "asc",
+            "desc": "正序倒序，asc，desc"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3687e7cd305a351c9ea",
+            "name": "pageNum",
+            "desc": "页码：1"
+          },
+          {
+            "required": "0",
+            "_id": "68f8a3687e7cd305a351c9e9",
+            "name": "pageSize",
+            "desc": "页条数：20"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1735126432,
+        "up_time": 1761125224,
+        "req_body_form": [],
+        "__v": 0
+      }
+    ]
+  }
+]

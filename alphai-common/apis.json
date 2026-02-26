@@ -1,0 +1,460 @@
+[
+  {
+    "index": 0,
+    "name": "BlackListController",
+    "desc": "BlackListController",
+    "add_time": 1766375847,
+    "up_time": 1766375847,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/data-center/blacklist/data",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 12903,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"tokenAddress\":{\"type\":\"string\",\"description\":\"\"},\"holderNum\":{\"type\":\"integer\",\"description\":\"\"},\"liquidity\":{\"type\":\"number\",\"description\":\"\"},\"marketcap\":{\"type\":\"number\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "黑名单接口数据支持",
+        "path": "/smart-web-gateway/data-center/blacklist/data",
+        "catid": 882,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6948c7727e7cd305a3520144",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6948c7727e7cd305a3520143",
+            "name": "token",
+            "desc": "逗号分隔，支持批量查询"
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 614,
+        "add_time": 1766375848,
+        "up_time": 1766377330,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "name": "公共接口",
+    "desc": "CommonController",
+    "add_time": 1749637013,
+    "up_time": 1749637053,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/common/platform/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9678,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"\"},\"openIcon\":{\"type\":\"string\",\"description\":\"\"},\"color\":{\"type\":\"string\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "获取发币平台信息",
+        "path": "/smart-web-gateway/common/platform/{chain}",
+        "catid": 791,
+        "req_params": [
+          {
+            "_id": "684957f37e7cd305a351b69c",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "684957f37e7cd305a351b69d",
+            "name": "language",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "uid": 607,
+        "add_time": 1749637014,
+        "up_time": 1749637107,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "name": "seo",
+    "desc": null,
+    "add_time": 1754040102,
+    "up_time": 1754040102,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/token/seo/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10303,
+        "method": "GET",
+        "catid": 807,
+        "title": "seo-分页获取token数据",
+        "path": "/smart-web-gateway/token/seo/list",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 614,
+        "add_time": 1754040157,
+        "up_time": 1754041521,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "688c8cb17e7cd305a351c169",
+            "name": "chain",
+            "example": "",
+            "desc": "链：sol"
+          },
+          {
+            "required": "1",
+            "_id": "688c8cb17e7cd305a351c168",
+            "name": "pageNum",
+            "example": "",
+            "desc": "页码：1"
+          },
+          {
+            "required": "1",
+            "_id": "688c8cb17e7cd305a351c167",
+            "name": "pageSize",
+            "example": "",
+            "desc": "页条数：500"
+          },
+          {
+            "required": "1",
+            "_id": "688c8cb17e7cd305a351c166",
+            "name": "statTime",
+            "example": "",
+            "desc": "初始化请求传null，更新请求传最后一个数据时间"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"params_num\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"totalCount\":{\"type\":\"integer\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"description\":\"tokenAddress\"}},\"pageSize\":{\"type\":\"integer\"},\"pageNum\":{\"type\":\"integer\"}},\"required\":[]}}}"
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "name": "SEO",
+    "desc": "SEO",
+    "add_time": 1757991007,
+    "up_time": 1757991007,
+    "list": [
+      {
+        "query_path": {
+          "path": "/seo-web-gateway/token/token-seo",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10693,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"\"},\"chain\":{\"type\":\"string\",\"description\":\"\"},\"tokenAddress\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"},\"fullName\":{\"type\":\"string\",\"description\":\"\"},\"price\":{\"type\":\"number\",\"description\":\"\"},\"priceUsdt\":{\"type\":\"number\",\"description\":\"\"},\"chg24h\":{\"type\":\"number\",\"description\":\"\"},\"marketCap\":{\"type\":\"number\",\"description\":\"\"},\"poolLiquidity\":{\"type\":\"number\",\"description\":\"\"},\"vol24h\":{\"type\":\"number\",\"description\":\"\"},\"top10\":{\"type\":\"number\",\"description\":\"\"},\"holdersNum\":{\"type\":\"integer\",\"description\":\"\"},\"statTime\":{\"type\":\"integer\",\"description\":\"\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "SSR 数据",
+        "path": "/seo-web-gateway/token/token-seo",
+        "catid": 819,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68c8d05f7e7cd305a351c6e1",
+            "name": "chain",
+            "value": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68c8d05f7e7cd305a351c6e0",
+            "name": "token",
+            "value": "",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 614,
+        "add_time": 1757991007,
+        "up_time": 1757991007,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/seo-web-gateway/token/token-seo-sitemap",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10698,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"tokenAddress\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "sitemap数据",
+        "path": "/seo-web-gateway/token/token-seo-sitemap",
+        "catid": 819,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68c8d0607e7cd305a351c6e4",
+            "name": "clientId",
+            "value": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68c8d0607e7cd305a351c6e3",
+            "name": "pageNum",
+            "value": "1",
+            "example": "1",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68c8d0607e7cd305a351c6e2",
+            "name": "pageSize",
+            "value": "1000",
+            "example": "1000",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 614,
+        "add_time": 1757991008,
+        "up_time": 1757991008,
+        "req_body_form": [],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "name": "分享相关",
+    "desc": "分享相关",
+    "add_time": 1760066067,
+    "up_time": 1760066067,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/share/token-pnl",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10828,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"object\",\"properties\":{\"tokenCode\":{\"type\":\"string\",\"description\":\"代币名\"},\"iconUrl\":{\"type\":\"string\",\"description\":\"代币 icon\"},\"allProfit\":{\"type\":\"string\",\"description\":\"总盈亏\"},\"totalProfitPercent\":{\"type\":\"string\",\"description\":\"总盈亏占比\"},\"holdingBalance\":{\"type\":\"string\",\"description\":\"持仓价值\"},\"totalSell\":{\"type\":\"string\",\"description\":\"总卖出\"},\"totalBuy\":{\"type\":\"string\",\"description\":\"总买入\"},\"twitterName\":{\"type\":\"string\",\"description\":\"X名称\"},\"slogan\":{\"type\":\"string\",\"description\":\"宣传标语\"},\"backgroundImage\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"默认背景图列表\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "token分享详情",
+        "path": "/smart-web-gateway/share/token-pnl",
+        "catid": 825,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68ea191a7e7cd305a351c8fc",
+            "name": "walletAddress",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "68ea191a7e7cd305a351c8fb",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "68ea191a7e7cd305a351c8fa",
+            "name": "token",
+            "desc": "代币名"
+          },
+          {
+            "required": "0",
+            "_id": "68ea191a7e7cd305a351c8f9",
+            "name": "language",
+            "desc": "语言"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 544,
+        "add_time": 1760066067,
+        "up_time": 1760172314,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/share/display",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10838,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"boolean\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "是否分享",
+        "path": "/smart-web-gateway/share/display",
+        "catid": 825,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68e87b2a7e7cd305a351c872",
+            "name": "walletAddress",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "68e87b2a7e7cd305a351c871",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "68e87b2a7e7cd305a351c870",
+            "name": "token",
+            "desc": "代币名"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 544,
+        "add_time": 1760066068,
+        "up_time": 1760066346,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/share/wallet-pnl",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10833,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"object\",\"properties\":{\"realizedPnl7d\":{\"type\":\"string\",\"description\":\"7D已实现利润\"},\"tradeBuyNum7d\":{\"type\":\"integer\",\"description\":\"7D买单交易数\"},\"tradeSellNum7d\":{\"type\":\"integer\",\"description\":\"7D卖单交易数\"},\"realizedPnl30d\":{\"type\":\"string\",\"description\":\"30D已实现利润\"},\"tradeBuyNum30d\":{\"type\":\"integer\",\"description\":\"30D买单交易数\"},\"tradeSellNum30d\":{\"type\":\"integer\",\"description\":\"30D卖单交易数\"},\"unrealizedPnl\":{\"type\":\"string\",\"description\":\"未实现利润\"},\"totalPnl\":{\"type\":\"string\",\"description\":\"总利润\"},\"twitterName\":{\"type\":\"string\",\"description\":\"X名称\"},\"slogan\":{\"type\":\"string\",\"description\":\"宣传标语\"},\"backgroundImage\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"默认背景图列表\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "钱包分享详情",
+        "path": "/smart-web-gateway/share/wallet-pnl",
+        "catid": 825,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68ea19787e7cd305a351c8ff",
+            "name": "walletAddress",
+            "desc": "钱包地址"
+          },
+          {
+            "required": "0",
+            "_id": "68ea19787e7cd305a351c8fe",
+            "name": "chain",
+            "desc": "链：sol"
+          },
+          {
+            "required": "0",
+            "_id": "68ea19787e7cd305a351c8fd",
+            "name": "language",
+            "desc": "语言：en_US"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 544,
+        "add_time": 1760066068,
+        "up_time": 1760172408,
+        "req_body_form": [],
+        "__v": 0
+      }
+    ]
+  }
+]
