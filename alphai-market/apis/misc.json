@@ -1,0 +1,258 @@
+[
+  {
+    "index": 25,
+    "name": "收藏",
+    "desc": "收藏",
+    "add_time": 1740399131,
+    "up_time": 1740399150,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-watch-token/del",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7708,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"tokenName\":{\"type\":\"string\",\"description\":\"token名称\"},\"tokenContract\":{\"type\":\"string\",\"description\":\"合约地址\"}},\"required\":[\"chain\",\"tokenContract\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "取消收藏",
+        "path": "/smart-web-gateway/user-watch-token/del",
+        "catid": 721,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "67bc621c7e7cd305a3519ac4",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"boolean\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1740399132,
+        "up_time": 1740399132,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-watch-token/add",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7703,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"tokenName\":{\"type\":\"string\",\"description\":\"token名称\"},\"tokenContract\":{\"type\":\"string\",\"description\":\"合约地址\"}},\"required\":[\"chain\",\"tokenContract\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "收藏",
+        "path": "/smart-web-gateway/user-watch-token/add",
+        "catid": 721,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "67bc621b7e7cd305a3519ac3",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"boolean\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1740399131,
+        "up_time": 1740399131,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-watch-token/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7713,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"tokenName\":{\"type\":\"string\",\"description\":\"token名称\"},\"tokenContract\":{\"type\":\"string\",\"description\":\"合约地址\"},\"tokenImage\":{\"type\":\"string\",\"description\":\"icon\"},\"vol\":{\"type\":\"number\",\"description\":\"成交数量\"},\"r\":{\"type\":\"number\",\"description\":\"涨跌幅百分比\"},\"price\":{\"type\":\"number\",\"description\":\"最新成交价（$）\"},\"supply\":{\"type\":\"number\",\"description\":\"供应量\"}},\"required\":[]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "收藏列表",
+        "path": "/smart-web-gateway/user-watch-token/list",
+        "catid": 721,
+        "markdown": "|  |  |\n| --- | --- |\n| 枚举（_asc_） | 说明 |\n| _asc_ | 升序 |\n| _desc_ | 降序 |\n\n|  |  |\n| --- | --- |\n| 枚举（sort） | 说明 |\n| tokenName | _token名称_ |\n| vol | _成交数量_ |\n| r | _涨跌幅百分比_ |",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6971c7d47e7cd305a352076f",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6971c7d47e7cd305a352076e",
+            "name": "sort",
+            "example": "",
+            "desc": "排序字段"
+          },
+          {
+            "required": "0",
+            "_id": "6971c7d47e7cd305a352076d",
+            "name": "asc",
+            "example": "",
+            "desc": "升序降序"
+          }
+        ],
+        "desc": "<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>枚举（<em>asc</em>）</td>\n<td>说明</td>\n</tr>\n<tr>\n<td><em>asc</em></td>\n<td>升序</td>\n</tr>\n<tr>\n<td><em>desc</em></td>\n<td>降序</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>枚举（sort）</td>\n<td>说明</td>\n</tr>\n<tr>\n<td>tokenName</td>\n<td><em>token名称</em></td>\n</tr>\n<tr>\n<td>vol</td>\n<td><em>成交数量</em></td>\n</tr>\n<tr>\n<td>r</td>\n<td><em>涨跌幅百分比</em></td>\n</tr>\n</tbody>\n</table>\n",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1740399132,
+        "up_time": 1769064404,
+        "req_body_form": [],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 27,
+    "name": "获取gas费",
+    "desc": "GasOracleController",
+    "add_time": 1743494347,
+    "up_time": 1743494372,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/gas/oracle",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8143,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"chainName\":{\"type\":\"string\",\"description\":\"\"},\"lastBlock\":{\"type\":\"string\",\"description\":\"\"},\"lowSpeedGasPrice\":{\"type\":\"string\",\"description\":\"\"},\"mediumSpeedGasPrice\":{\"type\":\"string\",\"description\":\"\"},\"highSpeedGasPrice\":{\"type\":\"string\",\"description\":\"\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "getGasOracle",
+        "path": "/smart-web-gateway/gas/oracle",
+        "catid": 735,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67eb9ccc7e7cd305a351a08a",
+            "name": "chain",
+            "value": "",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1743494348,
+        "up_time": 1743494348,
+        "req_body_form": [],
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 32,
+    "name": "链",
+    "desc": null,
+    "add_time": 1745820290,
+    "up_time": 1762241016,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/chain/price-currencies",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 11508,
+        "method": "GET",
+        "catid": 763,
+        "title": "获取链的计价表列表",
+        "path": "/smart-web-gateway/chain/price-currencies",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 656,
+        "add_time": 1762241080,
+        "up_time": 1762325989,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "690af5e57e7cd305a351d76f",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链名"
+          },
+          {
+            "required": "0",
+            "_id": "690af5e57e7cd305a351d76e",
+            "name": "needRate",
+            "example": "true",
+            "desc": "是否需要汇率,默认true, 单位为链"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "690af5e57e7cd305a351d770",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>{<br>\n&nbsp;&nbsp;&nbsp; \"code\": 0,<br>\n&nbsp;&nbsp;&nbsp; \"msg\": \"success\",<br>\n&nbsp;&nbsp;&nbsp; \"data\": {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"chainName\": \"链名chain_name(base)\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"currencies\": [<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"name\": \"币名(ETH)\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"contract\": \"合约地址ETH\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"price\": \"(对链的价格)0.123\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"images\": {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"large\": \"(图片大)<a href=\"https://....png\">https://....png</a>\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"small\": \"(图片小)<a href=\"https://.....png\">https://.....png</a>\"<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"name\": \"币名(VIRTUAL)\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"contract\": \"合约地址0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"price\": \"(对链的价格)0.123\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"images\": {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"large\": \"(图片大)<a href=\"https://..../fd5d296d.png\">https://..../fd5d296d.png</a>\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"small\": \"(图片小)<a href=\"https://....fcfb1bc.png\">https://....fcfb1bc.png</a>\"<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"name\": \"币名(ZORA)\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"contract\": \"合约地址0x1111111111166b7fe7bd91427724b487980afc69\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"price\": \"(对链的价格)0.124\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"images\": {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"large\": \"(图片大)<a href=\"https://..../fd5d296d.png\">https://..../fd5d296d.png</a>\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"small\": \"(图片小)<a href=\"https://....fcfb1bc.png\">https://....fcfb1bc.png</a>\"<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"name\": \"币名(USDC)\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"contract\": \"合约地址0x833589fcd6edb6e08f4c7c32d4f71b54bda02913\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"price\": \"(对链的价格)0.126\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"images\": {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"large\": \"(图片大)<a href=\"https://..../fd5d296d.png\">https://..../fd5d296d.png</a>\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"small\": \"(图片小)<a href=\"https://....fcfb1bc.png\">https://....fcfb1bc.png</a>\"<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]<br>\n&nbsp;&nbsp;&nbsp; }<br>\n}</p>\n",
+        "markdown": "{\n    \"code\": 0,\n    \"msg\": \"success\",\n    \"data\": {\n        \"chainName\": \"链名chain_name(base)\",\n        \"currencies\": [\n            {\n                \"name\": \"币名(ETH)\",\n                \"contract\": \"合约地址ETH\",\n                \"price\": \"(对链的价格)0.123\",\n                \"images\": {\n                    \"large\": \"(图片大)[https://....png](https://....png)\",\n                    \"small\": \"(图片小)[https://.....png](https://.....png)\"\n                }\n            },\n            {\n                \"name\": \"币名(VIRTUAL)\",\n                \"contract\": \"合约地址0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b\",\n                \"price\": \"(对链的价格)0.123\",\n                \"images\": {\n                    \"large\": \"(图片大)[https://..../fd5d296d.png](https://..../fd5d296d.png)\",\n                    \"small\": \"(图片小)[https://....fcfb1bc.png](https://....fcfb1bc.png)\"\n                }\n            },\n            {\n                \"name\": \"币名(ZORA)\",\n                \"contract\": \"合约地址0x1111111111166b7fe7bd91427724b487980afc69\",\n                \"price\": \"(对链的价格)0.124\",\n                \"images\": {\n                    \"large\": \"(图片大)[https://..../fd5d296d.png](https://..../fd5d296d.png)\",\n                    \"small\": \"(图片小)[https://....fcfb1bc.png](https://....fcfb1bc.png)\"\n                }\n            },\n            {\n                \"name\": \"币名(USDC)\",\n                \"contract\": \"合约地址0x833589fcd6edb6e08f4c7c32d4f71b54bda02913\",\n                \"price\": \"(对链的价格)0.126\",\n                \"images\": {\n                    \"large\": \"(图片大)[https://..../fd5d296d.png](https://..../fd5d296d.png)\",\n                    \"small\": \"(图片小)[https://....fcfb1bc.png](https://....fcfb1bc.png)\"\n                }\n            }\n        ]\n    }\n}",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"chainName\":{\"type\":\"string\",\"description\":\"链名\"},\"currencies\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"币名\"},\"contract\":{\"type\":\"string\",\"description\":\"合约地址\"},\"price\":{\"type\":\"string\",\"description\":\"价格\"},\"images\":{\"type\":\"object\",\"properties\":{\"large\":{\"type\":\"string\",\"description\":\"大图\"},\"small\":{\"type\":\"string\",\"description\":\"小图\"}},\"description\":\"图片信息\",\"required\":[]}},\"required\":[\"name\",\"contract\",\"price\",\"images\"]},\"description\":\"currencies计价币列表\"}},\"required\":[]}}}"
+      }
+    ]
+  }
+]

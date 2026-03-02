@@ -54,7 +54,18 @@ argument-hint: [查询内容/功能名称]
 
 ## API 数据来源
 
-完整的 API 定义存储在同目录下的 `apis.json` 文件中。
+按功能分类存储在 `apis/` 目录，按需查阅：
+
+| 功能 | 文件 | 包含 |
+|------|------|------|
+| 注册登录 | `apis/auth.json` | 注册流程、登录流程 (8个) |
+| 账户安全 | `apis/security.json` | 账户安全、Google 认证 (9个) |
+| 钱包管理 | `apis/wallet.json` | 钱包信息、用户中心 (6个) |
+| 用户信息 | `apis/profile.json` | UserController 全部接口 (20个) |
+| 分销邀请 | `apis/referral.json` | 分销、邀请码、返佣 (17个) |
+| 活动相关 | `apis/activity.json` | 空投活动、VIP、Humidifi (7个) |
+
+> 查找 API 时请直接读取对应的分类文件，不要读取 apis.json 全量文件。
 
 ---
 

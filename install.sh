@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Alph.ai API Skills 安装脚本
-# 用于快速安装 Skills 到 Claude Code
+# 支持 Claude Code、Cursor、Windsurf 等 AI Agent
 
 set -e
 
@@ -18,10 +18,46 @@ echo
 
 # 获取脚本所在目录
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-TARGET_DIR="$HOME/.claude/skills"
 
+# 选择 AI Agent
+echo -e "${BLUE}请选择你的 AI Agent:${NC}"
+echo "  1) Claude Code / Claude Desktop (默认)"
+echo "  2) Cursor"
+echo "  3) Windsurf"
+echo "  4) 自定义路径"
+echo
+read -p "选择 [1-4] (回车默认 1): " AGENT_CHOICE
+AGENT_CHOICE=${AGENT_CHOICE:-1}
+
+case $AGENT_CHOICE in
+    1)
+        TARGET_DIR="$HOME/.claude/skills"
+        AGENT_NAME="Claude"
+        ;;
+    2)
+        TARGET_DIR="$HOME/.cursor/skills"
+        AGENT_NAME="Cursor"
+        ;;
+    3)
+        TARGET_DIR="$HOME/.windsurf/skills"
+        AGENT_NAME="Windsurf"
+        ;;
+    4)
+        read -p "请输入目标路径: " TARGET_DIR
+        AGENT_NAME="自定义"
+        # 展开 ~
+        TARGET_DIR="${TARGET_DIR/#\~/$HOME}"
+        ;;
+    *)
+        TARGET_DIR="$HOME/.claude/skills"
+        AGENT_NAME="Claude"
+        ;;
+esac
+
+echo
 echo -e "${YELLOW}源目录:${NC} $SCRIPT_DIR"
 echo -e "${YELLOW}目标目录:${NC} $TARGET_DIR"
+echo -e "${YELLOW}Agent:${NC} $AGENT_NAME"
 echo
 
 # 检查目标目录是否存在
@@ -34,7 +70,7 @@ fi
 echo -e "${BLUE}将安装以下 Skills:${NC}"
 echo "  • alphai (主导航 + 认证指南)"
 echo "  • alphai-trading (交易模块 - 54 API)"
-echo "  • alphai-market (行情模块 - 41 API)"
+echo "  • alphai-market (行情模块 - 42 API)"
 echo "  • alphai-user (用户模块 - 67 API)"
 echo "  • alphai-twitter (社媒推特X - 7 API)"
 echo "  • alphai-smart (智能功能 - 31 API)"
@@ -67,13 +103,11 @@ echo -e "${GREEN}================================${NC}"
 echo -e "${GREEN}  安装完成！${NC}"
 echo -e "${GREEN}================================${NC}"
 echo
-echo -e "${BLUE}使用方法:${NC}"
-echo "  1. 直接调用: /alphai-trading 查询下单接口"
-echo "  2. 主导航: /alphai 我想做交易"
-echo "  3. 自动选择: 直接提问，Claude 会自动选择模块"
-echo
 echo -e "${BLUE}验证安装:${NC}"
-echo "  ls ~/.claude/skills/ | grep alphai"
+echo "  ls $TARGET_DIR/ | grep alphai"
 echo
-echo -e "${YELLOW}提示:${NC} 如果 Claude Code 正在运行，建议重启以加载新 skills"
+echo -e "${BLUE}验证 API 分类文件:${NC}"
+echo "  ls $TARGET_DIR/alphai-{user,market,trading}/apis/"
+echo
+echo -e "${YELLOW}提示:${NC} 如果你的 AI Agent 正在运行，建议重启以加载新 skills"
 echo

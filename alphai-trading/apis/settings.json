@@ -1,0 +1,940 @@
+[
+  {
+    "index": 21,
+    "name": "用户买单设置",
+    "desc": "用户买单设置",
+    "add_time": 1738402230,
+    "up_time": 1738402311,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-buy-set/v2/query",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7618,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"开关按钮，默认关闭\"},\"priorityFee\":{\"type\":\"string\",\"description\":\"优先费\"},\"slippageLimit\":{\"type\":\"string\",\"description\":\"滑点（百分比）\"},\"volume\":{\"type\":\"string\",\"description\":\"数量\"},\"quickVolume\":{\"type\":\"string\",\"description\":\"快速数量\"}},\"description\":\"data\",\"required\":[\"quickVolume\"]}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "查询用户买单设置_v2",
+        "path": "/smart-web-gateway/user-buy-set/v2/query",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "67b2e3cb7e7cd305a35199d5",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 287,
+        "add_time": 1739776917,
+        "up_time": 1739776971,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/saveTradeSetByType",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 13743,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "保存用户交易设置链维度/全局",
+        "path": "/smart-web-gateway/userTradeSet/saveTradeSetByType",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6979b19c7e7cd305a3520b93",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6979b19c7e7cd305a3520b92",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "req_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"tradeType\":{\"type\":\"integer\",\"description\":\"交易类型 0 买 1 卖\"},\"type\":{\"type\":\"string\",\"description\":\"类型 P1 =1 P2=2 P3=3 BOT=4\"},\"doubleUp\":{\"type\":\"string\",\"description\":\"翻倍回本\"}},\"required\":[\"chain\",\"tradeType\",\"type\",\"doubleUp\"]}",
+        "uid": 635,
+        "add_time": 1769582763,
+        "up_time": 1769583004,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/update",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10048,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "保存用户高级交易设置",
+        "path": "/smart-web-gateway/userTradeSet/update",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6972f0d77e7cd305a35207bb",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6972f0d77e7cd305a35207ba",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1751530241,
+        "up_time": 1769140439,
+        "__v": 0,
+        "req_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"tradeType\":{\"type\":\"integer\",\"description\":\"交易类型 0 买 1 卖\"},\"isDefault\":{\"type\":\"string\",\"description\":\"是否默认\"},\"type\":{\"type\":\"string\",\"description\":\"类型 P1 =1 P2=2 P3=3 BOT=4\"},\"quickTrade\":{\"type\":\"string\",\"description\":\"快捷交易设置\"},\"userTradeSet\":{\"type\":\"object\",\"properties\":{\"priorityFee\":{\"type\":\"string\",\"description\":\"优先费\"},\"priorityFeeType\":{\"type\":\"integer\",\"description\":\"优先费类型 0 自动 1 手动\"},\"bribeFee\":{\"type\":\"string\",\"description\":\"evm链为空 贿赂费 \"},\"bribeFeeType\":{\"type\":\"string\",\"description\":\"evm链为空 贿赂费类型 0 自动 1 手动 \"},\"maxFee\":{\"type\":\"string\",\"description\":\"费用上限\"},\"slippageLimit\":{\"type\":\"string\",\"description\":\"滑点（百分比）\"},\"slippageLimitType\":{\"type\":\"integer\",\"description\":\"滑点类型 0 自动 1 手动\"},\"antiMev\":{\"type\":\"string\",\"description\":\"是否开启防夹\"},\"doubleUp\":{\"type\":\"boolean\",\"description\":\"翻倍回本\"},\"gasFee\":{\"type\":\"string\",\"description\":\"sol链为空 矿工费\"},\"sniper\":{\"type\":\"boolean\",\"description\":\"sol链为空 狙击模式\"},\"gasFeeType\":{\"type\":\"number\",\"description\":\"sol链为空 gas费类型 0自动，1手动\"},\"gasFeeLevel\":{\"type\":\"number\",\"description\":\"sol链为空 自动gas费级别\"}},\"required\":[\"priorityFee\",\"slippageLimit\",\"maxFee\",\"priorityFeeType\",\"gasFee\",\"slippageLimitType\",\"antiMev\",\"doubleUp\"]}},\"required\":[\"chain\",\"tradeType\",\"isDefault\",\"userTradeSet\",\"type\",\"quickTrade\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/quickOtherTradeConfig",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 13683,
+        "method": "POST",
+        "catid": 706,
+        "title": "其他快捷交易快速买卖设置",
+        "path": "/smart-web-gateway/userTradeSet/quickOtherTradeConfig",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "69788a137e7cd305a35209fa",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"tokenAddress\":{\"type\":\"string\"},\"quickTradeSet\":{\"type\":\"array\",\"items\":{\"type\":\"number\"},\"description\":\"快速买卖配置\"},\"tradeType\":{\"type\":\"string\",\"description\":\"（0-买入 1-卖出）\"},\"chain\":{\"type\":\"string\"},\"extName\":{\"type\":\"string\",\"description\":\"topQuickRadio 顶部交易快捷设置\"}},\"required\":[\"chain\",\"tokenAddress\",\"quickTradeSet\",\"tradeType\",\"extName\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"boolean\"}}}",
+        "uid": 635,
+        "add_time": 1769506992,
+        "up_time": 1769507347,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/quickOtherTradeQuery",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 13678,
+        "method": "GET",
+        "catid": 706,
+        "title": "其他快捷交易设置买卖查询",
+        "path": "/smart-web-gateway/userTradeSet/quickOtherTradeQuery",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "697889b97e7cd305a35209f5",
+            "name": "String",
+            "example": "tokenAddress",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "697889b97e7cd305a35209f4",
+            "name": "tradeType",
+            "example": "（0-买入 1-卖出）",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "697889b97e7cd305a35209f3",
+            "name": "chain",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "697889b97e7cd305a35209f2",
+            "name": "extName",
+            "example": "topQuickRadio",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\"},\"tokenAddress\":{\"type\":\"string\"},\"quickTradeSet\":{\"type\":\"array\",\"items\":{\"type\":\"number\"},\"description\":\"快速买卖配置（0-买入 1-卖出）\\t\"}}}}}",
+        "uid": 635,
+        "add_time": 1769506910,
+        "up_time": 1769507257,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/quickTradeConfig",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 11973,
+        "method": "POST",
+        "catid": 706,
+        "title": "快捷交易快速买卖设置",
+        "path": "/smart-web-gateway/userTradeSet/quickTradeConfig",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 607,
+        "add_time": 1763343995,
+        "up_time": 1763452782,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "691c276e7e7cd305a351f7c0",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"tokenAddress\":{\"type\":\"string\"},\"quickTradeSet\":{\"type\":\"array\",\"items\":{\"type\":\"number\"},\"description\":\"快速买卖配置\"},\"tradeType\":{\"type\":\"string\",\"description\":\"（0-买入 1-卖出）\"},\"chain\":{\"type\":\"string\"}},\"required\":[\"chain\",\"tokenAddress\",\"quickTradeSet\",\"tradeType\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"boolean\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/quickTradeQuery",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 11968,
+        "method": "GET",
+        "catid": 706,
+        "title": "快捷交易设置买卖查询",
+        "path": "/smart-web-gateway/userTradeSet/quickTradeQuery",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 607,
+        "add_time": 1763343490,
+        "up_time": 1763346286,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "691a876e7e7cd305a351f60a",
+            "name": "String",
+            "example": "tokenAddress",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "691a876e7e7cd305a351f609",
+            "name": "tradeType",
+            "example": "（0-买入 1-卖出）",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "691a876e7e7cd305a351f608",
+            "name": "chain",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\"},\"tokenAddress\":{\"type\":\"string\"},\"quickTradeSet\":{\"type\":\"array\",\"items\":{\"type\":\"number\"},\"description\":\"快速买卖配置（0-买入 1-卖出）\\t\"}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-buy-set/query",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7358,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"开关按钮，默认关闭\"},\"priorityFee\":{\"type\":\"string\",\"description\":\"优先费\"},\"slippageLimit\":{\"type\":\"string\",\"description\":\"滑点（百分比）\"},\"volume\":{\"type\":\"string\",\"description\":\"数量\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "查询用户买单设置",
+        "path": "/smart-web-gateway/user-buy-set/query",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "679deabc7e7cd305a351964e",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1738402231,
+        "up_time": 1738402492,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/updateTopTradeSet",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 13558,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "保存用户顶部交易设置",
+        "path": "/smart-web-gateway/userTradeSet/updateTopTradeSet",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6979c7db7e7cd305a3520b9d",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6979c7db7e7cd305a3520b9c",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "req_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"tradeType\":{\"type\":\"integer\",\"description\":\"交易类型 0 买 1 卖\"},\"type\":{\"type\":\"string\",\"description\":\"类型 P1 =1 P2=2 P3=3 BOT=4\"},\"quickType\":{\"type\":\"string\",\"description\":\"0,不展示，1，常驻，2悬停\"},\"buyType\":{\"type\":\"string\",\"description\":\"p1 p2 p3\"},\"sellType\":{\"type\":\"string\",\"description\":\"p1 p2 p3\"},\"buyToken\":{\"type\":\"string\"},\"sellToken\":{\"type\":\"string\"}},\"required\":[\"chain\",\"tradeType\",\"type\",\"buyType\",\"sellType\",\"sellToken\",\"buyToken\"]}",
+        "uid": 635,
+        "add_time": 1769133440,
+        "up_time": 1769588699,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/quickOtherTradeSet",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 13738,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"doubleUp\":{\"type\":\"string\",\"description\":\"翻倍回本\"}},\"description\":\"data\",\"required\":[\"doubleUp\"]}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "查询用户交易设置链维度或全局",
+        "path": "/smart-web-gateway/userTradeSet/quickOtherTradeSet",
+        "catid": 706,
+        "markdown": "{\"chain\":\"sol\",\n\"tradeType\":\"1\",\n\"type\":1,\n},\n{\"chain\":\"sol\",\n\"tradeType\":\"0\",\n\"type\":2,\n}",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6979b17f7e7cd305a3520b8f",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          },
+          {
+            "required": "1",
+            "_id": "6979b17f7e7cd305a3520b8e",
+            "name": "type",
+            "example": "0",
+            "desc": "0为全链设置，1为p1，2=P2，3=P3"
+          }
+        ],
+        "desc": "<p>{\"chain\":\"sol\",<br>\n\"tradeType\":\"1\",<br>\n\"type\":1,<br>\n},<br>\n{\"chain\":\"sol\",<br>\n\"tradeType\":\"0\",<br>\n\"type\":2,<br>\n}</p>\n",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1769582641,
+        "up_time": 1769582975,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/queryTopSettings",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 13553,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"quickType\":{\"type\":\"integer\",\"description\":\"0，不展示，1，常驻，2，悬停\"},\"buyType\":{\"type\":\"number\",\"description\":\"p1，p2，p3\"},\"sellType\":{\"type\":\"number\",\"description\":\"p1，p2，p3\"},\"buyToken\":{\"type\":\"string\",\"description\":\"默认买token\"},\"sellToken\":{\"type\":\"string\",\"description\":\"默认卖token\"},\"quickBuySet\":{\"type\":\"string\"},\"quickSellSet\":{\"type\":\"string\"},\"doubleUp\":{\"type\":\"string\",\"description\":\"翻倍回本\"}},\"description\":\"data\",\"required\":[\"quickType\",\"buyType\",\"sellType\",\"sellToken\",\"buyToken\",\"doubleUp\",\"quickSellSet\",\"quickBuySet\"]}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "查询用户顶部交易设置",
+        "path": "/smart-web-gateway/userTradeSet/queryTopSettings",
+        "catid": 706,
+        "markdown": "{\"chain\":\"sol\",\n\"tradeType\":\"1\",\n\"type\":1,\n},\n{\"chain\":\"sol\",\n\"tradeType\":\"0\",\n\"type\":2,\n}",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "698056087e7cd305a3520d89",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "<p>{\"chain\":\"sol\",<br>\n\"tradeType\":\"1\",<br>\n\"type\":1,<br>\n},<br>\n{\"chain\":\"sol\",<br>\n\"tradeType\":\"0\",<br>\n\"type\":2,<br>\n}</p>\n",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1769133328,
+        "up_time": 1770018312,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/query",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10043,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"tradeType\":{\"type\":\"integer\",\"description\":\"交易类型 0 买 1 卖\"},\"isDefault\":{\"type\":\"string\",\"description\":\"是否默认\"},\"type\":{\"type\":\"string\",\"description\":\"类型 P1 P2 P3 BOT\"},\"tradeSet\":{\"type\":\"object\",\"properties\":{\"priorityFee\":{\"type\":\"string\",\"description\":\"优先费\"},\"priorityFeeType\":{\"type\":\"integer\",\"description\":\"优先费类型 0 自动 1 手动\"},\"bribeFee\":{\"type\":\"string\",\"description\":\"evm链为空 贿赂费 \"},\"bribeFeeType\":{\"type\":\"string\",\"description\":\"evm链为空 贿赂费类型 0 自动 1 手动 \"},\"maxFee\":{\"type\":\"string\",\"description\":\"费用上限\"},\"slippageLimit\":{\"type\":\"string\",\"description\":\"滑点（百分比）\"},\"slippageLimitType\":{\"type\":\"integer\",\"description\":\"滑点类型 0 自动 1 手动\"},\"antiMev\":{\"type\":\"string\",\"description\":\"是否开启防夹\"},\"doubleUp\":{\"type\":\"boolean\",\"description\":\"翻倍回本\"},\"gasFee\":{\"type\":\"string\",\"description\":\"sol链为空 矿工费\"},\"sniper\":{\"type\":\"boolean\",\"description\":\"sol链为空 狙击模式\"},\"gasFeeType\":{\"type\":\"number\",\"description\":\"sol链为空 gas费类型 0自动，1手动\"},\"gasFeeLevel\":{\"type\":\"number\",\"description\":\"sol链为空 自动gas费级别\"}},\"required\":[\"priorityFee\",\"slippageLimit\",\"maxFee\",\"priorityFeeType\",\"gasFee\",\"slippageLimitType\",\"antiMev\"]}},\"required\":[\"chain\",\"tradeType\",\"isDefault\",\"tradeSet\",\"type\"]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "查询用户高级交易设置",
+        "path": "/smart-web-gateway/userTradeSet/query",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6972f0b17e7cd305a35207b9",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1751529614,
+        "up_time": 1769140401,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-buy-set/update",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7353,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"开关按钮，默认关闭\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"slippageLimit\":{\"type\":\"number\",\"description\":\"滑点（百分比）\"},\"volume\":{\"type\":\"number\",\"description\":\"买入数量\"}},\"required\":[\"chain\",\"antiMev\",\"priorityFee\",\"slippageLimit\",\"volume\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"参数\"}",
+        "title": "用户买单设置",
+        "path": "/smart-web-gateway/user-buy-set/update",
+        "catid": 706,
+        "markdown": "| code | cn | en | id |\n| ---- | --- | --- | --- |\n| 400101 | 请输入有效值。滑点有效值 0 - 100%。 | Please enter a valid value. Slippage valid range: 0 - 100%. | Silakan masukkan nilai yang valid. Rentang nilai slippage yang valid: 0 - 100%. |\n| 400102 | 请输入有效值。优先费有效值 0 - 2 | Please enter a valid value. Priority fee valid range: 0 - 2. | Silakan masukkan nilai yang valid. Rentang nilai priority fee yang valid: 0 - 2. |\n| 400103 | 请输入有效值。买入数量有效值大于 {{minVolume}} 。 | Please enter a valid value. The valid buy quantity must be greater than {{minVolume}}. | Harap masukkan nilai yang valid. Jumlah pembelian yang valid harus lebih besar dari {{minVolume}} |\n| 400104 | 请输入有效值。卖出比例有效值 0.0{13}1 到 100 之间。 | Please enter a valid value. The valid sell ratio must be between 0.0{13}1 and 100. | Harap masukkan nilai yang valid. Rasio penjualan yang valid harus antara 0.0{13}1 dan 100. |",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6826b2117e7cd305a351b33f",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"boolean\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"是否成功\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<table>\n<thead>\n<tr>\n<th>code</th>\n<th>cn</th>\n<th>en</th>\n<th>id</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>400101</td>\n<td>请输入有效值。滑点有效值 0 - 100%。</td>\n<td>Please enter a valid value. Slippage valid range: 0 - 100%.</td>\n<td>Silakan masukkan nilai yang valid. Rentang nilai slippage yang valid: 0 - 100%.</td>\n</tr>\n<tr>\n<td>400102</td>\n<td>请输入有效值。优先费有效值 0 - 2</td>\n<td>Please enter a valid value. Priority fee valid range: 0 - 2.</td>\n<td>Silakan masukkan nilai yang valid. Rentang nilai priority fee yang valid: 0 - 2.</td>\n</tr>\n<tr>\n<td>400103</td>\n<td>请输入有效值。买入数量有效值大于 {{minVolume}} 。</td>\n<td>Please enter a valid value. The valid buy quantity must be greater than {{minVolume}}.</td>\n<td>Harap masukkan nilai yang valid. Jumlah pembelian yang valid harus lebih besar dari {{minVolume}}</td>\n</tr>\n<tr>\n<td>400104</td>\n<td>请输入有效值。卖出比例有效值 0.0{13}1 到 100 之间。</td>\n<td>Please enter a valid value. The valid sell ratio must be between 0.0{13}1 and 100.</td>\n<td>Harap masukkan nilai yang valid. Rasio penjualan yang valid harus antara 0.0{13}1 dan 100.</td>\n</tr>\n</tbody>\n</table>\n",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1738402231,
+        "up_time": 1747366417,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-buy-set/v2/update",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7608,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"开关按钮，默认关闭\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"slippageLimit\":{\"type\":\"number\",\"description\":\"滑点（百分比）\"},\"volume\":{\"type\":\"number\",\"description\":\"买入数量\"},\"quickVolume\":{\"type\":\"string\",\"description\":\"快速买入数量（英文逗号隔开）\"},\"amount\":{\"type\":\"number\",\"description\":\"买入价值多少金额代币(用户关注的钱包地址买入的代币)\"}},\"required\":[\"chain\",\"antiMev\",\"priorityFee\",\"slippageLimit\",\"quickVolume\",\"volume\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"参数\"}",
+        "title": "用户买单设置_V2",
+        "path": "/smart-web-gateway/user-buy-set/v2/update",
+        "catid": 706,
+        "markdown": "| code | cn | en | id |\n| ---- | --- | --- | --- |\n| 400101 | 请输入有效值。滑点有效值 0 - 100%。 | Please enter a valid value. Slippage valid range: 0 - 100%. | Silakan masukkan nilai yang valid. Rentang nilai slippage yang valid: 0 - 100%. |\n| 400102 | 请输入有效值。优先费有效值 0 - 2 | Please enter a valid value. Priority fee valid range: 0 - 2. | Silakan masukkan nilai yang valid. Rentang nilai priority fee yang valid: 0 - 2. |\n| 400103 | 请输入有效值。买入数量有效值大于 {{minVolume}}。 | Please enter a valid value. The valid buy quantity must be greater than {{minVolume}} | Harap masukkan nilai yang valid. Jumlah pembelian yang valid harus lebih besar dari {{minVolume}}. |\n| 400104 | 请输入有效值。卖出比例有效值 0.0{13}1 到 100 之间。 | Please enter a valid value. The valid sell ratio must be between 0.0{13}1 and 100. | Harap masukkan nilai yang valid. Rasio penjualan yang valid harus antara 0.0{13}1 dan 100. |",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68513e767e7cd305a351b75c",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"boolean\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"是否成功\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<table>\n<thead>\n<tr>\n<th>code</th>\n<th>cn</th>\n<th>en</th>\n<th>id</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>400101</td>\n<td>请输入有效值。滑点有效值 0 - 100%。</td>\n<td>Please enter a valid value. Slippage valid range: 0 - 100%.</td>\n<td>Silakan masukkan nilai yang valid. Rentang nilai slippage yang valid: 0 - 100%.</td>\n</tr>\n<tr>\n<td>400102</td>\n<td>请输入有效值。优先费有效值 0 - 2</td>\n<td>Please enter a valid value. Priority fee valid range: 0 - 2.</td>\n<td>Silakan masukkan nilai yang valid. Rentang nilai priority fee yang valid: 0 - 2.</td>\n</tr>\n<tr>\n<td>400103</td>\n<td>请输入有效值。买入数量有效值大于 {{minVolume}}。</td>\n<td>Please enter a valid value. The valid buy quantity must be greater than {{minVolume}}</td>\n<td>Harap masukkan nilai yang valid. Jumlah pembelian yang valid harus lebih besar dari {{minVolume}}.</td>\n</tr>\n<tr>\n<td>400104</td>\n<td>请输入有效值。卖出比例有效值 0.0{13}1 到 100 之间。</td>\n<td>Please enter a valid value. The valid sell ratio must be between 0.0{13}1 and 100.</td>\n<td>Harap masukkan nilai yang valid. Rasio penjualan yang valid harus antara 0.0{13}1 dan 100.</td>\n</tr>\n</tbody>\n</table>\n",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1739776704,
+        "up_time": 1750154870,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/batchUpdate",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10353,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "用户高级交易设置批量保存",
+        "path": "/smart-web-gateway/userTradeSet/batchUpdate",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6972f0ed7e7cd305a35207bc",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_query": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "req_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"userTradeUpdateReqs\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"number\"},\"tradeType\":{\"type\":\"string\"},\"isDefault\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"userTradeSet\":{\"type\":\"object\",\"properties\":{\"priorityFee\":{\"type\":\"string\",\"description\":\"优先费\"},\"priorityFeeType\":{\"type\":\"integer\",\"description\":\"优先费类型 0 自动 1 手动\"},\"bribeFee\":{\"type\":\"string\",\"description\":\"evm链为空 贿赂费 \"},\"bribeFeeType\":{\"type\":\"string\",\"description\":\"evm链为空 贿赂费类型 0 自动 1 手动 \"},\"maxFee\":{\"type\":\"string\",\"description\":\"费用上限\"},\"slippageLimit\":{\"type\":\"string\",\"description\":\"滑点（百分比）\"},\"slippageLimitType\":{\"type\":\"integer\",\"description\":\"滑点类型 0 自动 1 手动\"},\"antiMev\":{\"type\":\"string\",\"description\":\"是否开启防夹\"},\"doubleUp\":{\"type\":\"boolean\",\"description\":\"翻倍回本\"},\"gasFee\":{\"type\":\"string\",\"description\":\"sol链为空 矿工费\"},\"sniper\":{\"type\":\"boolean\",\"description\":\"sol链为空 狙击模式\"},\"gasFeeType\":{\"type\":\"number\",\"description\":\"sol链为空 gas费类型 0自动，1手动\"},\"gasFeeLevel\":{\"type\":\"number\",\"description\":\"sol链为空 自动gas费级别\"}},\"required\":[\"priorityFee\",\"slippageLimit\",\"maxFee\",\"priorityFeeType\",\"gasFee\",\"slippageLimitType\",\"antiMev\",\"doubleUp\"]}}}}}}",
+        "uid": 635,
+        "add_time": 1754995039,
+        "up_time": 1769140461,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userTradeSet/getSlippageConfig",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10198,
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"weights\":{\"type\":\"object\",\"properties\":{\"liquidity\":{\"type\":\"number\",\"description\":\"流动性\"},\"volume\":{\"type\":\"number\",\"description\":\"交易额\"}},\"description\":\"权重\"},\"liquidity_levels\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"level\":{\"type\":\"string\",\"description\":\"级别\"},\"min\":{\"type\":\"number\",\"description\":\"区间最小值\"},\"score\":{\"type\":\"number\",\"description\":\"得分\"},\"max\":{\"type\":\"number\",\"description\":\"最大值\"}},\"required\":[\"level\",\"min\",\"score\",\"max\"]},\"description\":\"流动性级别\"},\"volume_levels\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"level\":{\"type\":\"string\",\"description\":\"级别\"},\"min\":{\"type\":\"number\",\"description\":\"区间最小值\"},\"score\":{\"type\":\"number\",\"description\":\"得分\"},\"max\":{\"type\":\"number\",\"description\":\"区间最大\"}},\"required\":[\"level\",\"min\",\"score\",\"max\"]},\"description\":\"交易额级别\"},\"slippage_mapping\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"min_score\":{\"type\":\"number\",\"description\":\"最小得分\"},\"max_score\":{\"type\":\"number\",\"description\":\"最大得分\"},\"slippage_percent\":{\"type\":\"number\",\"description\":\"滑点\"}},\"required\":[\"min_score\",\"max_score\",\"slippage_percent\"],\"description\":\"滑点区间\"}}}},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"}},\"required\":[\"code\",\"msg\"]}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "自动滑点区间设置",
+        "path": "/smart-web-gateway/userTradeSet/getSlippageConfig",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "687750d67e7cd305a351bf2c",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1752649170,
+        "up_time": 1752649942,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/userSet/getAutoFee",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10053,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"bribeFeeResult\":{\"type\":\"string\",\"description\":\"贿赂费\"},\"priorityFeeResult\":{\"type\":\"integer\",\"description\":\"优先费\"}},\"required\":[\"bribeFeeResult\",\"priorityFeeResult\"]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "获取自动费用",
+        "path": "/smart-web-gateway/userSet/getAutoFee",
+        "catid": 706,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "688845af7e7cd305a351bfaa",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 635,
+        "add_time": 1751530241,
+        "up_time": 1753761199,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 18,
+    "name": "用户卖单设置",
+    "desc": "用户卖单设置",
+    "add_time": 1735811218,
+    "up_time": 1738402321,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-sell-set/query",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7028,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"开关按钮，默认关闭\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"slippageLimit\":{\"type\":\"number\",\"description\":\"滑点（百分比）\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "查询用户卖单设置",
+        "path": "/smart-web-gateway/user-sell-set/query",
+        "catid": 695,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "677661157e7cd305a351921c",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1735811219,
+        "up_time": 1735811349,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-sell-set/v2/query",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7603,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"开关按钮，默认关闭\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"slippageLimit\":{\"type\":\"number\",\"description\":\"滑点（百分比）\"},\"quickRadio\":{\"type\":\"string\",\"mock\":{\"mock\":\"20,40,50,100\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"结果\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "查询用户卖单设置_V2",
+        "path": "/smart-web-gateway/user-sell-set/v2/query",
+        "catid": 695,
+        "markdown": "| code | cn | en | id |\n| ---- | --- | --- | --- |\n| 400101 | 请输入有效值。滑点有效值 0 - 100%。 | Please enter a valid value. Slippage valid range: 0 - 100%. | Silakan masukkan nilai yang valid. Rentang nilai slippage yang valid: 0 - 100%. |\n| 400102 | 请输入有效值。优先费有效值 0 - 2 | Please enter a valid value. Priority fee valid range: 0 - 2. | Silakan masukkan nilai yang valid. Rentang nilai priority fee yang valid: 0 - 2. |\n| 400103 | 请输入有效值。买入数量有效值大于 0.0{15}1 。 | Please enter a valid value. The valid buy quantity must be greater than 0.0{15}1. | Harap masukkan nilai yang valid. Jumlah pembelian yang valid harus lebih besar dari 0.0{15}1. |\n| 400104 | 请输入有效值。卖出比例有效值 0.0{13}1 到 100 之间。 | Please enter a valid value. The valid sell ratio must be between 0.0{13}1 and 100. | Harap masukkan nilai yang valid. Rasio penjualan yang valid harus antara 0.0{13}1 dan 100. |",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67c5552a7e7cd305a3519bf7",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链"
+          }
+        ],
+        "desc": "<table>\n<thead>\n<tr>\n<th>code</th>\n<th>cn</th>\n<th>en</th>\n<th>id</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>400101</td>\n<td>请输入有效值。滑点有效值 0 - 100%。</td>\n<td>Please enter a valid value. Slippage valid range: 0 - 100%.</td>\n<td>Silakan masukkan nilai yang valid. Rentang nilai slippage yang valid: 0 - 100%.</td>\n</tr>\n<tr>\n<td>400102</td>\n<td>请输入有效值。优先费有效值 0 - 2</td>\n<td>Please enter a valid value. Priority fee valid range: 0 - 2.</td>\n<td>Silakan masukkan nilai yang valid. Rentang nilai priority fee yang valid: 0 - 2.</td>\n</tr>\n<tr>\n<td>400103</td>\n<td>请输入有效值。买入数量有效值大于 0.0{15}1 。</td>\n<td>Please enter a valid value. The valid buy quantity must be greater than 0.0{15}1.</td>\n<td>Harap masukkan nilai yang valid. Jumlah pembelian yang valid harus lebih besar dari 0.0{15}1.</td>\n</tr>\n<tr>\n<td>400104</td>\n<td>请输入有效值。卖出比例有效值 0.0{13}1 到 100 之间。</td>\n<td>Please enter a valid value. The valid sell ratio must be between 0.0{13}1 and 100.</td>\n<td>Harap masukkan nilai yang valid. Rasio penjualan yang valid harus antara 0.0{13}1 dan 100.</td>\n</tr>\n</tbody>\n</table>\n",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 287,
+        "add_time": 1739776479,
+        "up_time": 1740985642,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-sell-set/update",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7023,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"开关按钮，默认关闭\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"slippageLimit\":{\"type\":\"number\",\"description\":\"滑点（百分比）\"}},\"required\":[\"chain\",\"antiMev\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"参数\"}",
+        "title": "用户卖单设置",
+        "path": "/smart-web-gateway/user-sell-set/update",
+        "catid": 695,
+        "markdown": "| code | cn | en | id |\n| ---- | --- | --- | --- |\n| 400101 | 请输入有效值。滑点有效值 0 - 100%。 | Please enter a valid value. Slippage valid range: 0 - 100%. | Silakan masukkan nilai yang valid. Rentang nilai slippage yang valid: 0 - 100%. |\n| 400102 | 请输入有效值。优先费有效值 0 - 2 | Please enter a valid value. Priority fee valid range: 0 - 2. | Silakan masukkan nilai yang valid. Rentang nilai priority fee yang valid: 0 - 2. |\n| 400103 | 请输入有效值。买入数量有效值大于 0.0{15}1 。 | Please enter a valid value. The valid buy quantity must be greater than 0.0{15}1. | Harap masukkan nilai yang valid. Jumlah pembelian yang valid harus lebih besar dari 0.0{15}1. |\n| 400104 | 请输入有效值。卖出比例有效值 0.0{13}1 到 100 之间。 | Please enter a valid value. The valid sell ratio must be between 0.0{13}1 and 100. | Harap masukkan nilai yang valid. Rasio penjualan yang valid harus antara 0.0{13}1 dan 100. |",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "67c555177e7cd305a3519bf6",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"boolean\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"是否成功\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<table>\n<thead>\n<tr>\n<th>code</th>\n<th>cn</th>\n<th>en</th>\n<th>id</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>400101</td>\n<td>请输入有效值。滑点有效值 0 - 100%。</td>\n<td>Please enter a valid value. Slippage valid range: 0 - 100%.</td>\n<td>Silakan masukkan nilai yang valid. Rentang nilai slippage yang valid: 0 - 100%.</td>\n</tr>\n<tr>\n<td>400102</td>\n<td>请输入有效值。优先费有效值 0 - 2</td>\n<td>Please enter a valid value. Priority fee valid range: 0 - 2.</td>\n<td>Silakan masukkan nilai yang valid. Rentang nilai priority fee yang valid: 0 - 2.</td>\n</tr>\n<tr>\n<td>400103</td>\n<td>请输入有效值。买入数量有效值大于 0.0{15}1 。</td>\n<td>Please enter a valid value. The valid buy quantity must be greater than 0.0{15}1.</td>\n<td>Harap masukkan nilai yang valid. Jumlah pembelian yang valid harus lebih besar dari 0.0{15}1.</td>\n</tr>\n<tr>\n<td>400104</td>\n<td>请输入有效值。卖出比例有效值 0.0{13}1 到 100 之间。</td>\n<td>Please enter a valid value. The valid sell ratio must be between 0.0{13}1 and 100.</td>\n<td>Harap masukkan nilai yang valid. Rasio penjualan yang valid harus antara 0.0{13}1 dan 100.</td>\n</tr>\n</tbody>\n</table>\n",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1735811218,
+        "up_time": 1740985623,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/user-sell-set/v2/update",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7598,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链路\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"开关按钮，默认关闭\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"slippageLimit\":{\"type\":\"number\",\"description\":\"滑点（百分比）\"},\"quickRadio\":{\"type\":\"string\",\"description\":\"快速卖出百分制(英文逗号隔开)\"}},\"required\":[\"chain\",\"antiMev\",\"quickRadio\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"参数\"}",
+        "title": "用户卖单设置_V2",
+        "path": "/smart-web-gateway/user-sell-set/v2/update",
+        "catid": 695,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "67b2e1d97e7cd305a35199c8",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"data\":{\"type\":\"boolean\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"是否成功\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 287,
+        "add_time": 1739775957,
+        "up_time": 1739776473,
+        "__v": 0
+      }
+    ]
+  }
+]

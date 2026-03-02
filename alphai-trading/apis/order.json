@@ -1,0 +1,427 @@
+[
+  {
+    "index": 40,
+    "name": "下单服务",
+    "desc": "下单服务",
+    "add_time": 1735803203,
+    "up_time": 1735803203,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/order/pre-check",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 12258,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"check\":{\"type\":\"boolean\",\"description\":\"是否开启检验\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "下单前置校验",
+        "path": "/smart-web-gateway/order/pre-check",
+        "catid": 693,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "6927fa847e7cd305a351fb4f",
+            "name": "chain",
+            "value": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6927fa847e7cd305a351fb4e",
+            "name": "token",
+            "value": "",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 101,
+        "add_time": 1764227601,
+        "up_time": 1764227716,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/order/create",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6998,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"\"},\"subUid\":{\"type\":\"integer\",\"description\":\"\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"\"},\"chain\":{\"type\":\"string\",\"description\":\"\"},\"side\":{\"type\":\"string\",\"description\":\"\"},\"type\":{\"type\":\"string\",\"description\":\"\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"\"},\"sellContract\":{\"type\":\"string\",\"description\":\"\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"\"},\"buyContract\":{\"type\":\"string\",\"description\":\"\"},\"volume\":{\"type\":\"number\",\"description\":\"\"},\"volumeRate\":{\"type\":\"number\",\"description\":\"\"},\"slippage\":{\"type\":\"number\",\"description\":\"\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"\"},\"bribeFee\":{\"type\":\"number\",\"description\":\"\"},\"time\":{\"type\":\"integer\",\"description\":\"\"},\"source\":{\"type\":\"string\",\"description\":\"\"},\"sign\":{\"type\":\"string\",\"description\":\"\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"\"},\"waitTime\":{\"type\":\"integer\",\"description\":\"\"},\"feeConfigType\":{\"type\":\"integer\",\"description\":\"1:\\\"p1\\\",2:\\\"p2\\\",3:\\\"p3\\\"\"},\"sniper\":{\"type\":\"boolean\",\"description\":\"狙击模式 false/true\"},\"moneyBack\":{\"type\":\"boolean\",\"description\":\"true 回本\"}},\"required\":[\"userId\",\"subUid\",\"accountAddress\",\"chain\",\"side\",\"type\",\"sellContract\",\"buyContract\",\"slippage\",\"priorityFee\",\"moneyBack\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建订单请求\"}",
+        "title": "创建订单",
+        "path": "/smart-web-gateway/order/create",
+        "catid": 693,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "69788e777e7cd305a3520a01",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803203,
+        "up_time": 1769508471,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/order/batchCreate",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7003,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"createOrderRequests\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"\"},\"subUid\":{\"type\":\"integer\",\"description\":\"\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"\"},\"chain\":{\"type\":\"string\",\"description\":\"\"},\"side\":{\"type\":\"string\",\"description\":\"\"},\"type\":{\"type\":\"string\",\"description\":\"\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"\"},\"sellContract\":{\"type\":\"string\",\"description\":\"\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"\"},\"buyContract\":{\"type\":\"string\",\"description\":\"\"},\"volume\":{\"type\":\"number\",\"description\":\"\"},\"volumeRate\":{\"type\":\"number\",\"description\":\"\"},\"slippage\":{\"type\":\"number\",\"description\":\"\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"\"},\"bribeFee\":{\"type\":\"number\",\"description\":\"\"},\"time\":{\"type\":\"integer\",\"description\":\"\"},\"source\":{\"type\":\"string\",\"description\":\"\"},\"sign\":{\"type\":\"string\",\"description\":\"\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"\"},\"waitTime\":{\"type\":\"integer\",\"description\":\"\"},\"feeConfigType\":{\"type\":\"integer\",\"description\":\"\"},\"sniper\":{\"type\":\"boolean\"}},\"required\":[\"userId\",\"subUid\",\"accountAddress\",\"chain\",\"side\",\"type\",\"sellContract\",\"buyContract\",\"slippage\",\"priorityFee\"]},\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "批量创建订单",
+        "path": "/smart-web-gateway/order/batchCreate",
+        "catid": 693,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "695f0f267e7cd305a35205a2",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803203,
+        "up_time": 1767837478,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 41,
+    "name": "订单查询",
+    "desc": "订单查询",
+    "add_time": 1735803204,
+    "up_time": 1735803204,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/order/query/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7013,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"category\":{\"type\":\"string\",\"description\":\"订单分类 USER(1, \\\"用户下单\\\"),FOLLOW(2, \\\"跟随下单\\\")\"},\"side\":{\"type\":\"string\",\"description\":\"方向（BUY:买，SELL:卖）\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"},\"status\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"状态 NEW(\\\"新订单\\\"),FILLED(\\\"订单完成\\\"),CREATE_FAILED(\\\"下单失败\\\");\"},\"offset\":{\"type\":\"integer\",\"description\":\"分页id,取最后一条数据的id\"},\"limit\":{\"type\":\"integer\",\"description\":\"分页大小\"}},\"required\":[\"userId\",\"chain\",\"category\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "分页查询订单接口",
+        "path": "/smart-web-gateway/order/query/page",
+        "catid": 694,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6784dbaa7e7cd305a351946f",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"orders\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"ID\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"uid\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"orderSide\":{\"type\":\"string\",\"description\":\"订单方向  BUY, SELL;\"},\"orderId\":{\"type\":\"integer\",\"description\":\"订单ID\"},\"followAddress\":{\"type\":\"string\",\"description\":\"跟单地址\"},\"category\":{\"type\":\"string\",\"description\":\"订单类型\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出币种合约地址\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入币种合约地址\"},\"sellVolume\":{\"type\":\"number\",\"description\":\"卖出金额（InAmount，不一定是最终成交金额）\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分比，例如：7.5 表示 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（例如：\\\"0.006\\\"）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否开启防夹\"},\"platformFeeRate\":{\"type\":\"number\",\"description\":\"平台费（例如：\\\"0.006\\\"）\"},\"status\":{\"type\":\"string\",\"description\":\"状态 NEW(\\\"新订单\\\"),FILLED(\\\"订单完成\\\"),CREATE_FAILED(\\\"下单失败\\\");\"},\"code\":{\"type\":\"integer\",\"description\":\"失败码\"},\"createTime\":{\"type\":\"integer\",\"description\":\"private String msg; // 备注信息\"},\"price\":{\"type\":\"number\",\"description\":\"价格\"},\"buyVolume\":{\"type\":\"number\",\"description\":\"买入金额\"},\"antiMevFee\":{\"type\":\"number\",\"description\":\"防夹费\"},\"antiMevFeeCoin\":{\"type\":\"string\",\"description\":\"防夹费币种\"},\"platformFee\":{\"type\":\"number\",\"description\":\"平台费\"},\"platformFeeCoin\":{\"type\":\"string\",\"description\":\"平台费币种\"},\"gasFee\":{\"type\":\"number\",\"description\":\"矿工费\"},\"profit\":{\"type\":\"number\",\"description\":\"利润\"},\"gasFeeCoin\":{\"type\":\"string\",\"description\":\"矿工费币种\"},\"hash\":{\"type\":\"string\",\"description\":\"hash（交易hash，成交后才赋值）\"},\"tokenImage\":{\"type\":\"string\"}},\"required\":[\"tokenImage\"]},\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803205,
+        "up_time": 1736760234,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/order/tradeType",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": false,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 11513,
+        "method": "GET",
+        "catid": 694,
+        "title": "基准币种",
+        "path": "/smart-web-gateway/order/tradeType",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1762243428,
+        "up_time": 1762243428,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/order/query",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7008,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"orderIds\":{\"type\":\"array\",\"items\":{\"type\":\"integer\"},\"description\":\"订单ID集合\"},\"category\":{\"type\":\"string\",\"description\":\"订单分类 USER(1, \\\"用户下单\\\"),FOLLOW(2, \\\"跟随下单\\\")\"},\"side\":{\"type\":\"string\",\"description\":\"方向（BUY:买，SELL:卖）\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"},\"status\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"状态 NEW(\\\"新订单\\\"),FILLED(\\\"订单完成\\\"),CREATE_FAILED(\\\"下单失败\\\");\"}},\"required\":[\"userId\",\"chain\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "批量查询订单接口",
+        "path": "/smart-web-gateway/order/query",
+        "catid": 694,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6784aec87e7cd305a3519459",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"responseMap\":{\"type\":\"object\",\"properties\":{\"0\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"ID\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"uid\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"orderSide\":{\"type\":\"string\",\"description\":\"订单方向  BUY, SELL;\"},\"orderId\":{\"type\":\"integer\",\"description\":\"订单ID\"},\"followAddress\":{\"type\":\"string\",\"description\":\"跟单地址\"},\"category\":{\"type\":\"string\",\"description\":\"订单类型\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种\"},\"sellVolume\":{\"type\":\"number\",\"description\":\"卖出金额（InAmount，不一定是最终成交金额）\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分比，例如：7.5 表示 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（例如：\\\"0.006\\\"）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否开启防夹\"},\"platformFeeRate\":{\"type\":\"number\",\"description\":\"平台费（例如：\\\"0.006\\\"）\"},\"status\":{\"type\":\"string\",\"description\":\"状态 NEW(\\\"新订单\\\"),FILLED(\\\"订单完成\\\"),CREATE_FAILED(\\\"下单失败\\\");\"},\"code\":{\"type\":\"integer\",\"description\":\"失败码\"},\"createTime\":{\"type\":\"integer\",\"description\":\"private String msg; // 备注信息\"},\"price\":{\"type\":\"number\",\"description\":\"价格\"},\"buyVolume\":{\"type\":\"number\",\"description\":\"买入金额\"},\"antiMevFee\":{\"type\":\"number\",\"description\":\"防夹费\"},\"antiMevFeeCoin\":{\"type\":\"string\",\"description\":\"防夹费币种\"},\"platformFee\":{\"type\":\"number\",\"description\":\"平台费\"},\"platformFeeCoin\":{\"type\":\"string\",\"description\":\"平台费币种\"},\"gasFee\":{\"type\":\"number\",\"description\":\"矿工费\"},\"profit\":{\"type\":\"number\",\"description\":\"利润\"},\"gasFeeCoin\":{\"type\":\"string\",\"description\":\"矿工费币种\"},\"hash\":{\"type\":\"string\",\"description\":\"hash（交易hash，成交后才赋值）\"}}}},\"description\":\"订单信息\",\"default\":\"new HashMap<>()\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803204,
+        "up_time": 1736748744,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/order/statistic",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7193,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"data\":{\"type\":\"object\",\"properties\":{\"orderCount\":{\"type\":\"integer\"}},\"required\":[\"orderCount\"]}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\",\"required\":[\"data\"]}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "统计订单接口",
+        "path": "/smart-web-gateway/order/statistic",
+        "catid": 694,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6784afe07e7cd305a351946c",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_query": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1736748744,
+        "up_time": 1736749024,
+        "req_body_form": [],
+        "__v": 0,
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"number\"},\"chain\":{\"type\":\"string\"},\"category\":{\"type\":\"string\"},\"side\":{\"type\":\"string\"},\"followOrderId\":{\"type\":\"number\"},\"status\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}}}",
+        "req_body_type": "json"
+      },
+      {
+        "query_path": {
+          "path": "/order/orderFee",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 12323,
+        "method": "POST",
+        "catid": 694,
+        "title": "订单费率查询",
+        "path": "/order/orderFee",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1764407825,
+        "up_time": 1764408910,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "692abe4e7e7cd305a351fc4e",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"platformFeeRate\":{\"type\":\"number\",\"description\":\"平台费率\"},\"maxPriorityFee\":{\"type\":\"number\"},\"maxSlippage\":{\"type\":\"number\"},\"minUsdt\":{\"type\":\"number\"},\"antiMev\":{\"type\":\"number\"},\"success\":{\"type\":\"boolean\"}}}}}",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\"},\"contract\":{\"type\":\"string\"}}}"
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "交易统计数据",
+    "desc": "交易统计数据",
+    "add_time": 1767598228,
+    "up_time": 1767598228,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/trade/stats/query",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 13263,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"walletAddress\":{\"type\":\"string\",\"description\":\"用户地址\"},\"buyAvgPrice\":{\"type\":\"number\",\"description\":\"买入均价\"},\"sellAvgPrice\":{\"type\":\"number\",\"description\":\"卖出均价\"},\"balance\":{\"type\":\"number\",\"description\":\"持仓数量\"},\"holderThreshold\":{\"type\":\"number\",\"description\":\"清仓阀值\"},\"holderStartTime\":{\"type\":\"string\",\"description\":\"持仓开始时间\",\"mock\":{\"mock\":\"@datetime\"}},\"holderEndTime\":{\"type\":\"string\",\"description\":\"持仓结束时间\",\"mock\":{\"mock\":\"@datetime\"}},\"topHolderBuyAvgPrice\":{\"type\":\"number\",\"description\":\"top持有人地址 买入均价\"},\"topHolderSellAvgPrice\":{\"type\":\"number\",\"description\":\"top持有人地址 卖出均价\"},\"topTradeBuyAvgPrice\":{\"type\":\"number\",\"description\":\"top交易量地址 买入均价\"},\"topTradeSellAvgPrice\":{\"type\":\"number\",\"description\":\"top交易量地址 卖出均价\"},\"tokenMigrationTime\":{\"type\":\"string\",\"description\":\"代币内外盘迁移时间\",\"mock\":{\"mock\":\"@datetime\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "tradeStatsQuery",
+        "path": "/smart-web-gateway/trade/stats/query",
+        "catid": 896,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "697c50697e7cd305a3520d05",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "697c50697e7cd305a3520d04",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "697c50697e7cd305a3520d03",
+            "name": "walletAddress",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "697c50697e7cd305a3520d02",
+            "name": "topHolderNum",
+            "example": "100",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "697c50697e7cd305a3520d01",
+            "name": "topTradeNum",
+            "example": "100",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "697c50697e7cd305a3520d00",
+            "name": "tradeVolumeDays",
+            "example": "30",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 614,
+        "add_time": 1767598228,
+        "up_time": 1769754729,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      }
+    ]
+  }
+]

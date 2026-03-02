@@ -1,0 +1,372 @@
+[
+  {
+    "index": 2,
+    "name": "特殊手续费",
+    "desc": null,
+    "add_time": 1750217783,
+    "up_time": 1750217783,
+    "list": [
+      {
+        "query_path": {
+          "path": "/admin-gateway/fee/token/modify",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9788,
+        "method": "POST",
+        "catid": 793,
+        "title": "代币手续费修改",
+        "path": "/admin-gateway/fee/token/modify",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1750218069,
+        "up_time": 1750390886,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6854d8667e7cd305a351b8cd",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"}},\"required\":[\"code\",\"msg\"]}",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\"},\"contract\":{\"type\":\"string\"},\"fee\":{\"type\":\"string\"},\"status\":{\"type\":\"number\",\"description\":\"1是0否\"},\"coin\":{\"type\":\"string\"}},\"required\":[\"chain\",\"contract\",\"fee\",\"status\",\"coin\"]}",
+        "req_body_type": "json"
+      },
+      {
+        "query_path": {
+          "path": "/admin-gateway/fee/token/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9778,
+        "method": "POST",
+        "catid": 793,
+        "title": "代币手续费列表",
+        "path": "/admin-gateway/fee/token/list",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1750217985,
+        "up_time": 1750390867,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6854d8537e7cd305a351b8ca",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6854d8537e7cd305a351b8c9",
+            "name": "contract",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6854d8537e7cd305a351b8c8",
+            "name": "offset",
+            "example": "",
+            "desc": "分页id,取最后一条数据的id\t"
+          },
+          {
+            "required": "1",
+            "_id": "6854d8537e7cd305a351b8c7",
+            "name": "limit",
+            "example": "",
+            "desc": "分页大小\t"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6854d8537e7cd305a351b8cb",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\"},\"createTime\":{\"type\":\"number\"},\"useDefaultFee\":{\"type\":\"number\"},\"fee\":{\"type\":\"string\"},\"coin\":{\"type\":\"string\"},\"contracts\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"updateTime\":{\"type\":\"number\"}}}},\"total\":{\"type\":\"number\"},\"pageNum\":{\"type\":\"number\"},\"pageSize\":{\"type\":\"number\"}}}}}",
+        "req_body_type": "form"
+      },
+      {
+        "query_path": {
+          "path": "/admin-gateway/fee/token/add",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9783,
+        "method": "POST",
+        "catid": 793,
+        "title": "代币手续费新增",
+        "path": "/admin-gateway/fee/token/add",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1750218042,
+        "up_time": 1750390876,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6854d85c7e7cd305a351b8cc",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\"},\"contract\":{\"type\":\"string\"},\"fee\":{\"type\":\"string\"},\"coin\":{\"type\":\"string\"}},\"required\":[\"chain\",\"contract\",\"fee\",\"coin\"]}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"}},\"required\":[\"code\",\"msg\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/admin-gateway/fee/token/detail",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9923,
+        "method": "POST",
+        "catid": 793,
+        "title": "代币手续费详情",
+        "path": "/admin-gateway/fee/token/detail",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1750819524,
+        "up_time": 1750819546,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"id\",1}",
+        "req_body_type": "raw",
+        "res_body": ""
+      },
+      {
+        "query_path": {
+          "path": "/admin-gateway/fee/user/add",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9773,
+        "method": "POST",
+        "catid": 793,
+        "title": "用户特殊手续新增",
+        "path": "/admin-gateway/fee/user/add",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1750217921,
+        "up_time": 1750390857,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6854d8497e7cd305a351b8c6",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"uid\":{\"type\":\"number\"},\"fee\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"}}}",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"}},\"required\":[\"code\",\"msg\"]}"
+      },
+      {
+        "query_path": {
+          "path": "/admin-gateway/fee/user/modify",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9768,
+        "method": "POST",
+        "catid": 793,
+        "title": "用户特殊手续费修改",
+        "path": "/admin-gateway/fee/user/modify",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1750217889,
+        "up_time": 1750390848,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6854d8407e7cd305a351b8c5",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_type": "json",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"}},\"required\":[\"code\",\"msg\"]}",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"uid\":{\"type\":\"number\"},\"status\":{\"type\":\"boolean\",\"description\":\"1是 0否\"},\"fee\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"}},\"required\":[]}"
+      },
+      {
+        "query_path": {
+          "path": "/admin-gateway/fee/user/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9763,
+        "method": "POST",
+        "catid": 793,
+        "title": "用户特殊手续费列表",
+        "path": "/admin-gateway/fee/user/list",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1750217833,
+        "up_time": 1750390836,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6854d8347e7cd305a351b8c3",
+            "name": "uid",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6854d8347e7cd305a351b8c2",
+            "name": "pageNum",
+            "example": "",
+            "desc": "分页"
+          },
+          {
+            "required": "1",
+            "_id": "6854d8347e7cd305a351b8c1",
+            "name": "pageSize",
+            "example": "",
+            "desc": "大小"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6854d8347e7cd305a351b8c4",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"number\"},\"uid\":{\"type\":\"number\"},\"fee\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"createTime\":{\"type\":\"number\"},\"useDefaultFee\":{\"type\":\"number\"},\"updateTime\":{\"type\":\"number\"},\"\":{\"type\":\"string\"}}}},\"pageNum\":{\"type\":\"number\"},\"pageSize\":{\"type\":\"number\"},\"total\":{\"type\":\"number\"}}}}}",
+        "req_body_type": "form"
+      },
+      {
+        "query_path": {
+          "path": "/admin-gateway/fee/user/detail",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9918,
+        "method": "POST",
+        "catid": 793,
+        "title": "用户特殊手续费详情",
+        "path": "/admin-gateway/fee/user/detail",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1750819440,
+        "up_time": 1750819475,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "req_body_other": "{\"id\":1}",
+        "req_body_type": "raw",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}"
+      }
+    ]
+  }
+]

@@ -1,0 +1,795 @@
+[
+  {
+    "index": 3,
+    "name": "CoinDetailController",
+    "desc": "代币详情",
+    "add_time": 1751524542,
+    "up_time": 1751527416,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/token/token-detail",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 99999,
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "代币完整详情（推荐）",
+        "path": "/smart-web-gateway/token/token-detail",
+        "catid": 800,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "token_detail_001",
+            "name": "chain",
+            "desc": "链名称，如: bsc, ethereum, solana 等",
+            "example": "bsc"
+          },
+          {
+            "required": "1",
+            "_id": "token_detail_002",
+            "name": "token",
+            "desc": "代币合约地址",
+            "example": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444"
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 999,
+        "add_time": 1772457693,
+        "up_time": 1772457693,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p><strong>代币完整详情接口 - 一站式查询所有信息（推荐使用）</strong></p>\n<p>此接口返回代币的所有详细信息，包括：</p>\n<ul>\n<li><strong>价格信息</strong>: 实时价格（BNB 和 USDT）、市值</li>\n<li><strong>供应信息</strong>: 总供应量、持有者数量</li>\n<li><strong>流动性信息</strong>: 流动性池地址、流动性（BNB 和 USDT）、交易平台</li>\n<li><strong>安全信息</strong>: 开源、流动性锁定、蜜罐检测、可增发、买卖税</li>\n<li><strong>社交媒体</strong>: Twitter、Telegram、Website、KOL 提及数</li>\n<li><strong>创建者信息</strong>: 创建时间、创建者地址、创建者余额</li>\n<li><strong>AI 叙述</strong>: 代币描述、AI 生成的摘要和段落</li>\n</ul>\n<p><strong>优势</strong>：一次调用获取所有信息，无需多次请求不同接口。</p>",
+        "markdown": "**代币完整详情接口 - 一站式查询所有信息（推荐使用）**\n\n此接口返回代币的所有详细信息，包括：\n\n- **价格信息**: 实时价格（BNB 和 USDT）、市值\n- **供应信息**: 总供应量、持有者数量\n- **流动性信息**: 流动性池地址、流动性（BNB 和 USDT）、交易平台\n- **安全信息**: 开源、流动性锁定、蜜罐检测、可增发、买卖税\n- **社交媒体**: Twitter、Telegram、Website、KOL 提及数\n- **创建者信息**: 创建时间、创建者地址、创建者余额\n- **AI 叙述**: 代币描述、AI 生成的摘要和段落\n\n**优势**：一次调用获取所有信息，无需多次请求不同接口。",
+        "res_body": "{\"$schema\": \"http://json-schema.org/draft-04/schema#\", \"type\": \"object\", \"properties\": {\"code\": {\"type\": \"string\", \"description\": \"\\u54cd\\u5e94\\u7801\"}, \"msg\": {\"type\": \"string\", \"description\": \"\\u54cd\\u5e94\\u6d88\\u606f\"}, \"data\": {\"type\": \"object\", \"properties\": {\"chain\": {\"type\": \"string\", \"description\": \"\\u94fe\\u540d\\u79f0\"}, \"tokenAddress\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u5408\\u7ea6\\u5730\\u5740\"}, \"tokenCode\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u7b26\\u53f7\"}, \"tokenFullName\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u5168\\u79f0\"}, \"prec\": {\"type\": \"integer\", \"description\": \"\\u7cbe\\u5ea6\"}, \"tokenPriceSol\": {\"type\": \"number\", \"description\": \"\\u4ef7\\u683c\\uff08\\u4ee5\\u94fe\\u539f\\u751f\\u4ee3\\u5e01\\u8ba1\\u4ef7\\uff0c\\u5982 BNB\\uff09\"}, \"tokenPriceUsdt\": {\"type\": \"number\", \"description\": \"\\u4ef7\\u683c\\uff08USDT\\uff09\"}, \"marketCap\": {\"type\": \"number\", \"description\": \"\\u5e02\\u503c\\uff08USD\\uff09\"}, \"tokenSupply\": {\"type\": \"number\", \"description\": \"\\u603b\\u4f9b\\u5e94\\u91cf\"}, \"tokenHolders\": {\"type\": \"integer\", \"description\": \"\\u6301\\u6709\\u8005\\u6570\\u91cf\"}, \"smartMoneyHolders\": {\"type\": \"integer\", \"description\": \"\\u806a\\u660e\\u94b1\\u5305\\u6301\\u6709\\u8005\\u6570\\u91cf\"}, \"tokenCreateTime\": {\"type\": \"integer\", \"description\": \"\\u521b\\u5efa\\u65f6\\u95f4\\uff08\\u65f6\\u95f4\\u6233\\uff09\"}, \"tokenCreatorAddress\": {\"type\": \"string\", \"description\": \"\\u521b\\u5efa\\u8005\\u5730\\u5740\"}, \"tokenLabel\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u6807\\u7b7e\"}, \"tokenDesc\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u63cf\\u8ff0\"}, \"aiNarrativeSentence\": {\"type\": \"string\", \"description\": \"AI \\u751f\\u6210\\u7684\\u7b80\\u77ed\\u53d9\\u8ff0\"}, \"aiNarrativeParagraph\": {\"type\": \"string\", \"description\": \"AI \\u751f\\u6210\\u7684\\u8be6\\u7ec6\\u6bb5\\u843d\"}, \"iconUrl\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u56fe\\u6807 URL\"}, \"platform\": {\"type\": \"integer\", \"description\": \"\\u5e73\\u53f0 ID\\uff083=PancakeSwap V2\\uff09\"}, \"tokenMediaVo\": {\"type\": \"object\", \"description\": \"\\u793e\\u4ea4\\u5a92\\u4f53\\u548c\\u5b89\\u5168\\u4fe1\\u606f\", \"properties\": {\"twitter\": {\"type\": \"string\", \"description\": \"Twitter \\u94fe\\u63a5\"}, \"telegram\": {\"type\": \"string\", \"description\": \"Telegram \\u94fe\\u63a5\"}, \"website\": {\"type\": \"string\", \"description\": \"\\u5b98\\u7f51\\u94fe\\u63a5\"}, \"signalCallingKols\": {\"type\": \"integer\", \"description\": \"KOL \\u63d0\\u53ca\\u6b21\\u6570\"}, \"kolCallsFansNums\": {\"type\": \"integer\", \"description\": \"KOL \\u7c89\\u4e1d\\u603b\\u6570\"}, \"kolCallsViewNums\": {\"type\": \"integer\", \"description\": \"KOL \\u6d4f\\u89c8\\u603b\\u6570\"}, \"buyTax\": {\"type\": \"string\", \"description\": \"\\u4e70\\u5165\\u7a0e\\uff08%\\uff09\"}, \"sellTax\": {\"type\": \"string\", \"description\": \"\\u5356\\u51fa\\u7a0e\\uff08%\\uff09\"}, \"honeypot\": {\"type\": \"integer\", \"description\": \"\\u871c\\u7f50\\u68c0\\u6d4b\\uff080=\\u5426\\uff0c1=\\u662f\\uff09\"}, \"mintable\": {\"type\": \"integer\", \"description\": \"\\u53ef\\u589e\\u53d1\\uff080=\\u5426\\uff0c1=\\u662f\\uff09\"}, \"openSource\": {\"type\": \"integer\", \"description\": \"\\u5f00\\u6e90\\uff080=\\u5426\\uff0c1=\\u662f\\uff09\"}, \"poolLock\": {\"type\": \"integer\", \"description\": \"\\u6d41\\u52a8\\u6027\\u9501\\u5b9a\\uff080=\\u5426\\uff0c1=\\u662f\\uff09\"}}}, \"tokenPoolVo\": {\"type\": \"object\", \"description\": \"\\u6d41\\u52a8\\u6027\\u6c60\\u4fe1\\u606f\", \"properties\": {\"pool\": {\"type\": \"string\", \"description\": \"\\u6d41\\u52a8\\u6027\\u6c60\\u5408\\u7ea6\\u5730\\u5740\"}, \"poolLiquiditySol\": {\"type\": \"number\", \"description\": \"\\u6d41\\u52a8\\u6027\\uff08\\u94fe\\u539f\\u751f\\u4ee3\\u5e01\\uff0c\\u5982 BNB\\uff09\"}, \"poolLiquidityUsdt\": {\"type\": \"number\", \"description\": \"\\u6d41\\u52a8\\u6027\\uff08USDT\\uff09\"}, \"tradingPlatform\": {\"type\": \"string\", \"description\": \"\\u4ea4\\u6613\\u5e73\\u53f0\\u540d\\u79f0\"}}}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/traders",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10028,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"walletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"walletCreateTime\":{\"type\":\"string\",\"description\":\"钱包创建时间\"},\"solBalance\":{\"type\":\"number\",\"description\":\"当前sol数量\"},\"HoldingsRate\":{\"type\":\"number\",\"description\":\"当前持仓占比\"},\"valueUsd\":{\"type\":\"string\",\"description\":\"当前token持仓市值（USD）\"},\"totalBuyTokenNum\":{\"type\":\"number\",\"description\":\"买入token数\"},\"totalBuyNum\":{\"type\":\"integer\",\"description\":\"买入总次数\"},\"totalBuyAmount\":{\"type\":\"number\",\"description\":\"买入总金额（主链币）\"},\"avgBuyPrice\":{\"type\":\"number\",\"description\":\"平均买入价（主链币）\"},\"totalSellTokenNum\":{\"type\":\"number\",\"description\":\"卖出token数\"},\"totalSellNum\":{\"type\":\"integer\",\"description\":\"卖出总次数\"},\"totalSellAmount\":{\"type\":\"number\",\"description\":\"卖出总金额（主链币）\"},\"avgSellPrice\":{\"type\":\"number\",\"description\":\"平均卖出价（主链币）\"},\"realizedPnl\":{\"type\":\"number\",\"description\":\"已实现利润\"},\"unrealizedPnl\":{\"type\":\"number\",\"description\":\"未实现利润\"},\"totalPnl\":{\"type\":\"number\",\"description\":\"总利润\"},\"holdDuration\":{\"type\":\"string\",\"description\":\"持仓时长\"},\"lastActiveTime\":{\"type\":\"string\",\"description\":\"最后活跃时间\"},\"tag\":{\"type\":\"string\",\"description\":\"标签\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "交易者列表",
+        "path": "/smart-web-gateway/coin/detail/traders",
+        "catid": 800,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be80",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be7f",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be7e",
+            "name": "walletTag",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be7d",
+            "name": "sort",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be7c",
+            "name": "sortType",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be7b",
+            "name": "maker",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be7a",
+            "name": "minTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be79",
+            "name": "maxTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be78",
+            "name": "page",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77407e7cd305a351be77",
+            "name": "limit",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 544,
+        "add_time": 1751524543,
+        "up_time": 1752135488,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/bankers",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10233,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"walletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"walletCreateTime\":{\"type\":\"string\",\"description\":\"钱包创建时间\"},\"solBalance\":{\"type\":\"number\",\"description\":\"当前sol数量\"},\"holdingsRate\":{\"type\":\"number\",\"description\":\"当前持仓占比\"},\"holdingsValue\":{\"type\":\"string\",\"description\":\"当前token持仓数量\"},\"totalBuyTokenNum\":{\"type\":\"number\",\"description\":\"买入token数\"},\"totalBuyNum\":{\"type\":\"integer\",\"description\":\"买入总次数\"},\"totalBuyAmount\":{\"type\":\"number\",\"description\":\"买入总金额（主链币）\"},\"avgBuyPrice\":{\"type\":\"number\",\"description\":\"平均买入价（主链币）\"},\"totalSellTokenNum\":{\"type\":\"number\",\"description\":\"卖出token数\"},\"totalSellNum\":{\"type\":\"integer\",\"description\":\"卖出总次数\"},\"totalSellAmount\":{\"type\":\"number\",\"description\":\"卖出总金额（主链币）\"},\"avgSellPrice\":{\"type\":\"number\",\"description\":\"平均卖出价（主链币）\"},\"realizedPnl\":{\"type\":\"number\",\"description\":\"已实现利润\"},\"unrealizedPnl\":{\"type\":\"number\",\"description\":\"未实现利润\"},\"totalPnl\":{\"type\":\"number\",\"description\":\"总利润\"},\"holdDuration\":{\"type\":\"string\",\"description\":\"持仓时长\"},\"lastActiveTime\":{\"type\":\"string\",\"description\":\"最后活跃时间\"},\"tag\":{\"type\":\"string\",\"description\":\"标签\"},\"bankerList\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"description\":\"和外层一样\"}}},\"required\":[]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "庄家列表",
+        "path": "/smart-web-gateway/coin/detail/bankers",
+        "catid": 800,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c161",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c160",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c15f",
+            "name": "makerGroups",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c15e",
+            "name": "sort",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c15d",
+            "name": "sortType",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c15c",
+            "name": "maker",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c15b",
+            "name": "minTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c15a",
+            "name": "maxTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c159",
+            "name": "page",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688c6d6f7e7cd305a351c158",
+            "name": "limit",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "uid": 544,
+        "add_time": 1753344883,
+        "up_time": 1754033519,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/bankers/total",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10308,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"number\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "庄家群组数量",
+        "path": "/smart-web-gateway/coin/detail/bankers/total",
+        "catid": 800,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "688dc0407e7cd305a351c17f",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "688dc0407e7cd305a351c17e",
+            "name": "token",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "desc": "",
+        "markdown": "",
+        "uid": 544,
+        "add_time": 1754120175,
+        "up_time": 1754120256,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/myOrder",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8723,
+        "method": "GET",
+        "catid": 800,
+        "title": "我的交易-订单",
+        "path": "/smart-web-gateway/coin/detail/myOrder",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1745822264,
+        "up_time": 1752214589,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bec4",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bec3",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bec2",
+            "name": "type",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bec1",
+            "name": "sort",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bec0",
+            "name": "sortType",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bebf",
+            "name": "minTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bebe",
+            "name": "maxTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bebd",
+            "name": "page",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "6870ac3d7e7cd305a351bebc",
+            "name": "limit",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"contract\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"type\":{\"type\":\"integer\"},\"amount\":{\"type\":\"string\"},\"cp\":{\"type\":\"string\"},\"volume\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"dataId\":{\"type\":\"string\"},\"maker\":{\"type\":\"string\"},\"walletTags\":{\"type\":\"string\"},\"ts\":{\"type\":\"integer\"},\"tx\":{\"type\":\"string\"},\"holdingsNum\":{\"type\":\"number\",\"description\":\"当前持仓数量\"},\"holdingsRate\":{\"type\":\"number\",\"description\":\"当前持仓占比\"},\"detailList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"volume\":{\"type\":\"string\"},\"coin\":{\"type\":\"string\"},\"token\":{\"type\":\"string\"}}}}},\"required\":[]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/myBalance",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8738,
+        "method": "GET",
+        "catid": 800,
+        "title": "我的交易-资产",
+        "path": "/smart-web-gateway/coin/detail/myBalance",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1745822603,
+        "up_time": 1751528086,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "686632967e7cd305a351bd28",
+            "name": "token",
+            "desc": "当前token"
+          },
+          {
+            "required": "1",
+            "_id": "686632967e7cd305a351bd27",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"object\",\"properties\":{\"valueBalance\":{\"type\":\"string\",\"description\":\"代币价值余额\"},\"quantityBalance\":{\"type\":\"string\",\"description\":\"代币数量余额\"},\"realizedProfit\":{\"type\":\"string\",\"description\":\"已实现利润\"},\"unrealizedProfit\":{\"type\":\"string\",\"description\":\"未实现利润\"},\"totalProfit\":{\"type\":\"string\",\"description\":\"总利润\"},\"totalAmount\":{\"type\":\"string\",\"description\":\"总买入金额\"},\"avgPrice\":{\"type\":\"string\",\"description\":\"平均买价\"},\"saleAmount\":{\"type\":\"string\",\"description\":\"总卖出金额\"},\"avgSale\":{\"type\":\"string\",\"description\":\"平均卖价\"},\"sellNums\":{\"type\":\"integer\",\"description\":\"卖出笔数\"},\"buyNums\":{\"type\":\"integer\",\"description\":\"买入笔数\"},\"positionPercent\":{\"type\":\"string\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/holders",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10033,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"walletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"walletCreateTime\":{\"type\":\"string\",\"description\":\"钱包创建时间\"},\"solBalance\":{\"type\":\"number\",\"description\":\"当前sol数量\"},\"HoldingsRate\":{\"type\":\"number\",\"description\":\"当前持仓占比\"},\"valueUsd\":{\"type\":\"string\",\"description\":\"当前token持仓市值（USD）\"},\"totalBuyTokenNum\":{\"type\":\"number\",\"description\":\"买入token数\"},\"totalBuyNum\":{\"type\":\"integer\",\"description\":\"买入总次数\"},\"totalBuyAmount\":{\"type\":\"number\",\"description\":\"买入总金额（主链币）\"},\"avgBuyPrice\":{\"type\":\"number\",\"description\":\"平均买入价（主链币）\"},\"totalSellTokenNum\":{\"type\":\"number\",\"description\":\"卖出token数\"},\"totalSellNum\":{\"type\":\"integer\",\"description\":\"卖出总次数\"},\"totalSellAmount\":{\"type\":\"number\",\"description\":\"卖出总金额（主链币）\"},\"avgSellPrice\":{\"type\":\"number\",\"description\":\"平均卖出价（主链币）\"},\"totalPnl\":{\"type\":\"number\",\"description\":\"总利润\"},\"holdDuration\":{\"type\":\"string\",\"description\":\"持仓时长\"},\"lastActiveTime\":{\"type\":\"string\",\"description\":\"最后活跃时间\"},\"tag\":{\"type\":\"string\",\"description\":\"标签\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "持有者列表",
+        "path": "/smart-web-gateway/coin/detail/holders",
+        "catid": 800,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be76",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be75",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be74",
+            "name": "walletTag",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be73",
+            "name": "sort",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be72",
+            "name": "sortType",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be71",
+            "name": "maker",
+            "example": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be70",
+            "name": "minTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be6f",
+            "name": "maxTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be6e",
+            "name": "page",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686f77277e7cd305a351be6d",
+            "name": "limit",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 544,
+        "add_time": 1751524544,
+        "up_time": 1752135463,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/holders/stats",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10038,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"object\",\"properties\":{\"totalHolders\":{\"type\":\"string\",\"description\":\"持有者总数\"},\"top10Percent\":{\"type\":\"number\",\"description\":\"Top10 占比\"},\"top100Percent\":{\"type\":\"number\",\"description\":\"Top100 占比\"},\"developerPercent\":{\"type\":\"number\",\"description\":\"开发者钱包占比\"},\"sniperPercent\":{\"type\":\"number\",\"description\":\"狙击手钱包占比\"},\"insiderTradingPercent\":{\"type\":\"number\",\"description\":\"老鼠仓钱包占比\"},\"bundleWalletPercent\":{\"type\":\"number\",\"description\":\"捆绑钱包占比\"},\"phishingPercent\":{\"type\":\"number\",\"description\":\"钓鱼钱包占比\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "持有者统计",
+        "path": "/smart-web-gateway/coin/detail/holders/stats",
+        "catid": 800,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "696f2d377e7cd305a3520724",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "696f2d377e7cd305a3520723",
+            "name": "token",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 544,
+        "add_time": 1751524544,
+        "up_time": 1768893751,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8698,
+        "method": "GET",
+        "catid": 800,
+        "title": "活动列表",
+        "path": "/smart-web-gateway/coin/detail/list",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1745820463,
+        "up_time": 1751527971,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "686632237e7cd305a351bd26",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686632237e7cd305a351bd25",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686632237e7cd305a351bd24",
+            "name": "type",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686632237e7cd305a351bd23",
+            "name": "walletTag",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686632237e7cd305a351bd22",
+            "name": "sort",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686632237e7cd305a351bd21",
+            "name": "sortType",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686632237e7cd305a351bd20",
+            "name": "maker",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686632237e7cd305a351bd1f",
+            "name": "minAmount",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686632237e7cd305a351bd1e",
+            "name": "maxAmount",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686632237e7cd305a351bd1d",
+            "name": "minTs",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "686632237e7cd305a351bd1c",
+            "name": "maxTs",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686632237e7cd305a351bd1b",
+            "name": "page",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686632237e7cd305a351bd1a",
+            "name": "limit",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"contract\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"type\":{\"type\":\"integer\"},\"amount\":{\"type\":\"string\"},\"cp\":{\"type\":\"string\"},\"volume\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"dataId\":{\"type\":\"string\"},\"maker\":{\"type\":\"string\"},\"walletTags\":{\"type\":\"string\"},\"ts\":{\"type\":\"integer\"},\"tx\":{\"type\":\"string\"},\"HoldingsNum\":{\"type\":\"number\",\"description\":\"当前持仓数量\"},\"HoldingsRate\":{\"type\":\"number\",\"description\":\"当前持仓占比\"},\"detailList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"volume\":{\"type\":\"string\"},\"coin\":{\"type\":\"string\"},\"token\":{\"type\":\"string\"}}}}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/detail/tab",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8708,
+        "method": "GET",
+        "catid": 800,
+        "title": "活动列表tab",
+        "path": "/smart-web-gateway/coin/detail/tab",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1745821768,
+        "up_time": 1752230182,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6870e9267e7cd305a351bef2",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6870e9267e7cd305a351bef1",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "6870e9267e7cd305a351bef0",
+            "name": "listType",
+            "example": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"tabName\":{\"type\":\"string\"},\"code\":{\"type\":\"integer\"},\"amount\":{\"type\":\"integer\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/coin/bubble/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9668,
+        "method": "GET",
+        "catid": 800,
+        "title": "活动气泡使用",
+        "path": "/smart-web-gateway/coin/bubble/list",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1749535630,
+        "up_time": 1751527762,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "686631527e7cd305a351bd19",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686631527e7cd305a351bd18",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686631527e7cd305a351bd17",
+            "name": "walletTag",
+            "example": "SMART,DEV",
+            "desc": "SMART.聪明钱、DEV 开发者"
+          },
+          {
+            "required": "1",
+            "_id": "686631527e7cd305a351bd16",
+            "name": "maker",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "686631527e7cd305a351bd15",
+            "name": "minTs",
+            "desc": "时间戳毫秒"
+          },
+          {
+            "required": "1",
+            "_id": "686631527e7cd305a351bd14",
+            "name": "maxTs",
+            "desc": "时间戳毫秒"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>返回字段含义和活动列表一样</p>\n",
+        "markdown": "返回字段含义和活动列表一样",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"contract\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"type\":{\"type\":\"integer\"},\"amount\":{\"type\":\"string\"},\"cp\":{\"type\":\"string\"},\"volume\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"dataId\":{\"type\":\"string\"},\"maker\":{\"type\":\"string\"},\"walletTags\":{\"type\":\"string\"},\"ts\":{\"type\":\"integer\"},\"tx\":{\"type\":\"string\"},\"HoldingsNum\":{\"type\":\"number\",\"description\":\"当前持仓数量\"},\"HoldingsRate\":{\"type\":\"number\",\"description\":\"当前持仓占比\"},\"detailList\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"volume\":{\"type\":\"string\"},\"coin\":{\"type\":\"string\"},\"token\":{\"type\":\"string\"}}}}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}"
+      }
+    ]
+  }
+]

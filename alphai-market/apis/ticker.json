@@ -1,0 +1,249 @@
+[
+  {
+    "index": 22,
+    "name": "行情",
+    "desc": null,
+    "add_time": 1739444541,
+    "up_time": 1739444541,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/kline/new/history/{token}/{chain}/{type}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7558,
+        "method": "GET",
+        "catid": 716,
+        "title": "kline",
+        "path": "/smart-web-gateway/kline/new/history/{token}/{chain}/{type}",
+        "project_id": 241,
+        "req_params": [
+          {
+            "_id": "68d89e517e7cd305a351c7c1",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "_id": "68d89e517e7cd305a351c7c0",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "_id": "68d89e517e7cd305a351c7bf",
+            "name": "type",
+            "desc": "1min,5min,15min,60min,4h,1s,1day,30min,2h,12h,1week"
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1739445929,
+        "up_time": 1759026769,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68d89e517e7cd305a351c7c4",
+            "name": "endTime",
+            "example": "",
+            "desc": "开始的时间"
+          },
+          {
+            "required": "0",
+            "_id": "68d89e517e7cd305a351c7c3",
+            "name": "limit",
+            "example": "500",
+            "desc": "默认500"
+          },
+          {
+            "required": "1",
+            "_id": "68d89e517e7cd305a351c7c2",
+            "name": "useStable",
+            "example": "",
+            "desc": "true 转U ，false chain"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>{\"code\":\"200\",\"data\":[[1700000000000,\"52000\",\"50000\",\"49000\",\"51000\",\"123\",\"50500\"]]}</p>\n<p><br data-tomark-pass=\"\"></p>\n<pre><code>//1 idx\n//2 high open low close to string\n//3 open low close to string\n//4 low close to string\n//5 close to string\n//6 vol\n//7 price\n</code></pre>\n",
+        "markdown": "{\"code\":\"200\",\"data\":[[1700000000000,\"52000\",\"50000\",\"49000\",\"51000\",\"123\",\"50500\"]]}\n\n<br>\n\n\n```\n//1 idx\n//2 high open low close to string\n//3 open low close to string\n//4 low close to string\n//5 close to string\n//6 vol\n//7 price\n```",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/ticker/{token}/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 1,
+        "tag": [],
+        "_id": 7568,
+        "method": "GET",
+        "catid": 716,
+        "title": "ticker",
+        "path": "/smart-web-gateway/ticker/{token}/{chain}",
+        "project_id": 241,
+        "req_params": [
+          {
+            "_id": "67bd23867e7cd305a3519aeb",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "_id": "67bd23867e7cd305a3519aea",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1739449147,
+        "up_time": 1740448646,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>{\"code\":\"200\",\"data\":{\"300\":{\"ba\":6000,\"bc\":50,\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70},\"3600\":{\"ba\":6000,\"bc\":50,\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70},\"86400\":{\"ba\":6000,\"bc\":50,\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70},\"60\":{\"ba\":6000,\"bc\":50,\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70}}}</p>\n<p><br data-tomark-pass=\"\"></p>\n<pre><code>/**\n * buy count\n */\nprivate long bc;/**\n\n *  buy amount\n */\nprivate BigDecimal ba ;\n/**\n * sell count\n */\nprivate long sc ;/**\n * * sell amount\n */\nprivate BigDecimal sa ;\n\n/**\n *  涨跌幅\n */\nprivate String r;\n</code></pre>\n",
+        "markdown": "{\"code\":\"200\",\"data\":{\"300\":{\"ba\":6000,\"bc\":50,\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70},\"3600\":{\"ba\":6000,\"bc\":50,\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70},\"86400\":{\"ba\":6000,\"bc\":50,\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70},\"60\":{\"ba\":6000,\"bc\":50,\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70}}}\n\n<br>\n\n\n```\n/**\n * buy count\n */\nprivate long bc;/**\n\n *  buy amount\n */\nprivate BigDecimal ba ;\n/**\n * sell count\n */\nprivate long sc ;/**\n * * sell amount\n */\nprivate BigDecimal sa ;\n\n/**\n *  涨跌幅\n */\nprivate String r;\n```",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"60\":{\"type\":\"object\",\"properties\":{\"ba\":{\"type\":\"number\"},\"bc\":{\"type\":\"number\"},\"r\":{\"type\":\"string\"},\"sa\":{\"type\":\"number\"},\"sc\":{\"type\":\"number\"}}},\"300\":{\"type\":\"object\",\"properties\":{\"ba\":{\"type\":\"number\"},\"bc\":{\"type\":\"number\"},\"r\":{\"type\":\"string\"},\"sa\":{\"type\":\"number\"},\"sc\":{\"type\":\"number\"}}},\"3600\":{\"type\":\"object\",\"properties\":{\"ba\":{\"type\":\"number\"},\"bc\":{\"type\":\"number\"},\"r\":{\"type\":\"string\"},\"sa\":{\"type\":\"number\"},\"sc\":{\"type\":\"number\"}}},\"86400\":{\"type\":\"object\",\"properties\":{\"ba\":{\"type\":\"number\"},\"bc\":{\"type\":\"number\"},\"r\":{\"type\":\"string\"},\"sa\":{\"type\":\"number\"},\"sc\":{\"type\":\"number\"}}}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/ticker/currentPrice/{token}/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 2,
+        "tag": [],
+        "_id": 7588,
+        "method": "GET",
+        "catid": 716,
+        "title": "当前价格",
+        "path": "/smart-web-gateway/ticker/currentPrice/{token}/{chain}",
+        "project_id": 241,
+        "req_params": [
+          {
+            "_id": "67bd23af7e7cd305a3519aed",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "_id": "67bd23af7e7cd305a3519aec",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1739618327,
+        "up_time": 1740448687,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>{\"code\":\"200\",\"data\":{\"p\":\"1.2342\",\"ts\":1739621463514},\"msg\":\"\"}</p>\n",
+        "markdown": "{\"code\":\"200\",\"data\":{\"p\":\"1.2342\",\"ts\":1739621463514},\"msg\":\"\"}",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"p\":{\"type\":\"string\",\"description\":\"价格\"},\"ts\":{\"type\":\"number\",\"description\":\"时间戳\"}}},\"msg\":{\"type\":\"string\"}}}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/ticker/24h/{token}/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 3,
+        "tag": [],
+        "_id": 7563,
+        "method": "GET",
+        "catid": 716,
+        "title": "24h ticker",
+        "path": "/smart-web-gateway/ticker/24h/{token}/{chain}",
+        "project_id": 241,
+        "req_params": [
+          {
+            "_id": "67bd23da7e7cd305a3519aef",
+            "name": "token",
+            "desc": ""
+          },
+          {
+            "_id": "67bd23da7e7cd305a3519aee",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1739447431,
+        "up_time": 1740448730,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>{\"code\":\"200\",\"data\":{\"ticker\":{\"a\":\"10000\",\"ba\":6000,\"bc\":50,\"c\":\"51000\",\"h\":\"52000\",\"l\":\"49000\",\"o\":\"50000\",\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70,\"v\":\"500\"},\"ts\":1739621463511}}</p>\n",
+        "markdown": "{\"code\":\"200\",\"data\":{\"ticker\":{\"a\":\"10000\",\"ba\":6000,\"bc\":50,\"c\":\"51000\",\"h\":\"52000\",\"l\":\"49000\",\"o\":\"50000\",\"r\":\"2.5\",\"s\":1,\"sa\":4000,\"sc\":70,\"v\":\"500\"},\"ts\":1739621463511}}",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"ticker\":{\"type\":\"object\",\"properties\":{\"a\":{\"type\":\"string\",\"description\":\" 成交额\"},\"ba\":{\"type\":\"number\",\"description\":\"买成交额\"},\"bc\":{\"type\":\"number\",\"description\":\"买数量\"},\"c\":{\"type\":\"string\",\"description\":\"收盘价\"},\"h\":{\"type\":\"string\",\"description\":\"最高价\"},\"l\":{\"type\":\"string\",\"description\":\"最低价\"},\"o\":{\"type\":\"string\",\"description\":\"开盘价\"},\"r\":{\"type\":\"string\",\"description\":\"涨幅\"},\"s\":{\"type\":\"number\",\"description\":\"精度\"},\"sa\":{\"type\":\"number\",\"description\":\"卖成交额\"},\"sc\":{\"type\":\"number\",\"description\":\"卖数量\"},\"v\":{\"type\":\"string\",\"description\":\"成交量\"}}},\"ts\":{\"type\":\"number\"}}}}}"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/kline-scales",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 4,
+        "tag": [],
+        "_id": 7593,
+        "method": "GET",
+        "catid": 716,
+        "title": "kline-scales",
+        "path": "/smart-web-gateway/kline-scales",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 579,
+        "add_time": 1739621190,
+        "up_time": 1740396329,
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "67bc57297e7cd305a3519ac2",
+            "name": "lang",
+            "desc": "zh_cn"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p>{<br>\n&nbsp;&nbsp;&nbsp; \"code\": \"0\",<br>\n&nbsp;&nbsp;&nbsp; \"data\": [<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"1s\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"1s\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 1,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"1S\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"15s\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"15s\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 15,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"15S\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"20s\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"20s\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 20,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"20S\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"1m\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"1min\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 60,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"1\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"5m\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"5min\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 300,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"5\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"15m\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"15min\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 900,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"15\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"1h\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"60min\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 3600,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"60\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"4h\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"4h\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 14400,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"240\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"12h\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"12h\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 43200,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"720\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"title\": \"1d\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"value\": \"1day\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"interval\": 86400,<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"tip\": \"1D\",<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \"default\": false<br>\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\n&nbsp;&nbsp;&nbsp; ]<br>\n}</p>\n",
+        "markdown": "\n{\n    \"code\": \"0\",\n    \"data\": [\n        {\n            \"title\": \"1s\",\n            \"value\": \"1s\",\n            \"interval\": 1,\n            \"tip\": \"1S\",\n            \"default\": false\n        },\n        {\n            \"title\": \"15s\",\n            \"value\": \"15s\",\n            \"interval\": 15,\n            \"tip\": \"15S\",\n            \"default\": false\n        },\n        {\n            \"title\": \"20s\",\n            \"value\": \"20s\",\n            \"interval\": 20,\n            \"tip\": \"20S\",\n            \"default\": false\n        },\n        {\n            \"title\": \"1m\",\n            \"value\": \"1min\",\n            \"interval\": 60,\n            \"tip\": \"1\",\n            \"default\": false\n        },\n        {\n            \"title\": \"5m\",\n            \"value\": \"5min\",\n            \"interval\": 300,\n            \"tip\": \"5\",\n            \"default\": false\n        },\n        {\n            \"title\": \"15m\",\n            \"value\": \"15min\",\n            \"interval\": 900,\n            \"tip\": \"15\",\n            \"default\": false\n        },\n        {\n            \"title\": \"1h\",\n            \"value\": \"60min\",\n            \"interval\": 3600,\n            \"tip\": \"60\",\n            \"default\": false\n        },\n        {\n            \"title\": \"4h\",\n            \"value\": \"4h\",\n            \"interval\": 14400,\n            \"tip\": \"240\",\n            \"default\": false\n        },\n        {\n            \"title\": \"12h\",\n            \"value\": \"12h\",\n            \"interval\": 43200,\n            \"tip\": \"720\",\n            \"default\": false\n        },\n        {\n            \"title\": \"1d\",\n            \"value\": \"1day\",\n            \"interval\": 86400,\n            \"tip\": \"1D\",\n            \"default\": false\n        }\n    ]\n}",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"value\":{\"type\":\"string\"},\"interval\":{\"type\":\"number\"},\"tip\":{\"type\":\"string\"},\"default\":{\"type\":\"boolean\"}},\"required\":[\"title\",\"value\",\"interval\",\"tip\",\"default\"]}}}}"
+      }
+    ]
+  }
+]

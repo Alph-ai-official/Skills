@@ -1,0 +1,338 @@
+[
+  {
+    "index": 28,
+    "name": "扫链三栏",
+    "desc": "扫链三栏",
+    "add_time": 1743668692,
+    "up_time": 1743668692,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/snipe/list/hideToken",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 9673,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"tokens\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "hideToken",
+        "path": "/smart-web-gateway/snipe/list/hideToken",
+        "catid": 737,
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "689d9b2b7e7cd305a351c251",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"description\":\"data\",\"type\":\"null\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 607,
+        "add_time": 1749550094,
+        "up_time": 1755159339,
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/snipe/homepage",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10373,
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"community\":{\"type\":\"object\",\"properties\":{}},\"card\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"attachments\":{\"type\":\"object\",\"properties\":{\"media_keys\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}}},\"public_metrics\":{\"type\":\"object\",\"properties\":{\"like_count\":{\"type\":\"number\"},\"retweet_count\":{\"type\":\"number\"}}},\"id\":{\"type\":\"string\"},\"text\":{\"type\":\"string\"}}},\"includes\":{\"type\":\"object\",\"properties\":{\"media\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\"},\"media_key\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}},\"users\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"verified\":{\"type\":\"boolean\"},\"public_metrics\":{\"type\":\"object\",\"properties\":{\"tweet_count\":{\"type\":\"number\"},\"like_count\":{\"type\":\"number\"},\"listed_count\":{\"type\":\"number\"},\"following_count\":{\"type\":\"number\"},\"followers_count\":{\"type\":\"number\"}}},\"created_at\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"profile_image_url\":{\"type\":\"string\"},\"verified_type\":{\"type\":\"string\"},\"username\":{\"type\":\"string\"},\"profile_banner_url\":{\"type\":\"string\"}}}}}}}},\"homepage\":{\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"verified\":{\"type\":\"boolean\"},\"public_metrics\":{\"type\":\"object\",\"properties\":{\"tweet_count\":{\"type\":\"number\"},\"like_count\":{\"type\":\"number\"},\"listed_count\":{\"type\":\"number\"},\"following_count\":{\"type\":\"number\"},\"followers_count\":{\"type\":\"number\"}}},\"created_at\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"profile_image_url\":{\"type\":\"string\"},\"verified_type\":{\"type\":\"string\"},\"username\":{\"type\":\"string\"},\"profile_banner_url\":{\"type\":\"string\"}}}}}}}}}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "homepage",
+        "path": "/smart-web-gateway/snipe/homepage",
+        "catid": 737,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "689d9b8f7e7cd305a351c257",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "1",
+            "_id": "689d9b8f7e7cd305a351c256",
+            "name": "tokenAddress",
+            "desc": ""
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 607,
+        "add_time": 1755159340,
+        "up_time": 1755159439,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": ""
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/snipe/list/aimost/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8193,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNumField\":{\"type\":\"string\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNumField\":{\"type\":\"string\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmountField\":{\"type\":\"string\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmountField\":{\"type\":\"string\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolding\":{\"type\":\"integer\",\"description\":\"\"},\"maxSmartHolding\":{\"type\":\"integer\",\"description\":\"\"},\"minSniper\":{\"type\":\"number\",\"description\":\"\"},\"maxSniper\":{\"type\":\"number\",\"description\":\"\"},\"minBundler\":{\"type\":\"number\",\"description\":\"\"},\"maxBundler\":{\"type\":\"number\",\"description\":\"\"},\"minInsiders\":{\"type\":\"number\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"number\",\"description\":\"\"},\"hasTwitter\":{\"type\":\"boolean\",\"description\":\"\"},\"hasWebsite\":{\"type\":\"boolean\",\"description\":\"\"},\"hasTelegram\":{\"type\":\"boolean\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "三栏列表-aimost",
+        "path": "/smart-web-gateway/snipe/list/aimost/{chain}",
+        "catid": 737,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "689d9b287e7cd305a351c24d",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"tokenFullName\":{\"type\":\"string\",\"description\":\"\"},\"poolTime\":{\"type\":\"integer\",\"description\":\"\"},\"age\":{\"type\":\"integer\",\"description\":\"\"},\"progress\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"poolName\":{\"type\":\"string\",\"description\":\"\"},\"top10\":{\"type\":\"string\",\"description\":\"\"},\"devProportion\":{\"type\":\"string\",\"description\":\"\"},\"kolCalls\":{\"type\":\"integer\",\"description\":\"\"},\"fansNums\":{\"type\":\"integer\",\"description\":\"\"},\"viewNums\":{\"type\":\"integer\",\"description\":\"\"},\"marketCap\":{\"type\":\"string\",\"description\":\"\"},\"label\":{\"type\":\"string\",\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"liquidityBool\":{\"type\":\"string\",\"description\":\"\"},\"liquidityMain\":{\"type\":\"string\",\"description\":\"\"},\"liquidityUsdt\":{\"type\":\"string\",\"description\":\"\"},\"holdings\":{\"type\":\"integer\",\"description\":\"\"},\"sentence\":{\"type\":\"string\",\"description\":\"\"},\"paragraph\":{\"type\":\"string\",\"description\":\"\"},\"tradeNum\":{\"type\":\"string\",\"description\":\"\"},\"tradeAmount\":{\"type\":\"string\",\"description\":\"\"},\"price\":{\"type\":\"string\",\"description\":\"\"},\"lastTradeTime\":{\"type\":\"integer\",\"description\":\"\"},\"chg\":{\"type\":\"string\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "689d9b287e7cd305a351c24e",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "uid": 614,
+        "add_time": 1743666994,
+        "up_time": 1755159336,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/snipe/list/all/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "deprecated"
+        ],
+        "_id": 8183,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNumField\":{\"type\":\"string\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNumField\":{\"type\":\"string\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmountField\":{\"type\":\"string\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmountField\":{\"type\":\"string\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolding\":{\"type\":\"integer\",\"description\":\"\"},\"maxSmartHolding\":{\"type\":\"integer\",\"description\":\"\"},\"minSniper\":{\"type\":\"number\",\"description\":\"\"},\"maxSniper\":{\"type\":\"number\",\"description\":\"\"},\"minBundler\":{\"type\":\"number\",\"description\":\"\"},\"maxBundler\":{\"type\":\"number\",\"description\":\"\"},\"minInsiders\":{\"type\":\"number\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"number\",\"description\":\"\"},\"hasTwitter\":{\"type\":\"boolean\",\"description\":\"\"},\"hasWebsite\":{\"type\":\"boolean\",\"description\":\"\"},\"hasTelegram\":{\"type\":\"boolean\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "三栏列表-all",
+        "path": "/smart-web-gateway/snipe/list/all/{chain}",
+        "catid": 737,
+        "markdown": "「已废弃」",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "689d9b257e7cd305a351c249",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"tokenFullName\":{\"type\":\"string\",\"description\":\"\"},\"poolTime\":{\"type\":\"integer\",\"description\":\"\"},\"age\":{\"type\":\"integer\",\"description\":\"\"},\"progress\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"poolName\":{\"type\":\"string\",\"description\":\"\"},\"top10\":{\"type\":\"string\",\"description\":\"\"},\"devProportion\":{\"type\":\"string\",\"description\":\"\"},\"kolCalls\":{\"type\":\"integer\",\"description\":\"\"},\"fansNums\":{\"type\":\"integer\",\"description\":\"\"},\"viewNums\":{\"type\":\"integer\",\"description\":\"\"},\"marketCap\":{\"type\":\"string\",\"description\":\"\"},\"label\":{\"type\":\"string\",\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"liquidityBool\":{\"type\":\"string\",\"description\":\"\"},\"liquidityMain\":{\"type\":\"string\",\"description\":\"\"},\"liquidityUsdt\":{\"type\":\"string\",\"description\":\"\"},\"holdings\":{\"type\":\"integer\",\"description\":\"\"},\"sentence\":{\"type\":\"string\",\"description\":\"\"},\"paragraph\":{\"type\":\"string\",\"description\":\"\"},\"tradeNum\":{\"type\":\"string\",\"description\":\"\"},\"tradeAmount\":{\"type\":\"string\",\"description\":\"\"},\"price\":{\"type\":\"string\",\"description\":\"\"},\"lastTradeTime\":{\"type\":\"integer\",\"description\":\"\"},\"chg\":{\"type\":\"string\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "689d9b257e7cd305a351c24a",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "desc": "<p>「已废弃」</p>",
+        "project_id": 241,
+        "uid": 614,
+        "add_time": 1743666968,
+        "up_time": 1755159333,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/snipe/list/graduated/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8198,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNumField\":{\"type\":\"string\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNumField\":{\"type\":\"string\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmountField\":{\"type\":\"string\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmountField\":{\"type\":\"string\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolding\":{\"type\":\"integer\",\"description\":\"\"},\"maxSmartHolding\":{\"type\":\"integer\",\"description\":\"\"},\"minSniper\":{\"type\":\"number\",\"description\":\"\"},\"maxSniper\":{\"type\":\"number\",\"description\":\"\"},\"minBundler\":{\"type\":\"number\",\"description\":\"\"},\"maxBundler\":{\"type\":\"number\",\"description\":\"\"},\"minInsiders\":{\"type\":\"number\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"number\",\"description\":\"\"},\"hasTwitter\":{\"type\":\"boolean\",\"description\":\"\"},\"hasWebsite\":{\"type\":\"boolean\",\"description\":\"\"},\"hasTelegram\":{\"type\":\"boolean\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "三栏列表-graduated",
+        "path": "/smart-web-gateway/snipe/list/graduated/{chain}",
+        "catid": 737,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "689d9b2a7e7cd305a351c24f",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"tokenFullName\":{\"type\":\"string\",\"description\":\"\"},\"poolTime\":{\"type\":\"integer\",\"description\":\"\"},\"age\":{\"type\":\"integer\",\"description\":\"\"},\"progress\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"poolName\":{\"type\":\"string\",\"description\":\"\"},\"top10\":{\"type\":\"string\",\"description\":\"\"},\"devProportion\":{\"type\":\"string\",\"description\":\"\"},\"kolCalls\":{\"type\":\"integer\",\"description\":\"\"},\"fansNums\":{\"type\":\"integer\",\"description\":\"\"},\"viewNums\":{\"type\":\"integer\",\"description\":\"\"},\"marketCap\":{\"type\":\"string\",\"description\":\"\"},\"label\":{\"type\":\"string\",\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"liquidityBool\":{\"type\":\"string\",\"description\":\"\"},\"liquidityMain\":{\"type\":\"string\",\"description\":\"\"},\"liquidityUsdt\":{\"type\":\"string\",\"description\":\"\"},\"holdings\":{\"type\":\"integer\",\"description\":\"\"},\"sentence\":{\"type\":\"string\",\"description\":\"\"},\"paragraph\":{\"type\":\"string\",\"description\":\"\"},\"tradeNum\":{\"type\":\"string\",\"description\":\"\"},\"tradeAmount\":{\"type\":\"string\",\"description\":\"\"},\"price\":{\"type\":\"string\",\"description\":\"\"},\"lastTradeTime\":{\"type\":\"integer\",\"description\":\"\"},\"chg\":{\"type\":\"string\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "689d9b2a7e7cd305a351c250",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "uid": 614,
+        "add_time": 1743666994,
+        "up_time": 1755159338,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/snipe/list/new/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8188,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNumField\":{\"type\":\"string\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNumField\":{\"type\":\"string\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmountField\":{\"type\":\"string\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmountField\":{\"type\":\"string\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolding\":{\"type\":\"integer\",\"description\":\"\"},\"maxSmartHolding\":{\"type\":\"integer\",\"description\":\"\"},\"minSniper\":{\"type\":\"number\",\"description\":\"\"},\"maxSniper\":{\"type\":\"number\",\"description\":\"\"},\"minBundler\":{\"type\":\"number\",\"description\":\"\"},\"maxBundler\":{\"type\":\"number\",\"description\":\"\"},\"minInsiders\":{\"type\":\"number\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"number\",\"description\":\"\"},\"hasTwitter\":{\"type\":\"boolean\",\"description\":\"\"},\"hasWebsite\":{\"type\":\"boolean\",\"description\":\"\"},\"hasTelegram\":{\"type\":\"boolean\",\"description\":\"\"},\"supply\":{\"type\":\"number\",\"description\":\"发行量\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"required\":[\"supply\"]}",
+        "title": "三栏列表-new",
+        "path": "/smart-web-gateway/snipe/list/new/{chain}",
+        "catid": 737,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68fb36da7e7cd305a351ca4f",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"tokenFullName\":{\"type\":\"string\",\"description\":\"\"},\"poolTime\":{\"type\":\"integer\",\"description\":\"\"},\"age\":{\"type\":\"integer\",\"description\":\"\"},\"progress\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"poolName\":{\"type\":\"string\",\"description\":\"\"},\"top10\":{\"type\":\"string\",\"description\":\"\"},\"devProportion\":{\"type\":\"string\",\"description\":\"\"},\"kolCalls\":{\"type\":\"integer\",\"description\":\"\"},\"fansNums\":{\"type\":\"integer\",\"description\":\"\"},\"viewNums\":{\"type\":\"integer\",\"description\":\"\"},\"marketCap\":{\"type\":\"string\",\"description\":\"\"},\"label\":{\"type\":\"string\",\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"liquidityBool\":{\"type\":\"string\",\"description\":\"\"},\"liquidityMain\":{\"type\":\"string\",\"description\":\"\"},\"liquidityUsdt\":{\"type\":\"string\",\"description\":\"\"},\"holdings\":{\"type\":\"integer\",\"description\":\"\"},\"sentence\":{\"type\":\"string\",\"description\":\"\"},\"paragraph\":{\"type\":\"string\",\"description\":\"\"},\"tradeNum\":{\"type\":\"string\",\"description\":\"\"},\"tradeAmount\":{\"type\":\"string\",\"description\":\"\"},\"price\":{\"type\":\"string\",\"description\":\"\"},\"lastTradeTime\":{\"type\":\"integer\",\"description\":\"\"},\"chg\":{\"type\":\"string\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [
+          {
+            "_id": "68fb36da7e7cd305a351ca4e",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "uid": 614,
+        "add_time": 1743666994,
+        "up_time": 1761294042,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/snipe/platform/{chain}",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "var",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 8078,
+        "method": "GET",
+        "catid": 737,
+        "title": "配置项列表",
+        "path": "/smart-web-gateway/snipe/platform/{chain}",
+        "project_id": 241,
+        "req_params": [
+          {
+            "_id": "689d9b237e7cd305a351c248",
+            "name": "chain",
+            "desc": ""
+          }
+        ],
+        "res_body_type": "json",
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "689d9b237e7cd305a351c247",
+            "name": "language",
+            "value": "",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "desc": "<p></p>",
+        "markdown": "",
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "uid": 614,
+        "add_time": 1743039225,
+        "up_time": 1755159331,
+        "__v": 0
+      }
+    ]
+  }
+]

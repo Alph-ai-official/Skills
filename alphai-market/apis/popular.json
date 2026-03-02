@@ -1,0 +1,750 @@
+[
+  {
+    "index": 7,
+    "name": "PopularPageTokenController",
+    "desc": "PopularPageTokenController",
+    "add_time": 1757327489,
+    "up_time": 1757327489,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/getTopTokenByBanker",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10478,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"maxSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"top10\":{\"type\":\"number\",\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"labelType\":{\"type\":\"integer\",\"description\":\"\"},\"maxBundler\":{\"type\":\"string\",\"description\":\"\"},\"minBundler\":{\"type\":\"string\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"string\",\"description\":\"\"},\"minInsiders\":{\"type\":\"string\",\"description\":\"\"},\"maxBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"minBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"maxBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"},\"minBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建挂单请求对象\"}",
+        "title": "24小时净买入",
+        "path": "/smart-web-gateway/sherlock/popular_token/getTopTokenByBanker",
+        "catid": 813,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68beb0837e7cd305a351c5ed",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"token\":{\"type\":\"string\",\"description\":\"\"},\"tokenCode\":{\"type\":\"string\",\"description\":\"\"},\"bankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"bankerRate\":{\"type\":\"number\",\"description\":\"\"},\"marketCap\":{\"type\":\"number\",\"description\":\"\"},\"bankerNetInflow\":{\"type\":\"number\",\"description\":\"\"},\"tokenCreatedTime\":{\"type\":\"integer\",\"description\":\"\"},\"tokenCreatedDate\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"icon\":{\"type\":\"string\",\"description\":\"\"},\"platformName\":{\"type\":\"string\",\"description\":\"\"},\"bankerBalance\":{\"type\":\"number\",\"description\":\"\"},\"platform\":{\"type\":\"integer\",\"description\":\"\"},\"supply\":{\"type\":\"number\",\"description\":\"\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "uid": 635,
+        "add_time": 1756886279,
+        "up_time": 1757327491,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/getTokenTradeStats",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10508,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"buyCount\":{\"type\":\"string\",\"description\":\"买入笔数\"},\"sellCount\":{\"type\":\"string\",\"description\":\"卖出笔数\"},\"totalCount\":{\"type\":\"string\",\"description\":\"总笔数\"},\"buyAmount\":{\"type\":\"string\",\"description\":\"买入金额\"},\"sellAmount\":{\"type\":\"string\",\"description\":\"卖出金额\"},\"totalAmount\":{\"type\":\"string\",\"description\":\"总金额\"},\"traderCount\":{\"type\":\"string\",\"description\":\"交易人数\"},\"countRate\":{\"type\":\"string\",\"description\":\"总交易数涨跌幅\"},\"amountRate\":{\"type\":\"string\",\"description\":\"总交易额涨跌幅\"},\"traderRate\":{\"type\":\"string\",\"description\":\"交易人数涨跌幅\"},\"buyAmountUsdt\":{\"type\":\"string\",\"description\":\"买入金额-USDT\"},\"sellAmountUsdt\":{\"type\":\"string\",\"description\":\"卖出金额-USDT\"},\"totalAmountUsdt\":{\"type\":\"string\",\"description\":\"总金额-USDT\"},\"buyProcess\":{\"type\":\"string\",\"description\":\"买进度\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "交易统计数据",
+        "path": "/smart-web-gateway/sherlock/popular_token/getTokenTradeStats",
+        "catid": 813,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "68c0ed617e7cd305a351c638",
+            "name": "chain",
+            "value": "",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68c0ed617e7cd305a351c637",
+            "name": "time",
+            "value": "1h",
+            "example": "1h",
+            "desc": ""
+          }
+        ],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 614,
+        "add_time": 1757327491,
+        "up_time": 1757474145,
+        "req_body_form": [],
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/getPlatformData",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10753,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"平台code\"},\"amount\":{\"type\":\"number\",\"description\":\"交易量\"},\"rate\":{\"type\":\"number\",\"description\":\"涨跌幅\"},\"icon\":{\"type\":\"string\",\"description\":\"平台图标\"},\"color\":{\"type\":\"string\",\"description\":\"字段颜色\"},\"isPlat\":{\"type\":\"integer\",\"description\":\"是否为平台 1/0\"}},\"required\":[\"code\",\"color\",\"icon\",\"rate\",\"amount\",\"isPlat\"]},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "发射平台协议数据",
+        "path": "/smart-web-gateway/sherlock/popular_token/getPlatformData",
+        "catid": 813,
+        "markdown": "",
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "68ca5fff7e7cd305a351c73c",
+            "name": "chain",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68ca5fff7e7cd305a351c73b",
+            "name": "time",
+            "example": "1h",
+            "desc": ""
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "req_body_form": [],
+        "uid": 544,
+        "add_time": 1758090432,
+        "up_time": 1758093311,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/getNewTokenProgress",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10503,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"maxSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"top10\":{\"type\":\"number\",\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"labelType\":{\"type\":\"integer\",\"description\":\"\"},\"maxBundler\":{\"type\":\"string\",\"description\":\"\"},\"minBundler\":{\"type\":\"string\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"string\",\"description\":\"\"},\"minInsiders\":{\"type\":\"string\",\"description\":\"\"},\"maxBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"minBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"maxBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"},\"minBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建挂单请求对象\"}",
+        "title": "新币打满率",
+        "path": "/smart-web-gateway/sherlock/popular_token/getNewTokenProgress",
+        "catid": 813,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68beb0827e7cd305a351c5eb",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"createdNumb\":{\"type\":\"integer\",\"description\":\"\"},\"progressNumb\":{\"type\":\"integer\",\"description\":\"\"},\"progressRate\":{\"type\":\"string\",\"description\":\"\"},\"createdIncrease\":{\"type\":\"string\",\"description\":\"\"},\"progressIncrease\":{\"type\":\"string\",\"description\":\"\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 614,
+        "add_time": 1757327490,
+        "up_time": 1757327490,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/newTokenPage",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10433,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"maxSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"top10\":{\"type\":\"number\",\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"labelType\":{\"type\":\"integer\",\"description\":\"\"},\"maxBundler\":{\"type\":\"string\",\"description\":\"\"},\"minBundler\":{\"type\":\"string\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"string\",\"description\":\"\"},\"minInsiders\":{\"type\":\"string\",\"description\":\"\"},\"maxBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"minBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"maxBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"},\"minBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建挂单请求对象\"}",
+        "title": "新币热门列表",
+        "path": "/smart-web-gateway/sherlock/popular_token/newTokenPage",
+        "catid": 813,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68beb0827e7cd305a351c5e9",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"},\"tokenFullName\":{\"type\":\"string\",\"description\":\"\"},\"label\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"integer\",\"description\":\"\"},\"liquidityMain\":{\"type\":\"number\",\"description\":\"\"},\"LiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"marketCap\":{\"type\":\"number\",\"description\":\"\"},\"holdings\":{\"type\":\"integer\",\"description\":\"\"},\"smartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"top10\":{\"type\":\"number\",\"description\":\"\"},\"kolCalls\":{\"type\":\"integer\",\"description\":\"\"},\"fansNums\":{\"type\":\"integer\",\"description\":\"\"},\"viewNums\":{\"type\":\"integer\",\"description\":\"\"},\"price\":{\"type\":\"number\",\"description\":\"\"},\"tradeNum\":{\"type\":\"integer\",\"description\":\"\"},\"sentence\":{\"type\":\"string\",\"description\":\"\"},\"paragraph\":{\"type\":\"string\",\"description\":\"\"},\"tradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"chg1m\":{\"type\":\"number\",\"description\":\"\"},\"chg5m\":{\"type\":\"number\",\"description\":\"\"},\"chg1h\":{\"type\":\"number\",\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"safety1\":{\"type\":\"integer\",\"description\":\"\"},\"liquidityBool\":{\"type\":\"string\",\"description\":\"\"},\"safety2\":{\"type\":\"integer\",\"description\":\"\"},\"safety3\":{\"type\":\"integer\",\"description\":\"\"},\"safety4\":{\"type\":\"integer\",\"description\":\"\"},\"socialMedia\":{\"type\":\"integer\",\"description\":\"\"},\"insiders\":{\"type\":\"number\",\"description\":\"\"},\"bundler\":{\"type\":\"number\",\"description\":\"\"},\"devProportion\":{\"type\":\"number\",\"description\":\"\"},\"tokenCreateTime\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"pushTime\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"ctime\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"mtime\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"poolTime\":{\"type\":\"integer\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"\"},\"followed\":{\"type\":\"boolean\",\"description\":\"\"},\"bankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"bankerBalance\":{\"type\":\"integer\",\"description\":\"\"},\"bankerBalanceRate\":{\"type\":\"number\",\"description\":\"\"},\"bankerNetInflow\":{\"type\":\"number\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "uid": 635,
+        "add_time": 1756262170,
+        "up_time": 1757327490,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/tokenPage",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10428,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"maxSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"top10\":{\"type\":\"number\",\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"labelType\":{\"type\":\"integer\",\"description\":\"\"},\"maxBundler\":{\"type\":\"string\",\"description\":\"\"},\"minBundler\":{\"type\":\"string\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"string\",\"description\":\"\"},\"minInsiders\":{\"type\":\"string\",\"description\":\"\"},\"maxBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"minBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"maxBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"},\"minBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建挂单请求对象\"}",
+        "title": "热门币种列表",
+        "path": "/smart-web-gateway/sherlock/popular_token/tokenPage",
+        "catid": 813,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68beb0827e7cd305a351c5ea",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"code\":{\"type\":\"string\",\"description\":\"\"},\"tokenFullName\":{\"type\":\"string\",\"description\":\"\"},\"label\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"integer\",\"description\":\"\"},\"liquidityMain\":{\"type\":\"number\",\"description\":\"\"},\"LiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"marketCap\":{\"type\":\"number\",\"description\":\"\"},\"holdings\":{\"type\":\"integer\",\"description\":\"\"},\"smartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"top10\":{\"type\":\"number\",\"description\":\"\"},\"kolCalls\":{\"type\":\"integer\",\"description\":\"\"},\"fansNums\":{\"type\":\"integer\",\"description\":\"\"},\"viewNums\":{\"type\":\"integer\",\"description\":\"\"},\"price\":{\"type\":\"number\",\"description\":\"\"},\"tradeNum\":{\"type\":\"integer\",\"description\":\"\"},\"sentence\":{\"type\":\"string\",\"description\":\"\"},\"paragraph\":{\"type\":\"string\",\"description\":\"\"},\"tradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"chg1m\":{\"type\":\"number\",\"description\":\"\"},\"chg5m\":{\"type\":\"number\",\"description\":\"\"},\"chg1h\":{\"type\":\"number\",\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"social\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"object\",\"properties\":{}}},\"description\":\"\"},\"safety1\":{\"type\":\"integer\",\"description\":\"\"},\"liquidityBool\":{\"type\":\"string\",\"description\":\"\"},\"safety2\":{\"type\":\"integer\",\"description\":\"\"},\"safety3\":{\"type\":\"integer\",\"description\":\"\"},\"safety4\":{\"type\":\"integer\",\"description\":\"\"},\"socialMedia\":{\"type\":\"integer\",\"description\":\"\"},\"insiders\":{\"type\":\"number\",\"description\":\"\"},\"bundler\":{\"type\":\"number\",\"description\":\"\"},\"devProportion\":{\"type\":\"number\",\"description\":\"\"},\"tokenCreateTime\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"pushTime\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"ctime\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"mtime\":{\"type\":\"string\",\"description\":\"\",\"mock\":{\"mock\":\"@datetime\"}},\"poolTime\":{\"type\":\"integer\",\"description\":\"\"},\"icon\":{\"type\":\"string\",\"description\":\"\"},\"followed\":{\"type\":\"boolean\",\"description\":\"\"},\"bankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"bankerBalance\":{\"type\":\"integer\",\"description\":\"\"},\"bankerBalanceRate\":{\"type\":\"number\",\"description\":\"\"},\"bankerNetInflow\":{\"type\":\"number\",\"description\":\"\"}}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "uid": 635,
+        "add_time": 1756196872,
+        "up_time": 1757327490,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/getHotLabel",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10483,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"platform\":{\"type\":\"string\",\"description\":\"\"},\"platformList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"maxSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"minSmartHolders\":{\"type\":\"integer\",\"description\":\"\"},\"top10\":{\"type\":\"number\",\"description\":\"\"},\"language\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"dexes\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"poolName\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"security\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"social\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"dev\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"boolean\"}},\"description\":\"\"},\"label\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"noLabel\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"},\"klineTime\":{\"type\":\"string\",\"description\":\"\"},\"hasSocial\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorHold\":{\"type\":\"boolean\",\"description\":\"\"},\"creatorClose\":{\"type\":\"boolean\",\"description\":\"\"},\"sort\":{\"type\":\"string\",\"description\":\"\"},\"sortField\":{\"type\":\"string\",\"description\":\"\"},\"asc\":{\"type\":\"string\",\"description\":\"\"},\"limit\":{\"type\":\"integer\",\"description\":\"\"},\"minKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"maxKolCalls\":{\"type\":\"number\",\"description\":\"\"},\"minAge\":{\"type\":\"integer\",\"description\":\"\"},\"maxAge\":{\"type\":\"integer\",\"description\":\"\"},\"minHoldings\":{\"type\":\"number\",\"description\":\"\"},\"maxHoldings\":{\"type\":\"number\",\"description\":\"\"},\"minTop10\":{\"type\":\"number\",\"description\":\"\"},\"maxTop10\":{\"type\":\"number\",\"description\":\"\"},\"minMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"maxMarketCap\":{\"type\":\"number\",\"description\":\"\"},\"minTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeNum\":{\"type\":\"number\",\"description\":\"\"},\"minTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"maxTradeAmount\":{\"type\":\"number\",\"description\":\"\"},\"minProgress\":{\"type\":\"number\",\"description\":\"\"},\"maxProgress\":{\"type\":\"number\",\"description\":\"\"},\"minFansNum\":{\"type\":\"number\",\"description\":\"\"},\"maxFansNum\":{\"type\":\"number\",\"description\":\"\"},\"minViewNums\":{\"type\":\"number\",\"description\":\"\"},\"maxViewNums\":{\"type\":\"number\",\"description\":\"\"},\"minLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"maxLiquidityUsdt\":{\"type\":\"number\",\"description\":\"\"},\"bondingCurve\":{\"type\":\"integer\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"labelType\":{\"type\":\"integer\",\"description\":\"\"},\"maxBundler\":{\"type\":\"string\",\"description\":\"\"},\"minBundler\":{\"type\":\"string\",\"description\":\"\"},\"maxInsiders\":{\"type\":\"string\",\"description\":\"\"},\"minInsiders\":{\"type\":\"string\",\"description\":\"\"},\"maxBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"minBankerNumb\":{\"type\":\"integer\",\"description\":\"\"},\"maxBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"},\"minBankerNetInflow\":{\"type\":\"number\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建挂单请求对象\"}",
+        "title": "热门标签叙事",
+        "path": "/smart-web-gateway/sherlock/popular_token/getHotLabel",
+        "catid": 813,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68beb0827e7cd305a351c5ec",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"object\",\"properties\":{\"labelNumb\":{\"type\":\"integer\",\"description\":\"\"},\"label\":{\"type\":\"string\",\"description\":\"\"}},\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "uid": 635,
+        "add_time": 1756952384,
+        "up_time": 1757327490,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/getMemeScore",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": false,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10463,
+        "req_body_type": "form",
+        "res_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链\"}},\"required\":[\"chain\"]}",
+        "title": "获取某条链的最新 MEME 指数",
+        "path": "/smart-web-gateway/sherlock/popular_token/getMemeScore",
+        "catid": 813,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68beb0837e7cd305a351c5ee",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "example": "multipart/form-data"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5ef",
+            "name": "chain",
+            "value": "",
+            "desc": "链"
+          }
+        ],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"响应码\"},\"msg\":{\"type\":\"string\",\"description\":\"描述\"},\"params_num\":{\"type\":\"integer\",\"description\":\"响应参数数量\"},\"params\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"响应参数\"},\"errorDetail\":{\"type\":\"object\",\"properties\":{\"key\":{\"type\":\"string\"}},\"description\":\"\"},\"data\":{\"type\":\"integer\",\"description\":\"data\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"最新 MEME 指数\"}",
+        "method": "POST",
+        "req_body_form": [
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c611",
+            "name": "uid",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c610",
+            "name": "userDto.id",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c60f",
+            "name": "userDto.inviteCode",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c60e",
+            "name": "userDto.invitedCode",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c60d",
+            "name": "userDto.status",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c60c",
+            "name": "userDto.vip",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c60b",
+            "name": "userDto.loginStatus",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c60a",
+            "name": "userDto.loginexpireTime",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c609",
+            "name": "userDto.withdrawStatus",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c608",
+            "name": "userDto.withdrawexpireTime",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c607",
+            "name": "userDto.lastLoginTime",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c606",
+            "name": "userDto.ctime",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c605",
+            "name": "userDto.mtime",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c604",
+            "name": "userDto.walletDtoList[0].id",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c603",
+            "name": "userDto.walletDtoList[0].type",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c602",
+            "name": "userDto.walletDtoList[0].address",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c601",
+            "name": "userDto.walletDtoList[0].uid",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c600",
+            "name": "userDto.walletDtoList[0].chain",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5ff",
+            "name": "userDto.walletDtoList[0].suid",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5fe",
+            "name": "userDto.tokenArr[0]",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5fd",
+            "name": "userDto.lang",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5fc",
+            "name": "userDto.googleAuthenticatorStatus",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5fb",
+            "name": "userDto.withdrawFreezeType",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5fa",
+            "name": "userDto.withdrawFreezeTime",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f9",
+            "name": "token",
+            "type": "text",
+            "desc": "当前token"
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f8",
+            "name": "cookieMaxAge",
+            "type": "text",
+            "desc": "cookie 剩余秒数"
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f7",
+            "name": "tokenArr[0]",
+            "type": "text",
+            "desc": "用户所有token"
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f6",
+            "name": "userWallet.key[0].id",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f5",
+            "name": "userWallet.key[0].type",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f4",
+            "name": "userWallet.key[0].address",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f3",
+            "name": "userWallet.key[0].uid",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f2",
+            "name": "userWallet.key[0].chain",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f1",
+            "name": "userWallet.key[0].suid",
+            "type": "text",
+            "desc": ""
+          },
+          {
+            "required": "0",
+            "_id": "68beb0837e7cd305a351c5f0",
+            "name": "sourceType",
+            "type": "text",
+            "desc": "PC :PC"
+          }
+        ],
+        "req_params": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "uid": 635,
+        "add_time": 1756884873,
+        "up_time": 1757327491,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "name": "热门",
+    "desc": null,
+    "add_time": 1756201977,
+    "up_time": 1756201977,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/getTradeStatis",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "deprecated"
+        ],
+        "_id": 10468,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"type\":{\"type\":\"integer\",\"description\":\"时间类型，1，1小时，2，4小时，3，12小时，4 24小时\"}},\"required\":[\"chain\",\"type\"]}",
+        "title": "交易统计",
+        "path": "/smart-web-gateway/sherlock/popular_token/getTradeStatis",
+        "catid": 811,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68ba81b77e7cd305a351c5cc",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"tradeVol\":{\"type\":\"number\",\"description\":\"总交易数\"},\"volIncrease\":{\"type\":\"string\",\"description\":\"交易额涨跌幅\"},\"tradeNumb\":{\"type\":\"string\",\"description\":\"交易人数\"},\"numbIncrease\":{\"type\":\"string\",\"description\":\"交易人数涨跌幅\"},\"tradeAmount\":{\"type\":\"string\",\"description\":\"交易额\"},\"tradeIncrease\":{\"type\":\"string\",\"description\":\"交易额涨跌幅\"},\"buyCount\":{\"type\":\"string\",\"description\":\"买入笔数\"},\"sellCount\":{\"type\":\"string\",\"description\":\"卖出笔数\"},\"buyAmount\":{\"type\":\"string\",\"description\":\"买入金额\"},\"sellAmount\":{\"type\":\"string\",\"description\":\"卖出金额\"}},\"description\":\"meme指数\",\"required\":[\"tradeVol\",\"tradeNumb\",\"volIncrease\",\"numbIncrease\",\"tradeIncrease\",\"tradeAmount\",\"sellAmount\",\"buyAmount\",\"sellCount\",\"buyCount\"]},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"}},\"required\":[\"data\",\"msg\",\"code\"]}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [],
+        "desc": "",
+        "project_id": 241,
+        "uid": 635,
+        "add_time": 1756885276,
+        "up_time": 1757053367,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/sherlock/popular_token/getNewTokenProgress",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [
+          "deprecated"
+        ],
+        "_id": 10473,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链\"},\"type\":{\"type\":\"integer\",\"description\":\"时间类型，1，1小时，2，4小时，3，12小时，4 24小时\"}},\"required\":[\"chain\",\"type\"]}",
+        "title": "新币打满率",
+        "path": "/smart-web-gateway/sherlock/popular_token/getNewTokenProgress ",
+        "catid": 811,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68b7f4957e7cd305a351c5b0",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"data\":{\"type\":\"object\",\"properties\":{\"createdNumb\":{\"type\":\"number\",\"description\":\"创建数量\"},\"progressNumb \":{\"type\":\"number\",\"description\":\"打满数量\"},\"progressRate\":{\"type\":\"string\",\"description\":\"打满率\"},\"createdIncrease\":{\"type\":\"string\",\"description\":\"新创建token数量涨幅\"},\"progressIncrease\":{\"type\":\"string\",\"description\":\"新币打满数量涨幅\"}},\"required\":[\"createdNumb\",\"progressRate\",\"progressNumb \",\"createdIncrease\",\"progressIncrease\"]},\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"}},\"required\":[\"data\",\"msg\",\"code\"]}",
+        "method": "POST",
+        "req_body_form": [],
+        "req_params": [],
+        "desc": "",
+        "project_id": 241,
+        "uid": 635,
+        "add_time": 1756885849,
+        "up_time": 1756886165,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "name": "美股",
+    "desc": null,
+    "add_time": 1751940111,
+    "up_time": 1751940111,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/stock/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 10118,
+        "method": "GET",
+        "catid": 801,
+        "title": "列表",
+        "path": "/smart-web-gateway/stock/list",
+        "project_id": 241,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 607,
+        "add_time": 1751940133,
+        "up_time": 1751941365,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "686c80f57e7cd305a351bdf3",
+            "name": "chain",
+            "example": "sol",
+            "desc": ""
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "",
+        "markdown": "",
+        "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"number\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"tokenUrl\":{\"type\":\"string\"},\"platform\":{\"type\":\"string\"},\"tokenName\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"tokenAddress\":{\"type\":\"string\"},\"socialMedia\":{\"type\":\"string\"},\"marketCap\":{\"type\":\"string\"},\"price\":{\"type\":\"string\"},\"poolLiquidity\":{\"type\":\"string\"},\"holdersNum\":{\"type\":\"number\"},\"tradeNum1dBuy\":{\"type\":\"number\"},\"tradeNum1dSell\":{\"type\":\"number\"},\"tradeAmount1d\":{\"type\":\"string\"},\"priceChange1m\":{\"type\":\"string\"},\"priceChange5m\":{\"type\":\"string\"},\"priceChange1h\":{\"type\":\"string\"},\"followed\":{\"type\":\"boolean\"},\"hide\":{\"type\":\"boolean\"}}}}}}"
+      }
+    ]
+  }
+]

@@ -1,0 +1,517 @@
+[
+  {
+    "index": 37,
+    "name": "跟单服务",
+    "desc": "跟单服务",
+    "add_time": 1735803199,
+    "up_time": 1735803199,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/update",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6963,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "修改跟单接口",
+        "path": "/smart-web-gateway/follow/order/update",
+        "catid": 691,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd78",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "0",
+            "_id": "686658a27e7cd305a351bd77",
+            "name": "id",
+            "desc": "跟单id"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd76",
+            "name": "userId",
+            "desc": "用户id"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd75",
+            "name": "subUid",
+            "desc": "用户子id"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd74",
+            "name": "chain",
+            "desc": "主链币种"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd73",
+            "name": "accountAddress",
+            "desc": "用户地址"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd72",
+            "name": "followAddress",
+            "desc": "跟单地址"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd71",
+            "name": "buyType",
+            "desc": "跟买类型 MAXIMUM(1,\"最大跟买\"),FIXED(2, \"固定跟买\")"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd70",
+            "name": "buyVolume",
+            "desc": "跟买数量"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd6f",
+            "name": "sellType",
+            "desc": "卖出方式 NONE(1, \"不跟卖\"), AUTO(2, \"自动跟卖\")"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd6e",
+            "name": "slippage",
+            "desc": "滑点"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd6d",
+            "name": "priorityFee",
+            "desc": "优先费"
+          },
+          {
+            "required": "0",
+            "_id": "686658a27e7cd305a351bd6c",
+            "name": "antiMev",
+            "example": "false",
+            "desc": "是否防夹"
+          },
+          {
+            "required": "0",
+            "_id": "686658a27e7cd305a351bd6b",
+            "name": "maxVolume",
+            "desc": "单个钱包跟单最大投资额"
+          },
+          {
+            "required": "1",
+            "_id": "686658a27e7cd305a351bd6a",
+            "name": "bribeFee",
+            "example": "",
+            "desc": "贿赂费"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803200,
+        "up_time": 1751537826,
+        "req_body_form": [],
+        "__v": 0,
+        "req_body_type": "form"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/stop",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6978,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"},\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"}},\"required\":[\"chain\",\"followOrderId\",\"userId\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"跟单操作请求对象\"}",
+        "title": "停止跟单接口",
+        "path": "/smart-web-gateway/follow/order/stop",
+        "catid": 691,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "677cd31f7e7cd305a351938d",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803201,
+        "up_time": 1736233759,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/create",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6958,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"跟单id\"},\"userId\":{\"type\":\"integer\",\"description\":\"用户id\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"用户地址\"},\"followAddress\":{\"type\":\"string\",\"description\":\"跟单地址\"},\"buyType\":{\"type\":\"string\",\"description\":\"跟买类型 MAXIMUM(1,\\\"最大跟买\\\"),FIXED(2, \\\"固定跟买\\\")\"},\"buyVolume\":{\"type\":\"number\",\"description\":\"跟买数量\"},\"sellType\":{\"type\":\"string\",\"description\":\"卖出方式 NONE(1, \\\"不跟卖\\\"), AUTO(2, \\\"自动跟卖\\\")\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\",\"default\":\"false\"},\"maxVolume\":{\"type\":\"number\",\"description\":\"单个钱包跟单最大投资额\"},\"bribeFee\":{\"type\":\"string\",\"description\":\"贿赂费\"},\"marketValue\":{\"type\":\"number\",\"description\":\"市值\"},\"feeConfigType\":{\"type\":\"number\",\"description\":\"费用配置类型 1 - P1, 2 - p2 ...\"}},\"required\":[\"userId\",\"subUid\",\"chain\",\"accountAddress\",\"followAddress\",\"buyType\",\"buyVolume\",\"sellType\",\"slippage\",\"priorityFee\",\"bribeFee\",\"marketValue\",\"feeConfigType\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建跟单请求对象\"}",
+        "title": "创建跟单接口",
+        "path": "/smart-web-gateway/follow/order/create",
+        "catid": 691,
+        "markdown": "返回码参考下单接口\n[http://apidoc.bitapple.com/project/241/interface/api/6998](http://apidoc.bitapple.com/project/241/interface/api/6998)",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68ba8cea7e7cd305a351c5cf",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"errorDetails\":{\"type\":\"object\",\"properties\":{},\"description\":\"详细错误信息，kv结构，根据不同失败码返回具体数值，参考错误码说明\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p>返回码参考下单接口<br>\n<a href=\"http://apidoc.bitapple.com/project/241/interface/api/6998\">http://apidoc.bitapple.com/project/241/interface/api/6998</a></p>\n",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803199,
+        "up_time": 1757056234,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/resume",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6973,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"},\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"}},\"required\":[\"chain\",\"followOrderId\",\"userId\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"跟单操作请求对象\"}",
+        "title": "恢复跟单接口",
+        "path": "/smart-web-gateway/follow/order/resume",
+        "catid": 691,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "677cd3177e7cd305a351938c",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803200,
+        "up_time": 1736233751,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/pause",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6968,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"},\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"}},\"required\":[\"chain\",\"followOrderId\",\"userId\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"跟单操作请求对象\"}",
+        "title": "暂停跟单接口",
+        "path": "/smart-web-gateway/follow/order/pause",
+        "catid": 691,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "677cd30f7e7cd305a351938b",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803200,
+        "up_time": 1736233743,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 39,
+    "name": "跟单查询",
+    "desc": "跟单查询",
+    "add_time": 1735803201,
+    "up_time": 1735803201,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/query/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6983,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"followOrderId\":{\"type\":\"integer\",\"description\":\"跟单ID\"},\"status\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"状态 FOLLOWING(1, \\\"跟随中\\\"), PAUSED(2, \\\"暂停\\\"),FINISH(3, \\\"完结\\\")\"},\"profit\":{\"type\":\"boolean\",\"description\":\"是否获取盈利\"},\"offset\":{\"type\":\"integer\",\"description\":\"分页id,取最后一条数据的id\"},\"limit\":{\"type\":\"integer\",\"description\":\"分页大小\"}},\"required\":[\"chain\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "分页查询跟单订单",
+        "path": "/smart-web-gateway/follow/order/query/page",
+        "catid": 692,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "677cd2c87e7cd305a3519374",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"主键ID\"},\"uid\":{\"type\":\"integer\",\"description\":\"用户id\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"用户地址\"},\"followAddress\":{\"type\":\"string\",\"description\":\"跟单地址\"},\"buyType\":{\"type\":\"string\",\"description\":\"跟单类型 MAXIMUM(1,\\\"最大跟买\\\"),FIXED(2, \\\"固定跟买\\\")\"},\"buyVolume\":{\"type\":\"number\",\"description\":\"跟买数量\"},\"sellType\":{\"type\":\"string\",\"description\":\"卖出方式 卖出方式 NONE(1, \\\"不跟卖\\\"), AUTO(2, \\\"自动跟卖\\\")\"},\"sellVolume\":{\"type\":\"number\",\"description\":\"跟卖数量\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"preference\":{\"type\":\"string\",\"description\":\"跟单偏好\"},\"maxVolume\":{\"type\":\"number\",\"description\":\"单个钱包跟单最大投资额\"},\"minGas\":{\"type\":\"number\",\"description\":\"最低保留gas费\"},\"createTime\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"status\":{\"type\":\"string\",\"description\":\"状态  FOLLOWING(1, \\\"跟随中\\\"), PAUSED(2, \\\"暂停\\\"),FINISH(3, \\\"完结\\\")\"},\"buyChainVolume\":{\"type\":\"number\",\"description\":\"总买入Chain\"},\"sellChainVolume\":{\"type\":\"number\",\"description\":\"总卖出Chain\"},\"unrealizedProfit\":{\"type\":\"number\",\"description\":\"当前未实现利润\"},\"realizedProfit\":{\"type\":\"number\",\"description\":\"已实现利润\"},\"historicalRealizedProfit\":{\"type\":\"number\",\"description\":\"历史已实现利润\"},\"buyCount\":{\"type\":\"integer\",\"description\":\"跟单数量\"},\"sellCount\":{\"type\":\"integer\",\"description\":\"跟单数量\"},\"lastOrderTime\":{\"type\":\"integer\",\"description\":\"最后下单时间\"}}},\"description\":\"跟单详情\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803201,
+        "up_time": 1736233672,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/profit",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6993,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "查询跟单利润",
+        "path": "/smart-web-gateway/follow/order/profit",
+        "catid": 692,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "677f60e07e7cd305a3519401",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "677f60e07e7cd305a3519400",
+            "name": "chain",
+            "example": "",
+            "desc": " 主链币种"
+          }
+        ],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"unrealizedProfit\":{\"type\":\"number\",\"description\":\"当前未实现利润\"},\"realizedProfit\":{\"type\":\"number\",\"description\":\"已实现利润\"},\"historicalRealizedProfit\":{\"type\":\"number\",\"description\":\"历史已实现利润\"},\"buyCount\":{\"type\":\"integer\",\"description\":\"跟单数量\"},\"sellCount\":{\"type\":\"integer\",\"description\":\"跟单数量\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803202,
+        "up_time": 1736401120,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/statistic",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7018,
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"followerCount\":{\"type\":\"integer\",\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "method": "POST",
+        "res_body_type": "json",
+        "title": "查询跟单统计",
+        "path": "/smart-web-gateway/follow/order/statistic",
+        "catid": 692,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "677cd2e67e7cd305a351937b",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "example": "application/json",
+            "desc": "application/json"
+          }
+        ],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "677cd2e67e7cd305a351937a",
+            "name": "chain",
+            "desc": "主链币种"
+          },
+          {
+            "required": "0",
+            "_id": "677cd2e67e7cd305a3519379",
+            "name": "followOrderId",
+            "desc": "跟单ID"
+          },
+          {
+            "required": "0",
+            "_id": "677cd2e67e7cd305a3519378",
+            "name": "status[0]",
+            "desc": "状态 FOLLOWING(1, \"跟随中\"), PAUSED(2, \"暂停\"),FINISH(3, \"完结\")"
+          },
+          {
+            "required": "0",
+            "_id": "677cd2e67e7cd305a3519377",
+            "name": "profit",
+            "example": "false",
+            "desc": "是否获取盈利"
+          }
+        ],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735804464,
+        "up_time": 1736233702,
+        "req_body_form": [],
+        "__v": 0,
+        "req_body_type": "form"
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/follow/order/default",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 6988,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"}},\"required\":[\"chain\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "查询默认跟单参数",
+        "path": "/smart-web-gateway/follow/order/default",
+        "catid": 692,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "677cd2d47e7cd305a3519375",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"minGas\":{\"type\":\"number\",\"description\":\"最低保留gas费\"}}},\"description\":\"跟单详情\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1735803202,
+        "up_time": 1736233684,
+        "__v": 0
+      }
+    ]
+  }
+]

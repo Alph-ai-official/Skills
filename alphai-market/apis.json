@@ -8,6 +8,53 @@
     "list": [
       {
         "query_path": {
+          "path": "/smart-web-gateway/token/token-detail",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 99999,
+        "method": "GET",
+        "res_body_type": "json",
+        "title": "代币完整详情（推荐）",
+        "path": "/smart-web-gateway/token/token-detail",
+        "catid": 800,
+        "req_headers": [],
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "token_detail_001",
+            "name": "chain",
+            "desc": "链名称，如: bsc, ethereum, solana 等",
+            "example": "bsc"
+          },
+          {
+            "required": "1",
+            "_id": "token_detail_002",
+            "name": "token",
+            "desc": "代币合约地址",
+            "example": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444"
+          }
+        ],
+        "project_id": 241,
+        "req_params": [],
+        "uid": 999,
+        "add_time": 1772457693,
+        "up_time": 1772457693,
+        "req_body_form": [],
+        "__v": 0,
+        "desc": "<p><strong>代币完整详情接口 - 一站式查询所有信息（推荐使用）</strong></p>\n<p>此接口返回代币的所有详细信息，包括：</p>\n<ul>\n<li><strong>价格信息</strong>: 实时价格（BNB 和 USDT）、市值</li>\n<li><strong>供应信息</strong>: 总供应量、持有者数量</li>\n<li><strong>流动性信息</strong>: 流动性池地址、流动性（BNB 和 USDT）、交易平台</li>\n<li><strong>安全信息</strong>: 开源、流动性锁定、蜜罐检测、可增发、买卖税</li>\n<li><strong>社交媒体</strong>: Twitter、Telegram、Website、KOL 提及数</li>\n<li><strong>创建者信息</strong>: 创建时间、创建者地址、创建者余额</li>\n<li><strong>AI 叙述</strong>: 代币描述、AI 生成的摘要和段落</li>\n</ul>\n<p><strong>优势</strong>：一次调用获取所有信息，无需多次请求不同接口。</p>",
+        "markdown": "**代币完整详情接口 - 一站式查询所有信息（推荐使用）**\n\n此接口返回代币的所有详细信息，包括：\n\n- **价格信息**: 实时价格（BNB 和 USDT）、市值\n- **供应信息**: 总供应量、持有者数量\n- **流动性信息**: 流动性池地址、流动性（BNB 和 USDT）、交易平台\n- **安全信息**: 开源、流动性锁定、蜜罐检测、可增发、买卖税\n- **社交媒体**: Twitter、Telegram、Website、KOL 提及数\n- **创建者信息**: 创建时间、创建者地址、创建者余额\n- **AI 叙述**: 代币描述、AI 生成的摘要和段落\n\n**优势**：一次调用获取所有信息，无需多次请求不同接口。",
+        "res_body": "{\"$schema\": \"http://json-schema.org/draft-04/schema#\", \"type\": \"object\", \"properties\": {\"code\": {\"type\": \"string\", \"description\": \"\\u54cd\\u5e94\\u7801\"}, \"msg\": {\"type\": \"string\", \"description\": \"\\u54cd\\u5e94\\u6d88\\u606f\"}, \"data\": {\"type\": \"object\", \"properties\": {\"chain\": {\"type\": \"string\", \"description\": \"\\u94fe\\u540d\\u79f0\"}, \"tokenAddress\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u5408\\u7ea6\\u5730\\u5740\"}, \"tokenCode\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u7b26\\u53f7\"}, \"tokenFullName\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u5168\\u79f0\"}, \"prec\": {\"type\": \"integer\", \"description\": \"\\u7cbe\\u5ea6\"}, \"tokenPriceSol\": {\"type\": \"number\", \"description\": \"\\u4ef7\\u683c\\uff08\\u4ee5\\u94fe\\u539f\\u751f\\u4ee3\\u5e01\\u8ba1\\u4ef7\\uff0c\\u5982 BNB\\uff09\"}, \"tokenPriceUsdt\": {\"type\": \"number\", \"description\": \"\\u4ef7\\u683c\\uff08USDT\\uff09\"}, \"marketCap\": {\"type\": \"number\", \"description\": \"\\u5e02\\u503c\\uff08USD\\uff09\"}, \"tokenSupply\": {\"type\": \"number\", \"description\": \"\\u603b\\u4f9b\\u5e94\\u91cf\"}, \"tokenHolders\": {\"type\": \"integer\", \"description\": \"\\u6301\\u6709\\u8005\\u6570\\u91cf\"}, \"smartMoneyHolders\": {\"type\": \"integer\", \"description\": \"\\u806a\\u660e\\u94b1\\u5305\\u6301\\u6709\\u8005\\u6570\\u91cf\"}, \"tokenCreateTime\": {\"type\": \"integer\", \"description\": \"\\u521b\\u5efa\\u65f6\\u95f4\\uff08\\u65f6\\u95f4\\u6233\\uff09\"}, \"tokenCreatorAddress\": {\"type\": \"string\", \"description\": \"\\u521b\\u5efa\\u8005\\u5730\\u5740\"}, \"tokenLabel\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u6807\\u7b7e\"}, \"tokenDesc\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u63cf\\u8ff0\"}, \"aiNarrativeSentence\": {\"type\": \"string\", \"description\": \"AI \\u751f\\u6210\\u7684\\u7b80\\u77ed\\u53d9\\u8ff0\"}, \"aiNarrativeParagraph\": {\"type\": \"string\", \"description\": \"AI \\u751f\\u6210\\u7684\\u8be6\\u7ec6\\u6bb5\\u843d\"}, \"iconUrl\": {\"type\": \"string\", \"description\": \"\\u4ee3\\u5e01\\u56fe\\u6807 URL\"}, \"platform\": {\"type\": \"integer\", \"description\": \"\\u5e73\\u53f0 ID\\uff083=PancakeSwap V2\\uff09\"}, \"tokenMediaVo\": {\"type\": \"object\", \"description\": \"\\u793e\\u4ea4\\u5a92\\u4f53\\u548c\\u5b89\\u5168\\u4fe1\\u606f\", \"properties\": {\"twitter\": {\"type\": \"string\", \"description\": \"Twitter \\u94fe\\u63a5\"}, \"telegram\": {\"type\": \"string\", \"description\": \"Telegram \\u94fe\\u63a5\"}, \"website\": {\"type\": \"string\", \"description\": \"\\u5b98\\u7f51\\u94fe\\u63a5\"}, \"signalCallingKols\": {\"type\": \"integer\", \"description\": \"KOL \\u63d0\\u53ca\\u6b21\\u6570\"}, \"kolCallsFansNums\": {\"type\": \"integer\", \"description\": \"KOL \\u7c89\\u4e1d\\u603b\\u6570\"}, \"kolCallsViewNums\": {\"type\": \"integer\", \"description\": \"KOL \\u6d4f\\u89c8\\u603b\\u6570\"}, \"buyTax\": {\"type\": \"string\", \"description\": \"\\u4e70\\u5165\\u7a0e\\uff08%\\uff09\"}, \"sellTax\": {\"type\": \"string\", \"description\": \"\\u5356\\u51fa\\u7a0e\\uff08%\\uff09\"}, \"honeypot\": {\"type\": \"integer\", \"description\": \"\\u871c\\u7f50\\u68c0\\u6d4b\\uff080=\\u5426\\uff0c1=\\u662f\\uff09\"}, \"mintable\": {\"type\": \"integer\", \"description\": \"\\u53ef\\u589e\\u53d1\\uff080=\\u5426\\uff0c1=\\u662f\\uff09\"}, \"openSource\": {\"type\": \"integer\", \"description\": \"\\u5f00\\u6e90\\uff080=\\u5426\\uff0c1=\\u662f\\uff09\"}, \"poolLock\": {\"type\": \"integer\", \"description\": \"\\u6d41\\u52a8\\u6027\\u9501\\u5b9a\\uff080=\\u5426\\uff0c1=\\u662f\\uff09\"}}}, \"tokenPoolVo\": {\"type\": \"object\", \"description\": \"\\u6d41\\u52a8\\u6027\\u6c60\\u4fe1\\u606f\", \"properties\": {\"pool\": {\"type\": \"string\", \"description\": \"\\u6d41\\u52a8\\u6027\\u6c60\\u5408\\u7ea6\\u5730\\u5740\"}, \"poolLiquiditySol\": {\"type\": \"number\", \"description\": \"\\u6d41\\u52a8\\u6027\\uff08\\u94fe\\u539f\\u751f\\u4ee3\\u5e01\\uff0c\\u5982 BNB\\uff09\"}, \"poolLiquidityUsdt\": {\"type\": \"number\", \"description\": \"\\u6d41\\u52a8\\u6027\\uff08USDT\\uff09\"}, \"tradingPlatform\": {\"type\": \"string\", \"description\": \"\\u4ea4\\u6613\\u5e73\\u53f0\\u540d\\u79f0\"}}}}}}}"
+      },
+      {
+        "query_path": {
           "path": "/smart-web-gateway/coin/detail/traders",
           "params": []
         },

@@ -1,0 +1,314 @@
+[
+  {
+    "index": 19,
+    "name": "挂单服务",
+    "desc": "挂单服务",
+    "add_time": 1737714945,
+    "up_time": 1737714945,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/pending/order/update",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7328,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户id\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"pendingOrderId\":{\"type\":\"integer\",\"description\":\"挂单订单id\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"目标价格\"},\"pendingVolumeRate\":{\"type\":\"number\",\"description\":\"目标价格比例\"},\"marketValue\":{\"type\":\"number\",\"description\":\"市值\"}},\"required\":[\"userId\",\"subUid\",\"chain\",\"pendingOrderId\",\"pendingPrice\",\"marketValue\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"修改挂单请求对象\"}",
+        "title": "修改挂单接口",
+        "path": "/smart-web-gateway/pending/order/update",
+        "catid": 703,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6982f0377e7cd305a3520e34",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"orderVo\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"主键ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种名称\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入合约地址\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种名称\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格,预期价格乘以预期数量即为预期收入\"},\"placePrice\":{\"type\":\"number\",\"description\":\"下单时的价格\"},\"triggerPrice\":{\"type\":\"number\",\"description\":\"触发时的价格\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向， BUY买入,SELL卖出\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向， UP上涨,DOWN下跌\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"status\":{\"type\":\"string\",\"description\":\"状态 (PENDING(挂单中),TRIGGERED(已触发),SUCCESS(成功),FAIL(失败),CANCEL(取消),EXPIRED(过期))\"},\"createTime\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间\"},\"triggerTime\":{\"type\":\"integer\",\"description\":\"触发时间\"}},\"description\":\"挂单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1737714946,
+        "up_time": 1770188855,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/pending/order/create",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7323,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户id\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"用户地址\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单id\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种名称\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入合约地址\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种名称\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型,SINGLE信号，PRICE价格\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量，数量与数量百分比只能选择一项\"},\"pendingVolumeRate\":{\"type\":\"number\",\"description\":\"挂单预期触发数量百分比，0.1为10%\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格，价格与价格百分比只能选择一项\"},\"pendingPriceRate\":{\"type\":\"number\",\"description\":\"挂单价格百分比，0.1为10%\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向，UP为上涨，DOWN为下跌,使用价格百分比时，此项必填，使用价格时选填，不填则按照下单价格与当前实际价格比较，高于当前价格则为UP\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\",\"default\":\"false\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间的时间戳，单位毫秒，最大不超过72小时\"},\"bribeFee\":{\"type\":\"number\",\"description\":\"贿赂费\"},\"source\":{\"type\":\"string\",\"description\":\"bot,web,kepler\"},\"feeConfigType\":{\"type\":\"number\",\"description\":\"费用配置类型 1 - P1, 2 - p2 ...\"},\"triggerType\":{\"type\":\"string\",\"description\":\"usdt - U触发 , chain -链触发\"},\"sniper\":{\"type\":\"boolean\",\"description\":\"狙击模式\"}},\"required\":[\"userId\",\"subUid\",\"chain\",\"accountAddress\",\"buyContract\",\"sellContract\",\"pendingType\",\"orderSide\",\"slippage\",\"priorityFee\",\"expireTime\",\"bribeFee\",\"source\",\"feeConfigType\",\"triggerType\",\"sniper\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建挂单请求对象\"}",
+        "title": "创建挂单接口",
+        "path": "/smart-web-gateway/pending/order/create",
+        "catid": 703,
+        "markdown": "返回码参考下单接口\n[http://apidoc.bitapple.com/project/241/interface/api/6998](http://apidoc.bitapple.com/project/241/interface/api/6998)",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "695f0efe7e7cd305a35205a0",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"errorDetails\":{\"type\":\"string\",\"description\":\"详细错误信息，kv结构，根据不同失败码返回具体数值，参考错误码说明\"},\"orderVo\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"主键ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种名称\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入合约地址\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种名称\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格,预期价格乘以预期数量即为预期收入\"},\"placePrice\":{\"type\":\"number\",\"description\":\"下单时的价格\"},\"triggerPrice\":{\"type\":\"number\",\"description\":\"触发时的价格\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向， BUY买入,SELL卖出\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向， UP上涨,DOWN下跌\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"status\":{\"type\":\"string\",\"description\":\"状态 (PENDING(挂单中),TRIGGERED(已触发),SUCCESS(成功),FAIL(失败),CANCEL(取消),EXPIRED(过期))\"},\"createTime\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间\"},\"triggerTime\":{\"type\":\"integer\",\"description\":\"触发时间\"}},\"description\":\"挂单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\",\"required\":[\"errorDetails\"]}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p>返回码参考下单接口<br>\n<a href=\"http://apidoc.bitapple.com/project/241/interface/api/6998\">http://apidoc.bitapple.com/project/241/interface/api/6998</a></p>\n",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1737714945,
+        "up_time": 1767837438,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/pending/order/cancel",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7718,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户id\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"pendingOrderId\":{\"type\":\"integer\",\"description\":\"挂单订单id\"}},\"required\":[\"userId\",\"subUid\",\"chain\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"取消挂单请求对象\"}",
+        "title": "取消挂单接口",
+        "path": "/smart-web-gateway/pending/order/cancel",
+        "catid": 703,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "67bed40b7e7cd305a3519b08",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"orderVo\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"主键ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种名称\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入合约地址\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种名称\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格,预期价格乘以预期数量即为预期收入\"},\"placePrice\":{\"type\":\"number\",\"description\":\"下单时的价格\"},\"triggerPrice\":{\"type\":\"number\",\"description\":\"触发时的价格\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向， BUY买入,SELL卖出\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向， UP上涨,DOWN下跌\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"status\":{\"type\":\"string\",\"description\":\"状态 (PENDING(挂单中),TRIGGERED(已触发),SUCCESS(成功),FAIL(失败),CANCEL(取消),EXPIRED(过期))\"},\"createTime\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间\"},\"triggerTime\":{\"type\":\"integer\",\"description\":\"触发时间\"}},\"description\":\"挂单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p></p>",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1740559371,
+        "up_time": 1740559371,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/pending/order/batchCreate",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7643,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"用户地址\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"createOrderRequest\":{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"用户地址\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"side\":{\"type\":\"string\",\"description\":\"方向（BUY:买，SELL:卖）\"},\"type\":{\"type\":\"string\",\"description\":\"委托类型（MARKET: 市价）\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"@NotBlank(message = \\\"卖出币种不能为空\\\")\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出币种合约地址\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"@NotBlank(message = \\\"买入币种不能为空\\\")\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入币种合约地址\"},\"volume\":{\"type\":\"number\",\"description\":\"金额\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点，必须大于等于0\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费，必须大于0\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否开启防夹,默认为false\",\"default\":\"false\"},\"waitTime\":{\"type\":\"integer\",\"description\":\"等待秒数（0则不等待，1为1秒，不传默认为服务端控制）\"},\"triggerType\":{\"type\":\"number\"},\"sniper\":{\"type\":\"boolean\"}},\"required\":[\"userId\",\"subUid\",\"accountAddress\",\"chain\",\"side\",\"type\",\"sellContract\",\"buyContract\",\"volume\",\"slippage\",\"priorityFee\",\"sniper\",\"triggerType\"],\"description\":\"下单参数，可以为空，参数参考下单接口\"},\"pendingOrderCreateRequests\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户id\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"用户地址\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单id\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种名称\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入合约地址\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种名称\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型,SINGLE信号，PRICE价格\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量，数量与数量百分比只能选择一项\"},\"pendingVolumeRate\":{\"type\":\"number\",\"description\":\"挂单预期触发数量百分比，0.1为10%\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格，价格与价格百分比只能选择一项\"},\"pendingPriceRate\":{\"type\":\"number\",\"description\":\"挂单价格百分比，0.1为10%\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向，UP为上涨，DOWN为下跌,使用价格百分比时，此项必填，使用价格时选填，不填则按照下单价格与当前实际价格比较，高于当前价格则为UP\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\",\"default\":\"false\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间的时间戳，单位毫秒，最大不超过72小时\"},\"triggerType\":{\"type\":\"string\",\"description\":\"chain,usdt\"},\"sniper\":{\"type\":\"boolean\"}},\"required\":[\"userId\",\"subUid\",\"chain\",\"accountAddress\",\"buyContract\",\"sellContract\",\"pendingType\",\"orderSide\",\"slippage\",\"priorityFee\",\"expireTime\",\"triggerType\",\"sniper\"]},\"description\":\"挂单参数列表，不可以为空，参数参考挂单接口\"}},\"required\":[\"userId\",\"subUid\",\"accountAddress\",\"chain\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建挂单请求对象\"}",
+        "title": "批量创建订单及挂单接口",
+        "path": "/smart-web-gateway/pending/order/batchCreate",
+        "catid": 703,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "695f0ef67e7cd305a352059f",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"createOrderResponse\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"orderId\":{\"type\":\"integer\",\"description\":\"订单ID\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"\"}},\"description\":\"\"},\"pendingOrderResponses\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"orderVo\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"主键ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种名称\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入合约地址\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种名称\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格,预期价格乘以预期数量即为预期收入\"},\"placePrice\":{\"type\":\"number\",\"description\":\"下单时的价格\"},\"triggerPrice\":{\"type\":\"number\",\"description\":\"触发时的价格\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向， BUY买入,SELL卖出\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向， UP上涨,DOWN下跌\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"status\":{\"type\":\"string\",\"description\":\"状态 (PENDING(挂单中),TRIGGERED(已触发),SUCCESS(成功),FAIL(失败),CANCEL(取消),EXPIRED(过期))\"},\"createTime\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间\"},\"triggerTime\":{\"type\":\"integer\",\"description\":\"触发时间\"}},\"description\":\"挂单ID\"}}},\"description\":\"\",\"default\":\"new ArrayList<>()\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1739933467,
+        "up_time": 1767837430,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/pending/order/cancelAll",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7333,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户id\"},\"subUid\":{\"type\":\"integer\",\"description\":\"用户子id\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"tokenContract\":{\"type\":\"string\",\"description\":\"token合约地址\"}},\"required\":[\"userId\",\"subUid\",\"chain\",\"tokenContract\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"取消挂单请求对象\"}",
+        "title": "批量取消挂单接口",
+        "path": "/smart-web-gateway/pending/order/cancelAll",
+        "catid": 703,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "67d3f57a7e7cd305a3519ca9",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"orderVo\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"主键ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"买入币种名称\"},\"buyContract\":{\"type\":\"string\",\"description\":\"买入合约地址\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"卖出币种名称\"},\"sellContract\":{\"type\":\"string\",\"description\":\"卖出合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格,预期价格乘以预期数量即为预期收入\"},\"placePrice\":{\"type\":\"number\",\"description\":\"下单时的价格\"},\"triggerPrice\":{\"type\":\"number\",\"description\":\"触发时的价格\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向， BUY买入,SELL卖出\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向， UP上涨,DOWN下跌\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"status\":{\"type\":\"string\",\"description\":\"状态 (PENDING(挂单中),TRIGGERED(已触发),SUCCESS(成功),FAIL(失败),CANCEL(取消),EXPIRED(过期))\"},\"createTime\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间\"},\"triggerTime\":{\"type\":\"integer\",\"description\":\"触发时间\"}},\"description\":\"挂单ID\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1737714946,
+        "up_time": 1741944186,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "name": "挂单查询",
+    "desc": "挂单查询",
+    "add_time": 1737714947,
+    "up_time": 1737714947,
+    "list": [
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/pending/order/query/page",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7338,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"用户地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"pendingOrderId\":{\"type\":\"integer\",\"description\":\"挂单ID\"},\"tokenContract\":{\"type\":\"string\",\"description\":\"token合约地址\"},\"status\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"状态 PENDING(\\\"挂单中\\\"),TRIGGERED(\\\"已触发\\\"),CANCEL(\\\"已取消\\\"),EXPIRED(\\\"已过期\\\");\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向\"},\"offset\":{\"type\":\"integer\",\"description\":\"分页id,取最后一条数据的id\"},\"limit\":{\"type\":\"integer\",\"description\":\"分页大小\"}},\"required\":[\"userId\",\"chain\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "分页查询挂单订单",
+        "path": "/smart-web-gateway/pending/order/query/page",
+        "catid": 704,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68ec72ed7e7cd305a351c914",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"orders\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"主键ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"tokenCoin\":{\"type\":\"string\",\"description\":\"币种名称\"},\"tokenContract\":{\"type\":\"string\",\"description\":\"币种合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格,预期价格乘以预期数量即为预期收入\"},\"placePrice\":{\"type\":\"number\",\"description\":\"下单时的价格\"},\"triggerPrice\":{\"type\":\"number\",\"description\":\"触发时的价格\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向， BUY买入,SELL卖出\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向， UP上涨,DOWN下跌\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"status\":{\"type\":\"string\",\"description\":\"状态 (PENDING(挂单中),TRIGGERED(已触发),SUCCESS(成功),FAIL(失败),CANCEL(取消),EXPIRED(过期))\"},\"createTime\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间\"},\"triggerTime\":{\"type\":\"integer\",\"description\":\"触发时间\"},\"triggerType\":{\"type\":\"string\",\"description\":\"挂单触发类型\"},\"chainRate\":{\"type\":\"number\",\"description\":\"对链的汇率\"}}},\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1737714947,
+        "up_time": 1760326381,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/smart-web-gateway/pending/order/query",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 7343,
+        "req_body_type": "json",
+        "res_body_type": "json",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"pendingOrderId\":{\"type\":\"integer\",\"description\":\"挂单ID\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"}},\"required\":[\"userId\",\"chain\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "精确查询挂单订单",
+        "path": "/smart-web-gateway/pending/order/query",
+        "catid": 704,
+        "markdown": "",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "68ec72c57e7cd305a351c913",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"orderVo\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"主键ID\"},\"chain\":{\"type\":\"string\",\"description\":\"主链币种\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"客户端订单ID\"},\"tokenCoin\":{\"type\":\"string\",\"description\":\"币种名称\"},\"tokenContract\":{\"type\":\"string\",\"description\":\"币种合约地址\"},\"pendingType\":{\"type\":\"string\",\"description\":\"挂单类型\"},\"pendingVolume\":{\"type\":\"number\",\"description\":\"挂单预期触发数量\"},\"pendingPrice\":{\"type\":\"number\",\"description\":\"挂单预期触发价格,预期价格乘以预期数量即为预期收入\"},\"placePrice\":{\"type\":\"number\",\"description\":\"下单时的价格\"},\"triggerPrice\":{\"type\":\"number\",\"description\":\"触发时的价格\"},\"orderSide\":{\"type\":\"string\",\"description\":\"买卖方向， BUY买入,SELL卖出\"},\"pendingSide\":{\"type\":\"string\",\"description\":\"挂单方向， UP上涨,DOWN下跌\"},\"slippage\":{\"type\":\"number\",\"description\":\"滑点（百分数，如 7.5 代表 7.5%）\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"优先费（如 “0.006”）\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"是否防夹\"},\"status\":{\"type\":\"string\",\"description\":\"状态 (PENDING(挂单中),TRIGGERED(已触发),SUCCESS(成功),FAIL(失败),CANCEL(取消),EXPIRED(过期))\"},\"createTime\":{\"type\":\"integer\",\"description\":\"创建时间\"},\"expireTime\":{\"type\":\"integer\",\"description\":\"过期时间\"},\"triggerTime\":{\"type\":\"integer\",\"description\":\"触发时间\"},\"triggerType\":{\"type\":\"string\",\"description\":\"挂单价格触发类型\"},\"chainRate\":{\"type\":\"number\",\"description\":\"对链的汇率\"}},\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"\"}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "",
+        "project_id": 241,
+        "req_params": [],
+        "uid": 299,
+        "add_time": 1737714948,
+        "up_time": 1760326341,
+        "__v": 0
+      }
+    ]
+  }
+]
