@@ -74,6 +74,15 @@ mkdir -p .claude/skills && cp -r alphai* .claude/skills/
 
 Restart your AI agent after installation.
 
+### Update to latest version
+
+```bash
+cd Alph.ai_api_skills
+./update.sh
+```
+
+The update script will automatically pull the latest version from GitHub and install it to all detected agent directories.
+
 ## Usage
 
 ### Call a specific module

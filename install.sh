@@ -72,7 +72,7 @@ echo "  • alphai (主导航 + 认证指南)"
 echo "  • alphai-trading (交易模块 - 54 API)"
 echo "  • alphai-market (行情模块 - 42 API)"
 echo "  • alphai-user (用户模块 - 67 API)"
-echo "  • alphai-twitter (社媒推特X - 7 API)"
+echo "  • alphai-twitter (社媒推特X - 11 API)"
 echo "  • alphai-smart (智能功能 - 31 API)"
 echo "  • alphai-common (公共模块 - 8 API)"
 echo

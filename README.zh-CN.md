@@ -74,6 +74,15 @@ mkdir -p .claude/skills && cp -r alphai* .claude/skills/
 
 安装后重启 AI Agent 即可使用。
 
+### 更新到最新版本
+
+```bash
+cd Alph.ai_api_skills
+./update.sh
+```
+
+更新脚本会自动从 GitHub 拉取最新版本，并安装到所有检测到的 Agent 目录。
+
 ## 使用方法
 
 ### 直接调用具体模块
