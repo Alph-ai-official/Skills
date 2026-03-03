@@ -6,11 +6,11 @@ Join our Telegram group for updates, support and discussions:
 
 **https://t.me/alphaiglobalchat/101011**
 
-> 208 Alph.ai APIs packaged as AI Agent skills — token monitoring, social media tracking, automated trading, code generation and usage guidance.
+> 212 Alph.ai APIs packaged as AI Agent skills — token monitoring, social media tracking, automated trading, code generation and usage guidance.
 
 ## What's Inside
 
-208 APIs organized into 6 functional modules + 1 navigation hub:
+212 APIs organized into 6 functional modules + 1 navigation hub:
 
 | Skill | Description | APIs |
 |-------|-------------|------|
@@ -18,7 +18,7 @@ Join our Telegram group for updates, support and discussions:
 | `alphai-trading` | Trading (buy/sell, limit orders, copy trading) | 54 |
 | `alphai-market` | Market data (prices, tickers, WS push, on-chain scanning) | 42 |
 | `alphai-user` | User management (registration, accounts, wallets) | 67 |
-| `alphai-twitter` | Twitter/X monitoring (KOL tracking, tweet scraping, WS push) | 7 |
+| `alphai-twitter` | Twitter/X monitoring (KOL tracking, tweet scraping, WS push, user lookup, keyword search) | 11 |
 | `alphai-smart` | Smart features (smart wallets, trackers) | 31 |
 | `alphai-common` | Common utilities (SEO, sharing) | 8 |
 

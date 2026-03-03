@@ -6,11 +6,11 @@
 
 **https://t.me/alphaiglobalchat/101011**
 
-> 208 个 Alph.ai API 封装为 AI Agent Skills，支持代币监控、社媒监控、自动交易、代码生成和使用建议。
+> 212 个 Alph.ai API 封装为 AI Agent Skills，支持代币监控、社媒监控、自动交易、代码生成和使用建议。
 
 ## 包含内容
 
-208 个 API 分为 6 个功能模块 + 1 个主导航：
+212 个 API 分为 6 个功能模块 + 1 个主导航：
 
 | Skill | 说明 | API 数量 |
 |-------|------|----------|
@@ -18,7 +18,7 @@
 | `alphai-trading` | 交易模块（买卖、挂单、跟单等） | 54 |
 | `alphai-market` | 行情模块（币价、行情、WS推送、扫链等） | 42 |
 | `alphai-user` | 用户模块（注册、账户、钱包等） | 67 |
-| `alphai-twitter` | 社媒推特X（KOL监控、推文抓取、WS推送等） | 7 |
+| `alphai-twitter` | 社媒推特X（KOL监控、推文抓取、WS推送、用户查询、关键词搜索等） | 11 |
 | `alphai-smart` | 智能功能（聪明钱包、追踪等） | 31 |
 | `alphai-common` | 公共模块（SEO、分享等） | 8 |
 

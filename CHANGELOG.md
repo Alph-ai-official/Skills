@@ -1,5 +1,35 @@
 # Alph.ai API Skills 更新日志
 
+## [v1.3.0] - 2026-03-03
+
+### alphai-twitter 模块新增 4 个接口（7 → 11 API）
+
+新增 4 个推特数据接口，基于 Twitter API 会员封装：
+
+**新增接口：**
+
+| 方法 | 路径 | 功能 |
+|------|------|------|
+| GET | `/token/twitter-search` | 推文 meme 代币搜索 — 根据推文 URL 提取关联的 meme 代币合约地址，返回链名和池子流动性 |
+| POST | `/x/detail` | X 用户详情 — 根据用户名查询账户信息（粉丝数、简介、头像、认证状态等） |
+| POST | `/x/search` | 推文关键词搜索 — 按关键词搜索推文，返回推文内容、互动数据和作者信息，支持分页 |
+| POST | `/x/tweets` | 用户推文列表 — 根据用户 ID 获取最新推文，含 entities（mentions/cashtags）和互动数据，支持分页 |
+
+**使用场景：**
+
+- 根据推文链接一键查找所有关联 meme 代币及流动性
+- 查询任意 X 用户详情（粉丝数、认证状态等）
+- 按关键词搜索推文做舆情分析
+- 拉取指定 KOL 最新推文并分析内容
+
+**文档更新：**
+
+- 更新 `alphai-twitter/SKILL.md`：API 列表、接口详情、参数说明、返回示例、新增场景 5/6/7
+- 更新 `alphai-twitter/apis.json`：新增 4 个接口完整定义
+- 更新 `README.md` / `README.zh-CN.md`：API 总数 208 → 212，Twitter 模块 7 → 11
+
+---
+
 ## [v1.2.0] - 2026-03-02
 
 ### 拆分大型 apis.json 为分类子文件

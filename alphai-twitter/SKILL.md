@@ -1,13 +1,14 @@
 ---
 name: alphai-twitter
-description: Alph.ai 社媒推特(X) API - X 账户监控、推文抓取（发推/转发/回复/引用）、热门监控列表、关注管理、监控配置、WebSocket 实时推送、翻译等。当用户询问推特、X、社媒监控、KOL追踪、推文内容分析相关问题时使用。
+description: Alph.ai 社媒推特(X) API - X 账户监控、推文抓取（发推/转发/回复/引用）、热门监控列表、关注管理、监控配置、WebSocket 实时推送、翻译、X用户详情查询、推文关键词搜索、用户推文列表、推文meme代币搜索等。当用户询问推特、X、社媒监控、KOL追踪、推文内容分析相关问题时使用。
 argument-hint: [查询内容/功能名称]
 ---
 
 # Alph.ai 社媒推特(X) 模块 API
 
-本模块包含 **7 个 HTTP API** + **WebSocket 实时推送**，支持完整的推特监控链路：
-关注 KOL → 配置监控项 → 拉取历史推文 / WebSocket 实时接收 → 翻译 → 分析
+本模块包含 **11 个 HTTP API** + **WebSocket 实时推送**，支持完整的推特监控链路：
+关注 KOL → 配置监控项 → 拉取历史推文 / WebSocket 实时接收 → 翻译 → 分析 → 推文 meme 代币搜索
+
 
 ## API 列表
 
@@ -20,6 +21,10 @@ argument-hint: [查询内容/功能名称]
 | POST | `/smart-web-gateway/tracker/x/myList` | 我的监控列表（支持按用户名筛选和排序） |
 | POST | `/smart-web-gateway/tracker/x/hotList` | 热门监控列表 |
 | POST | `/smart-web-gateway/tracker/x/transTexts` | 翻译推文内容 |
+| GET  | `/smart-web-gateway/token/twitter-search` | 推文 meme 代币搜索（根据推文 URL 提取关联代币） |
+| POST | `/smart-web-gateway/x/detail` | X 用户详情（粉丝数、简介、头像等） |
+| POST | `/smart-web-gateway/x/search` | 推文关键词搜索（含互动数据和作者信息） |
+| POST | `/smart-web-gateway/x/tweets` | 获取指定用户的推文列表（按用户 ID） |
 
 ---
 
@@ -221,6 +226,24 @@ flow: 批量 follow KOL 列表 → 逐个 myList 拉取推文
       → Claude 分析推文内容 → 打分/分类
 ```
 
+### 场景 5：根据推文链接查找 meme 代币
+```
+flow: 用户提供推文链接 → twitter-search 提取关联代币
+      → 按 poolLiquidityUsdt 筛选有流动性的代币 → 查询行情详情
+```
+
+### 场景 6：查询 KOL 详情并拉取最新推文
+```
+flow: x/detail(user=KOL用户名) → 获取用户 ID 和粉丝数
+      → x/tweets(keyword=用户ID, nums=20) → 获取最新推文 → 分析内容
+```
+
+### 场景 7：按关键词搜索推文舆情
+```
+flow: x/search(keyword="BTC", nums=20) → 获取相关推文
+      → 分析推文情绪和互动数据 → 生成舆情报告
+```
+
 ---
 
 ## 配置接口详情
@@ -265,6 +288,211 @@ POST /smart-web-gateway/tracker/x/transTexts
 }
 // 返回: { "data": { "result": "早上好！BTC 冲！" } }
 ```
+
+### twitter-search - 推文 meme 代币搜索
+
+根据推文 URL 提取该推文下关联的 meme 代币合约地址，返回链名、代币地址和池子流动性。
+```
+GET /smart-web-gateway/token/twitter-search?twitter=https://x.com/tige_seal/status/2028404440110350738
+```
+
+返回示例：
+```json
+{
+    "code": "200",
+    "msg": "suc",
+    "data": [
+        {
+            "chain": "sol",
+            "tokenAddress": "HqCftALtKGdZAQnva2u7hZDsd5namLZjFLtAGVmzqTU3",
+            "poolLiquidityUsdt": 16377.57
+        },
+        {
+            "chain": "bsc",
+            "tokenAddress": "0xa08947e1b2bcd9dc48fafb30e740be3094377777",
+            "poolLiquidityUsdt": 17242.27
+        }
+    ]
+}
+```
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `chain` | string | 链名（sol、bsc、eth 等） |
+| `tokenAddress` | string | 代币合约地址 |
+| `poolLiquidityUsdt` | number | 池子流动性（USDT 计价） |
+
+### x/detail - X 用户详情
+
+根据用户名获取 X 账户详细信息。
+```json
+POST /smart-web-gateway/x/detail
+{
+    "user": "cz_binance"
+}
+```
+
+返回示例：
+```json
+{
+    "code": 200,
+    "data": {
+        "twitterDet": {
+            "data": {
+                "id": "1885979923195797504",
+                "name": "Joan",
+                "username": "Joan55683254681",
+                "description": "ka ka wa",
+                "created_at": "2025-02-02T09:14:16Z",
+                "profile_image_url": "https://pbs.twimg.com/profile_images/.../photo_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/...",
+                "public_metrics": {
+                    "followers_count": 2,
+                    "following_count": 14,
+                    "like_count": 0,
+                    "listed_count": 1,
+                    "tweet_count": 74
+                },
+                "verified": false,
+                "verified_type": "none"
+            }
+        }
+    }
+}
+```
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `user` | string | X 用户名（不含 @） |
+
+| 返回字段 | 说明 |
+|----------|------|
+| `id` | 用户 ID |
+| `name` | 显示名称 |
+| `username` | 用户名 |
+| `description` | 个人简介 |
+| `public_metrics` | 粉丝数、关注数、推文数等 |
+| `verified` / `verified_type` | 认证状态（blue/business/none） |
+
+### x/search - 推文关键词搜索
+
+按关键词搜索推文，返回推文内容、互动数据和作者信息。
+```json
+POST /smart-web-gateway/x/search
+{
+    "keyword": "BTC",
+    "nums": 10
+}
+```
+
+返回示例：
+```json
+{
+    "code": 200,
+    "data": {
+        "twitterDet": {
+            "data": [
+                {
+                    "id": "2028734723581764056",
+                    "author_id": "1508528078854795271",
+                    "text": "RT @Dexerto: A teacher with 900k+ YouTube...",
+                    "public_metrics": {
+                        "bookmark_count": 0,
+                        "impression_count": 1,
+                        "like_count": 0,
+                        "quote_count": 0,
+                        "reply_count": 0,
+                        "retweet_count": 830
+                    }
+                }
+            ],
+            "includes": {
+                "users": [
+                    {
+                        "id": "1508528078854795271",
+                        "name": "Crazy Ass Moments in Italian Politics",
+                        "username": "CrazyItalianPol",
+                        "public_metrics": { "followers_count": 120029, "..." : "..." }
+                    }
+                ]
+            },
+            "meta": {
+                "result_count": 10,
+                "next_token": "b26v89c19zqg8o3j..."
+            }
+        }
+    }
+}
+```
+
+| 参数 | 类型 | 说明 |
+|------|------|------|
+| `keyword` | string | 搜索关键词 |
+| `nums` | number | 返回数量 |
+
+### x/tweets - 获取用户推文列表
+
+根据用户 ID 获取该用户的最新推文列表。
+> 注意：`keyword` 参数传的是用户 ID（数字），不是用户名。可先通过 `x/detail` 获取用户 ID。
+
+```json
+POST /smart-web-gateway/x/tweets
+{
+    "keyword": "1852674305517342720",
+    "nums": 10
+}
+```
+
+返回示例：
+```json
+{
+    "code": 200,
+    "data": {
+        "twitterDet": {
+            "data": [
+                {
+                    "id": "2028747575239864471",
+                    "author_id": "1852674305517342720",
+                    "created_at": "2026-03-03T08:21:28.000Z",
+                    "text": "@markets_wizard one entity owns 3.71% of supply...",
+                    "entities": {
+                        "mentions": [{ "username": "markets_wizard", "..." : "..." }],
+                        "annotations": [],
+                        "cashtags": []
+                    },
+                    "public_metrics": {
+                        "impression_count": 27,
+                        "like_count": 0,
+                        "retweet_count": 0,
+                        "reply_count": 1,
+                        "quote_count": 0,
+                        "bookmark_count": 0
+                    }
+                }
+            ],
+            "includes": {
+                "users": [
+                    {
+                        "id": "1852674305517342720",
+                        "name": "aixbt",
+                        "username": "aixbt_agent",
+                        "public_metrics": { "followers_count": 472589, "..." : "..." }
+                    }
+                ]
+            },
+            "meta": {
+                "result_count": 10,
+                "next_token": "7140dibdnow9c7btw..."
+            }
+        }
+    }
+}
+```
+
+| 参数 | 类型 | 说明 |
+|------|------|------|
+| `keyword` | string | X 用户 ID（数字字符串） |
+| `nums` | number | 返回数量 |
 
 ---
 
