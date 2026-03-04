@@ -125,7 +125,7 @@
         "__v": 0,
         "desc": "",
         "markdown": "",
-        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"username\":{\"type\":\"string\"},\"pageNum\":{\"type\":\"number\"},\"pageSize\":{\"type\":\"number\"},\"sort\\t\":{\"type\":\"string\",\"description\":\"排序字段，返回值里面的字段名 \"},\"asc\":{\"type\":\"string\",\"description\":\"正序倒序，asc，desc\"}},\"required\":[\"sort\\t\",\"asc\",\"pageSize\",\"pageNum\"]}",
+        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"username\":{\"type\":\"string\"},\"pageNum\":{\"type\":\"number\"},\"pageSize\":{\"type\":\"number\"},\"sort\":{\"type\":\"string\",\"description\":\"排序字段，返回值里面的字段名\"},\"asc\":{\"type\":\"string\",\"description\":\"正序倒序，asc，desc\"}},\"required\":[\"sort\",\"asc\",\"pageSize\",\"pageNum\"]}",
         "req_body_type": "json",
         "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"total\":{\"type\":\"number\"},\"pageNum\":{\"type\":\"number\"},\"pageSize\":{\"type\":\"number\"},\"list\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"x_follow\":{\"type\":\"number\"},\"id\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"profile_image_url\":{\"type\":\"string\"},\"username\":{\"type\":\"string\"},\"followed\":{\"type\":\"boolean\"}}}}}}}}}"
       },
@@ -328,7 +328,7 @@
         "desc": "",
         "markdown": "",
         "res_body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"retweeted\":{\"type\":\"boolean\",\"description\":\"true-配置 false-未配置\"},\"replied_to\":{\"type\":\"boolean\"},\"quoted\":{\"type\":\"boolean\"},\"follow\":{\"type\":\"boolean\"},\"profile\":{\"type\":\"boolean\"},\"icon\":{\"type\":\"boolean\"},\"account\":{\"type\":\"boolean\"},\"nick\":{\"type\":\"boolean\"},\"banner\":{\"type\":\"boolean\"},\"send\":{\"type\":\"boolean\"}}}}}"
-      }
+      },
       {
         "query_path": {
           "path": "/smart-web-gateway/x/detail",

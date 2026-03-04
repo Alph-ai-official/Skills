@@ -173,13 +173,15 @@ Header: Cookie: dex_cookie=<value>
 Body: { "pageNum": 1, "pageSize": 20 }
 ```
 
-通过 `myList` 可按用户名筛选特定 KOL 的推文：
+通过 `myList` 可查看已关注的 KOL 列表（支持按用户名筛选和排序）：
 
 ```
 POST https://b.alph.ai/smart-web-gateway/tracker/x/myList
 Header: Cookie: dex_cookie=<value>
-Body: { "username": "cz_binance", "pageNum": 1, "pageSize": 20, "sort": "desc" }
+Body: { "username": "", "pageNum": 1, "pageSize": 20, "sort": "x_follow", "asc": "desc" }
 ```
+
+> 注意：myList 返回的是 KOL 账户列表（id/name/username/followed），不是推文内容。要获取推文内容请用 `monitorList`。
 
 ### 方式 2：WebSocket 实时推送
 
