@@ -368,7 +368,7 @@
         "_id": 6993,
         "req_body_type": "json",
         "res_body_type": "json",
-        "req_body_other": "{\"type\":\"object\",\"properties\":{},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"主链币种，如 sol、bsc、eth\"}},\"required\":[\"chain\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
         "title": "查询跟单利润",
         "path": "/smart-web-gateway/follow/order/profit",
         "catid": 692,
@@ -382,15 +382,7 @@
             "example": "application/json"
           }
         ],
-        "req_query": [
-          {
-            "required": "1",
-            "_id": "677f60e07e7cd305a3519400",
-            "name": "chain",
-            "example": "",
-            "desc": " 主链币种"
-          }
-        ],
+        "req_query": [],
         "res_body": "{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\",\"description\":\"返回值，200为成功\"},\"msg\":{\"type\":\"string\",\"description\":\"返回信息\"},\"unrealizedProfit\":{\"type\":\"number\",\"description\":\"当前未实现利润\"},\"realizedProfit\":{\"type\":\"number\",\"description\":\"已实现利润\"},\"historicalRealizedProfit\":{\"type\":\"number\",\"description\":\"历史已实现利润\"},\"buyCount\":{\"type\":\"integer\",\"description\":\"跟单数量\"},\"sellCount\":{\"type\":\"integer\",\"description\":\"跟单数量\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
         "method": "POST",
         "req_body_form": [],

@@ -724,7 +724,7 @@
       },
       {
         "query_path": {
-          "path": "/smart-web-gateway/userSet/getAutoFee",
+          "path": "/smart-web-gateway/userTradeSet/getAutoFee",
           "params": []
         },
         "edit_uid": 0,
@@ -740,7 +740,7 @@
         "method": "GET",
         "res_body_type": "json",
         "title": "获取自动费用",
-        "path": "/smart-web-gateway/userSet/getAutoFee",
+        "path": "/smart-web-gateway/userTradeSet/getAutoFee",
         "catid": 706,
         "markdown": "",
         "req_headers": [],

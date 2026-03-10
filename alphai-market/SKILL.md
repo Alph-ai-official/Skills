@@ -89,7 +89,7 @@ Header: Cookie: dex_cookie=<your_cookie>
    - 📊 **代币详情查询**（合约地址、代币名称） → 优先推荐 `/token/token-detail` 接口
    - 💰 **实时价格查询** → 使用 `/ticker/currentPrice` 或 `/ticker/24h` 接口
    - 🔥 **热门币种列表** → 使用 `/sherlock/popular_token/tokenPage` 接口
-   - 📈 **K线数据** → 使用 `/kline/new/history` 接口
+   - 📈 **K线数据** → 使用 `GET /kline/new/history?chain=&token=&type=` 接口（query 传参，非路径参数）
 2. 从 `apis.json` 中搜索相关 API
 3. 展示 API 的路径、方法、参数、响应格式
 4. 根据需要生成调用代码示例
@@ -107,6 +107,135 @@ Header: Cookie: dex_cookie=<your_cookie>
 - `tokenPriceSol`: 链原生代币计价（字段名是 Sol 但实际是链原生币）
 - `tokenPriceUsdt`: **USDT 计价**（推荐使用，直观）
 - `marketCap`: **市值（USD）**
+
+## 扫链数据（新币发现）
+
+扫链接口用于发现各链上最新发射的代币，支持丰富的筛选条件。
+
+### 接口列表
+
+| 方法 | 路径 | 功能 |
+|------|------|------|
+| GET  | `/snipe/platform/{chain}` | 获取可用平台列表（platform ID、DEX、标签） |
+| POST | `/snipe/list/new/{chain}` | 新币列表（最新发射的代币） |
+| POST | `/snipe/list/aimost/{chain}` | AI 推荐列表（AI 筛选的热门新币） |
+| POST | `/snipe/list/graduated/{chain}` | 已毕业列表（从 bonding curve 进入 DEX） |
+| POST | `/snipe/list/hideToken` | 隐藏代币（从列表中隐藏指定代币） |
+| GET  | `/snipe/homepage` | 代币主页信息（社区、推特、开发者） |
+
+> `snipe/list/all/{chain}` 已废弃，请使用 `aimost` 替代。
+
+### 重要：platform 为必传参数
+
+调用 `new`、`aimost`、`graduated` 接口时，**必须传 `platform` 参数**，否则返回空数据。
+
+`platform` 是平台 ID 的逗号分隔字符串，通过 `GET /snipe/platform/{chain}` 获取：
+
+```
+GET https://b.alph.ai/smart-web-gateway/snipe/platform/bsc
+```
+
+**BSC 链**：platform 传平台 ID 组合，如 `"3,13"`
+
+| id | 平台名 |
+|----|--------|
+| 0 | All（全部） |
+| 3 | Fourmeme |
+| 9 | USD1 |
+| 13 | Flap |
+| 19 | X Mode |
+| 28 | Fourmeme Agent |
+| 10000 | Others |
+
+**SOL 链**：platform 传 `"All"`
+
+> 不同链的 platform 取值不同：BSC 用数字 ID 组合（如 `"3,13"`），SOL 用 `"All"`。调用前请先查询对应链的平台列表。
+
+### 请求示例：查询 BSC 最新代币
+
+```
+POST https://b.alph.ai/smart-web-gateway/snipe/list/new/bsc
+Header: Cookie: dex_cookie=<value>
+Content-Type: application/json
+
+{
+    "language": "zh_CN",
+    "platform": "3,13"
+}
+```
+
+### 常用筛选参数
+
+| 参数 | 类型 | 说明 |
+|------|------|------|
+| `platform` | string | **必传**。平台 ID 逗号分隔，如 `"3,13"` |
+| `language` | string | 语言，如 `"zh_CN"` |
+| `limit` | integer | 返回数量 |
+| `minAge` / `maxAge` | integer | 存活时间范围（分钟） |
+| `minMarketCap` / `maxMarketCap` | number | 市值范围（USD） |
+| `minLiquidityUsdt` / `maxLiquidityUsdt` | number | 流动性范围（USDT） |
+| `minHoldings` / `maxHoldings` | number | 持有人数范围 |
+| `minTradeNum` / `maxTradeNum` | number | 交易笔数范围 |
+| `minKolCalls` / `maxKolCalls` | number | KOL 提及次数范围 |
+| `label` | array | 标签过滤，如 `["MEME"]` |
+| `hasTwitter` | boolean | 是否有 Twitter |
+| `hasWebsite` | boolean | 是否有官网 |
+| `hasTelegram` | boolean | 是否有 Telegram |
+| `sort` / `sortField` / `asc` | string | 排序字段和方向 |
+| `bondingCurve` | integer | bonding curve 状态（1=在内盘） |
+
+### 返回数据字段
+
+每个代币包含以下信息：
+
+| 字段 | 说明 |
+|------|------|
+| `token` | 合约地址 |
+| `tokenFullName` / `code` | 代币全名 / 符号 |
+| `poolTime` | 上池时间（毫秒时间戳） |
+| `age` | 存活时间（分钟） |
+| `platform` / `poolName` | 发射平台 ID / 名称 |
+| `marketCap` | 市值（USD） |
+| `price` | 当前价格 |
+| `chg` | 涨跌幅 |
+| `liquidityUsdt` / `liquidityMain` | 流动性（USDT / 链原生币） |
+| `holdings` | 持有人数 |
+| `tradeNum` / `tradeAmount` | 交易笔数 / 交易额 |
+| `top10` | 前10持有者占比 |
+| `devProportion` | 开发者持有比例 |
+| `kolCalls` / `fansNums` / `viewNums` | KOL 提及 / 粉丝数 / 浏览数 |
+| `security` | 安全信息 |
+| `social` | 社交媒体（twitter/website/telegram） |
+| `bondingCurve` | bonding curve 状态（1=内盘） |
+| `supply` | 总发行量 |
+| `smartHolding` | 聪明钱包持仓数 |
+| `sniper` / `bundler` / `insiders` | 狙击手 / 捆绑者 / 内部人比例 |
+
+### 典型场景
+
+**查询过去1小时 BSC 新发的 meme 代币：**
+```json
+POST /snipe/list/new/bsc
+{
+    "platform": "3,13",
+    "maxAge": 60,
+    "label": ["MEME"],
+    "language": "zh_CN"
+}
+```
+
+**查询有 KOL 提及、流动性 > $1000 的 Solana 新币：**
+```json
+POST /snipe/list/new/sol
+{
+    "platform": "1,2",
+    "minKolCalls": 1,
+    "minLiquidityUsdt": 1000,
+    "language": "zh_CN"
+}
+```
+
+---
 
 ## API 数据来源
 

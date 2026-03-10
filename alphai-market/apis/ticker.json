@@ -8,12 +8,12 @@
     "list": [
       {
         "query_path": {
-          "path": "/smart-web-gateway/kline/new/history/{token}/{chain}/{type}",
+          "path": "/smart-web-gateway/kline/new/history",
           "params": []
         },
         "edit_uid": 0,
-        "status": "undone",
-        "type": "var",
+        "status": "done",
+        "type": "static",
         "req_body_is_json_schema": true,
         "res_body_is_json_schema": true,
         "api_opened": false,
@@ -23,30 +23,35 @@
         "method": "GET",
         "catid": 716,
         "title": "kline",
-        "path": "/smart-web-gateway/kline/new/history/{token}/{chain}/{type}",
+        "path": "/smart-web-gateway/kline/new/history",
         "project_id": 241,
-        "req_params": [
-          {
-            "_id": "68d89e517e7cd305a351c7c1",
-            "name": "token",
-            "desc": ""
-          },
-          {
-            "_id": "68d89e517e7cd305a351c7c0",
-            "name": "chain",
-            "desc": ""
-          },
-          {
-            "_id": "68d89e517e7cd305a351c7bf",
-            "name": "type",
-            "desc": "1min,5min,15min,60min,4h,1s,1day,30min,2h,12h,1week"
-          }
-        ],
+        "req_params": [],
         "res_body_type": "json",
         "uid": 579,
         "add_time": 1739445929,
         "up_time": 1759026769,
         "req_query": [
+          {
+            "required": "1",
+            "_id": "68d89e517e7cd305a351c7c1",
+            "name": "token",
+            "example": "PTbgoLtbo4scL4jmNnMMupxEGD3UwL5xiKyPcmFpump",
+            "desc": "代币合约地址"
+          },
+          {
+            "required": "1",
+            "_id": "68d89e517e7cd305a351c7c0",
+            "name": "chain",
+            "example": "sol",
+            "desc": "链名称（sol/bsc/eth）"
+          },
+          {
+            "required": "1",
+            "_id": "68d89e517e7cd305a351c7bf",
+            "name": "type",
+            "example": "5min",
+            "desc": "K线类型：1min,5min,15min,60min,4h,1s,1day,30min,2h,12h,1week"
+          },
           {
             "required": "0",
             "_id": "68d89e517e7cd305a351c7c4",
@@ -58,14 +63,14 @@
             "required": "0",
             "_id": "68d89e517e7cd305a351c7c3",
             "name": "limit",
-            "example": "500",
+            "example": "360",
             "desc": "默认500"
           },
           {
             "required": "1",
             "_id": "68d89e517e7cd305a351c7c2",
             "name": "useStable",
-            "example": "",
+            "example": "true",
             "desc": "true 转U ，false chain"
           }
         ],
