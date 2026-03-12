@@ -64,7 +64,7 @@ ls <TARGET_DIR>/alphai-{user,market,trading}/apis/*.json
 
 安装完成后告知用户：
 - 需要重启 AI Agent 才能加载新 skills
-- 所有 API 调用需要 `dex_cookie` 认证（从浏览器 alph.ai 的 Cookie 中获取，有效期 14 天）
+- 所有 API 调用需要 `dex_cookie` 认证（登录https://alph.ai,打开开发者工具，选择Allpication，找到dex_cookie,有效期 14 天）
 - 认证详情见 `alphai/auth-guide.md`
 
 ## 模块索引
