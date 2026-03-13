@@ -1,5 +1,36 @@
 # Alph.ai API Skills 更新日志
 
+## [v1.3.1] - 2026-03-13
+
+### 补全所有 API 参数描述，消除模型推理依赖
+
+为 6 个 API 文件中 100+ 个参数补充完整的中文描述、示例值和枚举说明，确保任何模型都能按文档直接调用 API，无需推理或猜测参数含义。
+
+**修改文件：**
+
+| 文件 | 修改内容 |
+|------|---------|
+| `alphai-market/apis/token-detail.json` | traders/bankers/holders/activity 等接口 60+ 参数描述 |
+| `alphai-trading/apis/order.json` | create/batchCreate/statistic/trade-stats 等接口 50+ 参数描述 |
+| `alphai-user/apis/wallet.json` | deleteWallet/getWalletInfo/setMasterWallet/genkey 参数描述 |
+| `alphai-user/apis/security.json` | 2FA/Google 认证/提现相关参数描述 |
+| `alphai-market/apis/misc.json` | gasOracle/watchToken 链参数描述 |
+| `alphai-market/apis/scan.json` | hideToken/snipe 接口参数描述 |
+
+**补充内容示例：**
+
+- `chain` → `"链名称，如: bsc, sol, eth"`
+- `walletTag` → `"钱包标签筛选，如: SMART(聪明钱), DEV(开发者), SNIPER(狙击手)，多个用逗号分隔"`
+- `sort` → `"排序字段，如: totalPnl(总利润), totalBuyAmount(买入总额), holdingsRate(持仓占比)"`
+- `slippage` → `"滑点百分比，如 7.5 表示 7.5%"`
+- `googleCode` → `"Google验证码（6位数字）"`
+
+**修复：**
+
+- 修正 `security.json` 中 `get-wallet` 接口路径（`//smart-web-gateway` → `/smart-web-gateway`）
+
+---
+
 ## [v1.3.0] - 2026-03-03
 
 ### alphai-twitter 模块新增 4 个接口（7 → 11 API）
