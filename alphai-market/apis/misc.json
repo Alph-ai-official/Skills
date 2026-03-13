@@ -117,7 +117,8 @@
             "required": "1",
             "_id": "6971c7d47e7cd305a352076f",
             "name": "chain",
-            "desc": ""
+            "example": "bsc",
+            "desc": "链名称，如: bsc, sol, eth"
           },
           {
             "required": "0",
@@ -179,7 +180,8 @@
             "_id": "67eb9ccc7e7cd305a351a08a",
             "name": "chain",
             "value": "",
-            "desc": ""
+            "example": "bsc",
+            "desc": "链名称，如: bsc, sol, eth"
           }
         ],
         "project_id": 241,

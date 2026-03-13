@@ -30,18 +30,19 @@
         "req_headers": [],
         "req_query": [
           {
-            "required": "0",
+            "required": "1",
             "_id": "6927fa847e7cd305a351fb4f",
             "name": "chain",
             "value": "",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
-            "required": "0",
+            "required": "1",
             "_id": "6927fa847e7cd305a351fb4e",
             "name": "token",
             "value": "",
-            "desc": ""
+            "desc": "代币合约地址"
           }
         ],
         "desc": "<p></p>",
@@ -69,7 +70,7 @@
         "_id": 6998,
         "req_body_type": "json",
         "res_body_type": "json",
-        "req_body_other": "{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"\"},\"subUid\":{\"type\":\"integer\",\"description\":\"\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"\"},\"chain\":{\"type\":\"string\",\"description\":\"\"},\"side\":{\"type\":\"string\",\"description\":\"\"},\"type\":{\"type\":\"string\",\"description\":\"\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"\"},\"sellContract\":{\"type\":\"string\",\"description\":\"\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"\"},\"buyContract\":{\"type\":\"string\",\"description\":\"\"},\"volume\":{\"type\":\"number\",\"description\":\"\"},\"volumeRate\":{\"type\":\"number\",\"description\":\"\"},\"slippage\":{\"type\":\"number\",\"description\":\"\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"\"},\"bribeFee\":{\"type\":\"number\",\"description\":\"\"},\"time\":{\"type\":\"integer\",\"description\":\"\"},\"source\":{\"type\":\"string\",\"description\":\"\"},\"sign\":{\"type\":\"string\",\"description\":\"\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"\"},\"waitTime\":{\"type\":\"integer\",\"description\":\"\"},\"feeConfigType\":{\"type\":\"integer\",\"description\":\"1:\\\"p1\\\",2:\\\"p2\\\",3:\\\"p3\\\"\"},\"sniper\":{\"type\":\"boolean\",\"description\":\"狙击模式 false/true\"},\"moneyBack\":{\"type\":\"boolean\",\"description\":\"true 回本\"}},\"required\":[\"userId\",\"subUid\",\"accountAddress\",\"chain\",\"side\",\"type\",\"sellContract\",\"buyContract\",\"slippage\",\"priorityFee\",\"moneyBack\"],\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"创建订单请求\"}",
+        "req_body_other": "{\"type\": \"object\", \"properties\": {\"userId\": {\"type\": \"integer\", \"description\": \"用户ID\"}, \"clientOrderId\": {\"type\": \"string\", \"description\": \"客户端订单ID（可选，用于幂等）\"}, \"subUid\": {\"type\": \"integer\", \"description\": \"子账户ID（钱包的suid）\"}, \"accountAddress\": {\"type\": \"string\", \"description\": \"钱包地址\"}, \"chain\": {\"type\": \"string\", \"description\": \"链名称，如: bsc, sol, eth\"}, \"side\": {\"type\": \"string\", \"description\": \"交易方向: BUY(买入), SELL(卖出)\"}, \"type\": {\"type\": \"string\", \"description\": \"订单类型: MARKET(市价单)\"}, \"sellCoin\": {\"type\": \"string\", \"description\": \"卖出币种名称，如: BNB, SOL\"}, \"sellContract\": {\"type\": \"string\", \"description\": \"卖出币种合约地址\"}, \"buyCoin\": {\"type\": \"string\", \"description\": \"买入币种名称\"}, \"buyContract\": {\"type\": \"string\", \"description\": \"买入币种合约地址\"}, \"volume\": {\"type\": \"number\", \"description\": \"交易数量（主链币数量或代币数量）\"}, \"volumeRate\": {\"type\": \"number\", \"description\": \"交易比例（0-1，如0.5表示卖出50%持仓）\"}, \"slippage\": {\"type\": \"number\", \"description\": \"滑点百分比，如 7.5 表示 7.5%\"}, \"priorityFee\": {\"type\": \"number\", \"description\": \"优先费/矿工小费（主链币单位）\"}, \"bribeFee\": {\"type\": \"number\", \"description\": \"贿赂费（Jito小费，仅Solana链）\"}, \"time\": {\"type\": \"integer\", \"description\": \"时间戳（毫秒）\"}, \"source\": {\"type\": \"string\", \"description\": \"订单来源标识\"}, \"sign\": {\"type\": \"string\", \"description\": \"签名\"}, \"antiMev\": {\"type\": \"boolean\", \"description\": \"是否开启防MEV/防夹交易\"}, \"waitTime\": {\"type\": \"integer\", \"description\": \"等待确认时间（秒）\"}, \"feeConfigType\": {\"type\": \"integer\", \"description\": \"1:\\\"p1\\\",2:\\\"p2\\\",3:\\\"p3\\\"\"}, \"sniper\": {\"type\": \"boolean\", \"description\": \"狙击模式 false/true\"}, \"moneyBack\": {\"type\": \"boolean\", \"description\": \"true 回本\"}}, \"required\": [\"userId\", \"subUid\", \"accountAddress\", \"chain\", \"side\", \"type\", \"sellContract\", \"buyContract\", \"slippage\", \"priorityFee\", \"moneyBack\"], \"$schema\": \"http://json-schema.org/draft-04/schema#\", \"description\": \"创建订单请求\"}",
         "title": "创建订单",
         "path": "/smart-web-gateway/order/create",
         "catid": 693,
@@ -111,7 +112,7 @@
         "_id": 7003,
         "req_body_type": "json",
         "res_body_type": "json",
-        "req_body_other": "{\"type\":\"object\",\"properties\":{\"createOrderRequests\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"integer\",\"description\":\"\"},\"clientOrderId\":{\"type\":\"string\",\"description\":\"\"},\"subUid\":{\"type\":\"integer\",\"description\":\"\"},\"accountAddress\":{\"type\":\"string\",\"description\":\"\"},\"chain\":{\"type\":\"string\",\"description\":\"\"},\"side\":{\"type\":\"string\",\"description\":\"\"},\"type\":{\"type\":\"string\",\"description\":\"\"},\"sellCoin\":{\"type\":\"string\",\"description\":\"\"},\"sellContract\":{\"type\":\"string\",\"description\":\"\"},\"buyCoin\":{\"type\":\"string\",\"description\":\"\"},\"buyContract\":{\"type\":\"string\",\"description\":\"\"},\"volume\":{\"type\":\"number\",\"description\":\"\"},\"volumeRate\":{\"type\":\"number\",\"description\":\"\"},\"slippage\":{\"type\":\"number\",\"description\":\"\"},\"priorityFee\":{\"type\":\"number\",\"description\":\"\"},\"bribeFee\":{\"type\":\"number\",\"description\":\"\"},\"time\":{\"type\":\"integer\",\"description\":\"\"},\"source\":{\"type\":\"string\",\"description\":\"\"},\"sign\":{\"type\":\"string\",\"description\":\"\"},\"antiMev\":{\"type\":\"boolean\",\"description\":\"\"},\"waitTime\":{\"type\":\"integer\",\"description\":\"\"},\"feeConfigType\":{\"type\":\"integer\",\"description\":\"\"},\"sniper\":{\"type\":\"boolean\"}},\"required\":[\"userId\",\"subUid\",\"accountAddress\",\"chain\",\"side\",\"type\",\"sellContract\",\"buyContract\",\"slippage\",\"priorityFee\"]},\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "req_body_other": "{\"type\": \"object\", \"properties\": {\"createOrderRequests\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"userId\": {\"type\": \"integer\", \"description\": \"用户ID\"}, \"clientOrderId\": {\"type\": \"string\", \"description\": \"客户端订单ID（可选，用于幂等）\"}, \"subUid\": {\"type\": \"integer\", \"description\": \"子账户ID（钱包的suid）\"}, \"accountAddress\": {\"type\": \"string\", \"description\": \"钱包地址\"}, \"chain\": {\"type\": \"string\", \"description\": \"链名称，如: bsc, sol, eth\"}, \"side\": {\"type\": \"string\", \"description\": \"交易方向: BUY(买入), SELL(卖出)\"}, \"type\": {\"type\": \"string\", \"description\": \"订单类型: MARKET(市价单)\"}, \"sellCoin\": {\"type\": \"string\", \"description\": \"卖出币种名称，如: BNB, SOL\"}, \"sellContract\": {\"type\": \"string\", \"description\": \"卖出币种合约地址\"}, \"buyCoin\": {\"type\": \"string\", \"description\": \"买入币种名称\"}, \"buyContract\": {\"type\": \"string\", \"description\": \"买入币种合约地址\"}, \"volume\": {\"type\": \"number\", \"description\": \"交易数量（主链币数量或代币数量）\"}, \"volumeRate\": {\"type\": \"number\", \"description\": \"交易比例（0-1，如0.5表示卖出50%持仓）\"}, \"slippage\": {\"type\": \"number\", \"description\": \"滑点百分比，如 7.5 表示 7.5%\"}, \"priorityFee\": {\"type\": \"number\", \"description\": \"优先费/矿工小费（主链币单位）\"}, \"bribeFee\": {\"type\": \"number\", \"description\": \"贿赂费（Jito小费，仅Solana链）\"}, \"time\": {\"type\": \"integer\", \"description\": \"时间戳（毫秒）\"}, \"source\": {\"type\": \"string\", \"description\": \"订单来源标识\"}, \"sign\": {\"type\": \"string\", \"description\": \"签名\"}, \"antiMev\": {\"type\": \"boolean\", \"description\": \"是否开启防MEV/防夹交易\"}, \"waitTime\": {\"type\": \"integer\", \"description\": \"等待确认时间（秒）\"}, \"feeConfigType\": {\"type\": \"integer\", \"description\": \"\"}, \"sniper\": {\"type\": \"boolean\"}}, \"required\": [\"userId\", \"subUid\", \"accountAddress\", \"chain\", \"side\", \"type\", \"sellContract\", \"buyContract\", \"slippage\", \"priorityFee\"]}, \"description\": \"\"}}, \"$schema\": \"http://json-schema.org/draft-04/schema#\"}",
         "title": "批量创建订单",
         "path": "/smart-web-gateway/order/batchCreate",
         "catid": 693,
@@ -297,7 +298,7 @@
         "up_time": 1736749024,
         "req_body_form": [],
         "__v": 0,
-        "req_body_other": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"userId\":{\"type\":\"number\"},\"chain\":{\"type\":\"string\"},\"category\":{\"type\":\"string\"},\"side\":{\"type\":\"string\"},\"followOrderId\":{\"type\":\"number\"},\"status\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}}}",
+        "req_body_other": "{\"$schema\": \"http://json-schema.org/draft-04/schema#\", \"type\": \"object\", \"properties\": {\"userId\": {\"type\": \"number\", \"description\": \"用户ID\"}, \"chain\": {\"type\": \"string\", \"description\": \"链名称，如: bsc, sol, eth\"}, \"category\": {\"type\": \"string\", \"description\": \"订单分类: USER(用户下单), FOLLOW(跟随下单)\"}, \"side\": {\"type\": \"string\", \"description\": \"交易方向: BUY(买入), SELL(卖出)\"}, \"followOrderId\": {\"type\": \"number\", \"description\": \"跟单ID\"}, \"status\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}, \"description\": \"状态筛选: NEW, FILLED, CREATE_FAILED\"}}}",
         "req_body_type": "json"
       },
       {
@@ -376,40 +377,40 @@
             "required": "1",
             "_id": "697c50697e7cd305a3520d05",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth"
           },
           {
             "required": "1",
             "_id": "697c50697e7cd305a3520d04",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           },
           {
             "required": "0",
             "_id": "697c50697e7cd305a3520d03",
             "name": "walletAddress",
-            "desc": ""
+            "desc": "用户钱包地址（可选）"
           },
           {
             "required": "0",
             "_id": "697c50697e7cd305a3520d02",
             "name": "topHolderNum",
             "example": "100",
-            "desc": ""
+            "desc": "Top持有者数量"
           },
           {
             "required": "0",
             "_id": "697c50697e7cd305a3520d01",
             "name": "topTradeNum",
             "example": "100",
-            "desc": ""
+            "desc": "Top交易量数量"
           },
           {
             "required": "0",
             "_id": "697c50697e7cd305a3520d00",
             "name": "tradeVolumeDays",
             "example": "30",
-            "desc": ""
+            "desc": "交易量统计天数"
           }
         ],
         "project_id": 241,

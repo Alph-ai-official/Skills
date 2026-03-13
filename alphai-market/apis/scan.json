@@ -22,7 +22,7 @@
         "_id": 9673,
         "req_body_type": "json",
         "res_body_type": "json",
-        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"tokens\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"string\",\"description\":\"链名称，如: bsc, sol, eth\"},\"uid\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"tokens\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"description\":\"要隐藏的代币合约地址列表\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
         "title": "隐藏代币（从扫链列表中隐藏指定代币）",
         "path": "/smart-web-gateway/snipe/list/hideToken",
         "catid": 737,
@@ -74,13 +74,14 @@
             "required": "1",
             "_id": "689d9b8f7e7cd305a351c257",
             "name": "chain",
-            "desc": ""
+            "example": "bsc",
+            "desc": "链名称，如: bsc, sol, eth"
           },
           {
             "required": "1",
             "_id": "689d9b8f7e7cd305a351c256",
             "name": "tokenAddress",
-            "desc": ""
+            "desc": "代币合约地址"
           }
         ],
         "project_id": 241,

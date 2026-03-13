@@ -8,7 +8,7 @@
     "list": [
       {
         "query_path": {
-          "path": "//smart-web-gateway/user/get-wallet",
+          "path": "/smart-web-gateway/user/get-wallet",
           "params": []
         },
         "edit_uid": 0,
@@ -23,7 +23,7 @@
         "method": "GET",
         "catid": 762,
         "title": "2FA-查询用户是否绑定2FA、查询用户提现状态(改造用户信息接口)",
-        "path": "//smart-web-gateway/user/get-wallet",
+        "path": "/smart-web-gateway/user/get-wallet",
         "project_id": 241,
         "req_params": [],
         "res_body_type": "json",
@@ -483,7 +483,7 @@
         "add_time": 1762169724,
         "up_time": 1764383383,
         "__v": 0,
-        "req_body_other": "{\"type\":\"object\",\"properties\":{\"sessionId\":{\"type\":\"string\",\"description\":\"\"},\"message\":{\"type\":\"string\",\"description\":\"\"},\"signature\":{\"type\":\"string\",\"description\":\"\"},\"ip\":{\"type\":\"string\",\"description\":\"\"},\"walletAddress\":{\"type\":\"string\",\"description\":\"\"},\"invitedCode\":{\"type\":\"string\",\"description\":\"\"},\"token\":{\"type\":\"string\",\"description\":\"\"},\"googleCode\":{\"type\":\"string\",\"description\":\"\"},\"credential\":{\"type\":\"string\",\"description\":\"\"},\"uid\":{\"type\":\"integer\",\"description\":\"\"},\"emailCode\":{\"type\":\"string\",\"description\":\"邮箱验证码\"},\"pwd\":{\"type\":\"string\",\"description\":\"密码\"},\"genKey\":{\"type\":\"string\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"required\":[]}"
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"sessionId\":{\"type\":\"string\",\"description\":\"会话ID\"},\"message\":{\"type\":\"string\",\"description\":\"签名消息\"},\"signature\":{\"type\":\"string\",\"description\":\"钱包签名\"},\"ip\":{\"type\":\"string\",\"description\":\"客户端IP\"},\"walletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"invitedCode\":{\"type\":\"string\",\"description\":\"邀请码\"},\"token\":{\"type\":\"string\",\"description\":\"登录token\"},\"googleCode\":{\"type\":\"string\",\"description\":\"Google验证码（6位数字）\"},\"credential\":{\"type\":\"string\",\"description\":\"凭证\"},\"uid\":{\"type\":\"integer\",\"description\":\"用户ID\"},\"emailCode\":{\"type\":\"string\",\"description\":\"邮箱验证码\"},\"pwd\":{\"type\":\"string\",\"description\":\"密码\"},\"genKey\":{\"type\":\"string\",\"description\":\"通过getUserCenterGenkey接口获取的genKey\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"required\":[]}"
       }
     ]
   }

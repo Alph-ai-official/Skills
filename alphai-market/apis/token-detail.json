@@ -76,65 +76,73 @@
         "req_headers": [],
         "req_query": [
           {
-            "required": "0",
+            "required": "1",
             "_id": "686f77407e7cd305a351be80",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
-            "required": "0",
+            "required": "1",
             "_id": "686f77407e7cd305a351be7f",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           },
           {
             "required": "0",
             "_id": "686f77407e7cd305a351be7e",
             "name": "walletTag",
-            "desc": ""
+            "desc": "钱包标签筛选，如: SMART(聪明钱), DEV(开发者), SNIPER(狙击手)，多个用逗号分隔",
+            "example": "SMART"
           },
           {
             "required": "0",
             "_id": "686f77407e7cd305a351be7d",
             "name": "sort",
-            "desc": ""
+            "desc": "排序字段，如: totalPnl(总利润), totalBuyAmount(买入总额), holdingsRate(持仓占比)",
+            "example": "totalPnl"
           },
           {
             "required": "0",
             "_id": "686f77407e7cd305a351be7c",
             "name": "sortType",
-            "desc": ""
+            "desc": "排序方向: asc(升序), desc(降序)",
+            "example": "desc"
           },
           {
             "required": "0",
             "_id": "686f77407e7cd305a351be7b",
             "name": "maker",
             "example": "",
-            "desc": ""
+            "desc": "按钱包地址筛选"
           },
           {
             "required": "0",
             "_id": "686f77407e7cd305a351be7a",
             "name": "minTs",
-            "desc": ""
+            "desc": "最小时间戳(毫秒)，筛选该时间之后的数据",
+            "example": "1700000000000"
           },
           {
             "required": "0",
             "_id": "686f77407e7cd305a351be79",
             "name": "maxTs",
-            "desc": ""
+            "desc": "最大时间戳(毫秒)，筛选该时间之前的数据",
+            "example": "1710000000000"
           },
           {
             "required": "0",
             "_id": "686f77407e7cd305a351be78",
             "name": "page",
-            "desc": ""
+            "desc": "页码，从1开始",
+            "example": "1"
           },
           {
             "required": "0",
             "_id": "686f77407e7cd305a351be77",
             "name": "limit",
-            "desc": ""
+            "desc": "每页数量",
+            "example": "20"
           }
         ],
         "project_id": 241,
@@ -170,65 +178,72 @@
         "req_headers": [],
         "req_query": [
           {
-            "required": "0",
+            "required": "1",
             "_id": "688c6d6f7e7cd305a351c161",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
-            "required": "0",
+            "required": "1",
             "_id": "688c6d6f7e7cd305a351c160",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           },
           {
             "required": "0",
             "_id": "688c6d6f7e7cd305a351c15f",
             "name": "makerGroups",
-            "desc": ""
+            "desc": "庄家群组ID筛选"
           },
           {
             "required": "0",
             "_id": "688c6d6f7e7cd305a351c15e",
             "name": "sort",
-            "desc": ""
+            "desc": "排序字段，如: totalPnl(总利润), totalBuyAmount(买入总额), holdingsRate(持仓占比)",
+            "example": "totalPnl"
           },
           {
             "required": "0",
             "_id": "688c6d6f7e7cd305a351c15d",
             "name": "sortType",
-            "desc": ""
+            "desc": "排序方向: asc(升序), desc(降序)",
+            "example": "desc"
           },
           {
             "required": "0",
             "_id": "688c6d6f7e7cd305a351c15c",
             "name": "maker",
             "example": "",
-            "desc": ""
+            "desc": "按钱包地址筛选"
           },
           {
             "required": "0",
             "_id": "688c6d6f7e7cd305a351c15b",
             "name": "minTs",
-            "desc": ""
+            "desc": "最小时间戳(毫秒)，筛选该时间之后的数据",
+            "example": "1700000000000"
           },
           {
             "required": "0",
             "_id": "688c6d6f7e7cd305a351c15a",
             "name": "maxTs",
-            "desc": ""
+            "desc": "最大时间戳(毫秒)，筛选该时间之前的数据",
+            "example": "1710000000000"
           },
           {
             "required": "0",
             "_id": "688c6d6f7e7cd305a351c159",
             "name": "page",
-            "desc": ""
+            "desc": "页码，从1开始",
+            "example": "1"
           },
           {
             "required": "0",
             "_id": "688c6d6f7e7cd305a351c158",
             "name": "limit",
-            "desc": ""
+            "desc": "每页数量",
+            "example": "20"
           }
         ],
         "project_id": 241,
@@ -264,16 +279,17 @@
         "req_headers": [],
         "req_query": [
           {
-            "required": "0",
+            "required": "1",
             "_id": "688dc0407e7cd305a351c17f",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
-            "required": "0",
+            "required": "1",
             "_id": "688dc0407e7cd305a351c17e",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           }
         ],
         "project_id": 241,
@@ -312,58 +328,65 @@
         "up_time": 1752214589,
         "req_query": [
           {
-            "required": "0",
+            "required": "1",
             "_id": "6870ac3d7e7cd305a351bec4",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
-            "required": "0",
+            "required": "1",
             "_id": "6870ac3d7e7cd305a351bec3",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           },
           {
             "required": "0",
             "_id": "6870ac3d7e7cd305a351bec2",
             "name": "type",
-            "desc": ""
+            "desc": "交易类型筛选: 1(买入), 2(卖出)"
           },
           {
             "required": "0",
             "_id": "6870ac3d7e7cd305a351bec1",
             "name": "sort",
-            "desc": ""
+            "desc": "排序字段，如: totalPnl(总利润), totalBuyAmount(买入总额), holdingsRate(持仓占比)",
+            "example": "totalPnl"
           },
           {
             "required": "0",
             "_id": "6870ac3d7e7cd305a351bec0",
             "name": "sortType",
-            "desc": ""
+            "desc": "排序方向: asc(升序), desc(降序)",
+            "example": "desc"
           },
           {
             "required": "0",
             "_id": "6870ac3d7e7cd305a351bebf",
             "name": "minTs",
-            "desc": ""
+            "desc": "最小时间戳(毫秒)，筛选该时间之后的数据",
+            "example": "1700000000000"
           },
           {
             "required": "0",
             "_id": "6870ac3d7e7cd305a351bebe",
             "name": "maxTs",
-            "desc": ""
+            "desc": "最大时间戳(毫秒)，筛选该时间之前的数据",
+            "example": "1710000000000"
           },
           {
             "required": "0",
             "_id": "6870ac3d7e7cd305a351bebd",
             "name": "page",
-            "desc": ""
+            "desc": "页码，从1开始",
+            "example": "1"
           },
           {
             "required": "0",
             "_id": "6870ac3d7e7cd305a351bebc",
             "name": "limit",
-            "desc": ""
+            "desc": "每页数量",
+            "example": "20"
           }
         ],
         "req_headers": [],
@@ -408,7 +431,8 @@
             "required": "1",
             "_id": "686632967e7cd305a351bd27",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           }
         ],
         "req_headers": [],
@@ -441,65 +465,73 @@
         "req_headers": [],
         "req_query": [
           {
-            "required": "0",
+            "required": "1",
             "_id": "686f77277e7cd305a351be76",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
-            "required": "0",
+            "required": "1",
             "_id": "686f77277e7cd305a351be75",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           },
           {
             "required": "0",
             "_id": "686f77277e7cd305a351be74",
             "name": "walletTag",
-            "desc": ""
+            "desc": "钱包标签筛选，如: SMART(聪明钱), DEV(开发者), SNIPER(狙击手)，多个用逗号分隔",
+            "example": "SMART"
           },
           {
             "required": "0",
             "_id": "686f77277e7cd305a351be73",
             "name": "sort",
-            "desc": ""
+            "desc": "排序字段，如: totalPnl(总利润), totalBuyAmount(买入总额), holdingsRate(持仓占比)",
+            "example": "totalPnl"
           },
           {
             "required": "0",
             "_id": "686f77277e7cd305a351be72",
             "name": "sortType",
-            "desc": ""
+            "desc": "排序方向: asc(升序), desc(降序)",
+            "example": "desc"
           },
           {
             "required": "0",
             "_id": "686f77277e7cd305a351be71",
             "name": "maker",
             "example": "",
-            "desc": ""
+            "desc": "按钱包地址筛选"
           },
           {
             "required": "0",
             "_id": "686f77277e7cd305a351be70",
             "name": "minTs",
-            "desc": ""
+            "desc": "最小时间戳(毫秒)，筛选该时间之后的数据",
+            "example": "1700000000000"
           },
           {
             "required": "0",
             "_id": "686f77277e7cd305a351be6f",
             "name": "maxTs",
-            "desc": ""
+            "desc": "最大时间戳(毫秒)，筛选该时间之前的数据",
+            "example": "1710000000000"
           },
           {
             "required": "0",
             "_id": "686f77277e7cd305a351be6e",
             "name": "page",
-            "desc": ""
+            "desc": "页码，从1开始",
+            "example": "1"
           },
           {
             "required": "0",
             "_id": "686f77277e7cd305a351be6d",
             "name": "limit",
-            "desc": ""
+            "desc": "每页数量",
+            "example": "20"
           }
         ],
         "project_id": 241,
@@ -538,13 +570,14 @@
             "required": "1",
             "_id": "696f2d377e7cd305a3520724",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
             "required": "1",
             "_id": "696f2d377e7cd305a3520723",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           }
         ],
         "project_id": 241,
@@ -586,79 +619,87 @@
             "required": "1",
             "_id": "686632237e7cd305a351bd26",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           },
           {
             "required": "1",
             "_id": "686632237e7cd305a351bd25",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
             "required": "0",
             "_id": "686632237e7cd305a351bd24",
             "name": "type",
-            "desc": ""
+            "desc": "交易类型筛选: 1(买入), 2(卖出)"
           },
           {
             "required": "1",
             "_id": "686632237e7cd305a351bd23",
             "name": "walletTag",
-            "desc": ""
+            "desc": "钱包标签筛选，如: SMART(聪明钱), DEV(开发者), SNIPER(狙击手)，多个用逗号分隔",
+            "example": "SMART"
           },
           {
             "required": "0",
             "_id": "686632237e7cd305a351bd22",
             "name": "sort",
-            "desc": ""
+            "desc": "排序字段，如: totalPnl(总利润), totalBuyAmount(买入总额), holdingsRate(持仓占比)",
+            "example": "totalPnl"
           },
           {
             "required": "0",
             "_id": "686632237e7cd305a351bd21",
             "name": "sortType",
-            "desc": ""
+            "desc": "排序方向: asc(升序), desc(降序)",
+            "example": "desc"
           },
           {
             "required": "1",
             "_id": "686632237e7cd305a351bd20",
             "name": "maker",
-            "desc": ""
+            "desc": "按钱包地址筛选"
           },
           {
             "required": "0",
             "_id": "686632237e7cd305a351bd1f",
             "name": "minAmount",
-            "desc": ""
+            "desc": "最小金额筛选"
           },
           {
             "required": "1",
             "_id": "686632237e7cd305a351bd1e",
             "name": "maxAmount",
-            "desc": ""
+            "desc": "最大金额筛选"
           },
           {
             "required": "0",
             "_id": "686632237e7cd305a351bd1d",
             "name": "minTs",
-            "desc": ""
+            "desc": "最小时间戳(毫秒)，筛选该时间之后的数据",
+            "example": "1700000000000"
           },
           {
             "required": "0",
             "_id": "686632237e7cd305a351bd1c",
             "name": "maxTs",
-            "desc": ""
+            "desc": "最大时间戳(毫秒)，筛选该时间之前的数据",
+            "example": "1710000000000"
           },
           {
             "required": "1",
             "_id": "686632237e7cd305a351bd1b",
             "name": "page",
-            "desc": ""
+            "desc": "页码，从1开始",
+            "example": "1"
           },
           {
             "required": "1",
             "_id": "686632237e7cd305a351bd1a",
             "name": "limit",
-            "desc": ""
+            "desc": "每页数量",
+            "example": "20"
           }
         ],
         "req_headers": [],
@@ -697,20 +738,21 @@
             "required": "1",
             "_id": "6870e9267e7cd305a351bef2",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           },
           {
             "required": "1",
             "_id": "6870e9267e7cd305a351bef1",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
             "required": "1",
             "_id": "6870e9267e7cd305a351bef0",
             "name": "listType",
             "example": "",
-            "desc": ""
+            "desc": "列表类型"
           }
         ],
         "req_headers": [],
@@ -749,13 +791,14 @@
             "required": "1",
             "_id": "686631527e7cd305a351bd19",
             "name": "token",
-            "desc": ""
+            "desc": "代币合约地址"
           },
           {
             "required": "1",
             "_id": "686631527e7cd305a351bd18",
             "name": "chain",
-            "desc": ""
+            "desc": "链名称，如: bsc, sol, eth",
+            "example": "bsc"
           },
           {
             "required": "1",
@@ -768,19 +811,21 @@
             "required": "1",
             "_id": "686631527e7cd305a351bd16",
             "name": "maker",
-            "desc": ""
+            "desc": "按钱包地址筛选"
           },
           {
             "required": "1",
             "_id": "686631527e7cd305a351bd15",
             "name": "minTs",
-            "desc": "时间戳毫秒"
+            "desc": "时间戳毫秒",
+            "example": "1700000000000"
           },
           {
             "required": "1",
             "_id": "686631527e7cd305a351bd14",
             "name": "maxTs",
-            "desc": "时间戳毫秒"
+            "desc": "时间戳毫秒",
+            "example": "1710000000000"
           }
         ],
         "req_headers": [],

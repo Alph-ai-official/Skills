@@ -43,7 +43,7 @@
         "__v": 0,
         "desc": "",
         "markdown": "",
-        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"address\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"},\"suid\":{\"type\":\"string\"},\"googleCode\":{\"type\":\"string\"}},\"required\":[\"address\",\"chain\",\"googleCode\",\"suid\"]}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"address\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"chain\":{\"type\":\"string\",\"description\":\"链名称，如: bsc, sol, eth\"},\"suid\":{\"type\":\"string\",\"description\":\"子账户ID\"},\"googleCode\":{\"type\":\"string\",\"description\":\"Google验证码（6位数字）\"}},\"required\":[\"address\",\"chain\",\"googleCode\",\"suid\"]}",
         "req_body_type": "json",
         "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"status\":{\"type\":\"string\"},\"chains\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"required\":[\"status\"]}},\"required\":[\"code\",\"msg\",\"data\"]}"
       },
@@ -80,7 +80,7 @@
         "req_body_form": [],
         "desc": "",
         "markdown": "",
-        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"walletAddress\":{\"type\":\"string\"},\"chain\":{\"type\":\"string\"}},\"required\":[\"walletAddress\",\"chain\"]}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"walletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"chain\":{\"type\":\"string\",\"description\":\"链名称，如: bsc, sol, eth\"}},\"required\":[\"walletAddress\",\"chain\"]}",
         "req_body_type": "json",
         "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"status\":{\"type\":\"string\"}},\"required\":[\"status\"]}},\"required\":[\"code\",\"msg\",\"data\"]}",
         "uid": 635,
@@ -121,7 +121,7 @@
         "req_body_form": [],
         "desc": "",
         "markdown": "",
-        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"walletAddress\":{\"type\":\"string\",\"description\":\"链\"},\"chain\":{\"type\":\"string\",\"description\":\"链\"}},\"required\":[\"walletAddress\",\"chain\"]}",
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"walletAddress\":{\"type\":\"string\",\"description\":\"钱包地址\"},\"chain\":{\"type\":\"string\",\"description\":\"链名称，如: bsc, sol, eth\"}},\"required\":[\"walletAddress\",\"chain\"]}",
         "req_body_type": "json",
         "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"code\":{\"type\":\"string\"},\"msg\":{\"type\":\"string\"},\"data\":{\"type\":\"object\",\"properties\":{\"status\":{\"type\":\"string\"}},\"required\":[\"status\"]}},\"required\":[\"code\",\"msg\",\"data\"]}",
         "uid": 635,
@@ -196,7 +196,7 @@
             "_id": "692961dc7e7cd305a351fb71",
             "name": "genkey",
             "value": "",
-            "desc": ""
+            "desc": "通过getUserCenterGenkey接口获取的genkey"
           }
         ],
         "desc": "<p>genkey 如何获取 @see com.superatomfin.exchange.gateway.core.controller.UserCenterInfoApiController#getUserCenterGenkey</p>",
@@ -236,14 +236,14 @@
             "_id": "692961dc7e7cd305a351fb96",
             "name": "uid",
             "value": "0",
-            "desc": ""
+            "desc": "用户ID（必填）"
           },
           {
             "required": "0",
             "_id": "692961dc7e7cd305a351fb95",
             "name": "userDto.id",
             "value": "0",
-            "desc": ""
+            "desc": "用户DTO的ID（服务端自动填充，无需传入）"
           },
           {
             "required": "0",
@@ -488,7 +488,7 @@
             "_id": "692961dc7e7cd305a351fb72",
             "name": "sourceType",
             "value": "",
-            "desc": "PC :0.0"
+            "desc": "来源类型，PC端填: 0.0"
           }
         ],
         "desc": "<p></p>",
