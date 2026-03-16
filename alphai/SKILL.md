@@ -1,6 +1,6 @@
 ---
 name: alphai
-description: Alph.ai API 主导航 - 帮助查找合适的 API 模块、生成调用代码、提供 API 使用建议。当用户不确定使用哪个模块或需要 API 总览时使用。
+description: Alph.ai API 主导航 - 帮助查找合适的 API 模块、生成调用代码、提供 API 使用建议。当用户询问 alph.ai 相关功能、需要开发对接 alph.ai 的程序、不确定该调哪个接口、或请求涉及多个模块（如交易+行情+推特）时使用。即使用户只说"alph.ai"或"alphai"也应触发。
 argument-hint: [你的问题或需求]
 ---
 

@@ -89,75 +89,10 @@ monitorList / WebSocket 返回的每条推文数据：
 
 ### 不同推文类型的数据示例
 
-**直接发推（send）：**
-```json
-{
-    "type": "send",
-    "id": "2026558347798004185",
-    "created_at": "2026-02-25T07:22:00.000Z",
-    "text": "BTC 突破新高！",
-    "tweets": {
-        "text": "BTC 突破新高！",
-        "id": "2026558347798004185",
-        "media": []
-    }
-}
-```
-
-**回复（replied_to）：**
-```json
-{
-    "type": "replied_to",
-    "id": "2026558009577714113",
-    "created_at": "2026-02-25T07:20:55.000Z",
-    "text": "@someone 🎯",
-    "tweets": {
-        "text": "@someone 🎯",
-        "id": "2026558009577714113",
-        "media": []
-    },
-    "referenced": {
-        "text": "原始推文内容...",
-        "id": "2026365444282851690",
-        "media": []
-    }
-}
-```
-
-**引用转发（quoted）：**
-```json
-{
-    "type": "quoted",
-    "id": "2026560000000000000",
-    "created_at": "2026-02-25T07:30:00.000Z",
-    "text": "说得对！基座模型与工程化还是两回事",
-    "tweets": {
-        "text": "说得对！基座模型与工程化还是两回事",
-        "id": "2026560000000000000",
-        "media": []
-    },
-    "referenced": {
-        "text": "If we based our sentencing on recidivism data...",
-        "id": "2026365444282851690",
-        "media": []
-    }
-}
-```
-
-**转发（retweeted）：**
-```json
-{
-    "type": "retweeted",
-    "id": "2026561000000000000",
-    "created_at": "2026-02-25T07:35:00.000Z",
-    "text": "",
-    "referenced": {
-        "text": "被转发的原始推文内容...",
-        "id": "2026300000000000000",
-        "media": []
-    }
-}
-```
+**推文类型说明：**
+- `send`：`tweets.text` 为原创内容，无 `referenced`
+- `replied_to` / `quoted`：`tweets.text` 为本人内容，`referenced.text` 为被回复/引用的原文
+- `retweeted`：`text` 为空，内容在 `referenced.text`
 
 ---
 

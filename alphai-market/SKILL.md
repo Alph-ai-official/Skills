@@ -1,6 +1,6 @@
 ---
 name: alphai-market
-description: Alph.ai 行情数据 API - 币种详情、实时行情、热门币种、市场数据、WS推送、收藏、扫链等。当用户询问价格、行情、币种信息、市场数据时使用。
+description: Alph.ai 行情数据 API - 代币详情、实时价格、热门币种、K线、市场数据、WebSocket 行情推送、收藏、扫链等。当用户询问代币价格、行情走势、币种信息、合约地址查询、热门币、K线数据、市值、流动性、Gas 费时使用。
 argument-hint: [查询内容/币种名称]
 ---
 

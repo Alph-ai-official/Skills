@@ -1,6 +1,6 @@
 ---
 name: alphai-trading
-description: Alph.ai 交易相关 API - 买卖交易（含完整下单参数和响应）、挂单、跟单、订单查询、手续费等。当用户询问下单、买币、卖币、交易、挂单、跟单、订单相关问题时使用。
+description: Alph.ai 交易相关 API - 买卖交易（含完整下单参数和响应）、挂单、跟单、订单查询、手续费等。当用户询问下单、买币、卖币、交易、挂单、跟单、订单、止损止盈、滑点设置、防 MEV、交易手续费、copy trade 相关问题时使用。
 argument-hint: [查询内容/功能名称]
 allowed-tools: Bash(python *), Bash(pip install requests)
 ---
