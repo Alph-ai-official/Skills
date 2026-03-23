@@ -102,6 +102,11 @@ Header: Cookie: dex_cookie=<your_cookie>
 - BSC 链：价格以 **BNB** 计价
 - 以太坊链：价格以 **ETH** 计价
 - Solana 链：价格以 **SOL** 计价
+- Base 链：价格以 **ETH** 计价
+- XLayer 链：价格以 **OKB** 计价
+- Plasma 链：价格以 **XPL** 计价
+- Monad 链：价格以 **MON** 计价
+- Kasplex 链：价格以 **KAS** 计价
 
 但 `token-detail` 接口同时提供：
 - `tokenPriceSol`: 链原生代币计价（字段名是 Sol 但实际是链原生币）

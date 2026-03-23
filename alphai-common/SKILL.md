@@ -33,6 +33,7 @@ GET /smart-web-gateway/data-center/blacklist/data
 ```
 GET /smart-web-gateway/common/platform/{chain}?language=zh_CN
 ```
+`{chain}` 支持：`eth`、`bsc`、`base`、`xlayer`、`plasma`、`monad`、`kasplex`、`sol`
 
 返回该链上所有发币平台的 `id`、`code`（平台名）、`icon`、`color`。
 这是 `alphai-market` 扫链接口中 `platform` 参数的数据来源。

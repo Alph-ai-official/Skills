@@ -54,7 +54,7 @@ Cookie: dex_cookie=<your_dex_cookie>
 
 | 字段 | 类型 | 必填 | 说明 |
 |------|------|------|------|
-| `chain` | string | 是 | 链名称：`sol`、`bsc`、`eth` 等 |
+| `chain` | string | 是 | 链名称：`eth`、`bsc`、`base`、`xlayer`、`plasma`、`monad`、`kasplex`、`sol` |
 | `side` | string | 是 | 方向：`BUY` 买入 / `SELL` 卖出 |
 | `type` | string | 是 | 订单类型：`MARKET` 市价 |
 | `buyCoin` | string | 是 | 买入币种名称 |
@@ -161,9 +161,14 @@ Cookie: dex_cookie=<your_dex_cookie>
 
 | 链 | sellCoin（买入时） | sellContract |
 |----|-------------------|--------------|
-| `sol` | `sol` | `SOL` |
-| `bsc` | `bnb` | `BNB` |
 | `eth` | `eth` | `ETH` |
+| `bsc` | `bnb` | `BNB` |
+| `base` | `eth` | `ETH` |
+| `xlayer` | `okb` | `OKB` |
+| `plasma` | `xpl` | `XPL` |
+| `monad` | `mon` | `MON` |
+| `kasplex` | `kas` | `KAS` |
+| `sol` | `sol` | `SOL` |
 
 ---
 

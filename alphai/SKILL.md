@@ -124,6 +124,23 @@ argument-hint: [你的问题或需求]
 
 ---
 
+## 🌐 支持的公链
+
+所有模块中 `chain` 参数的合法值：
+
+| chain | 链名 | 类型 |
+|---|---|---|
+| `eth` | Ethereum | EVM |
+| `bsc` | BNB Smart Chain | EVM |
+| `base` | Base | EVM |
+| `xlayer` | X Layer | EVM |
+| `plasma` | Plasma | EVM |
+| `monad` | Monad | EVM |
+| `kasplex` | Kasplex | EVM（Kaspa 生态 L2） |
+| `sol` | Solana | 非EVM（地址为 Base58，无 0x 前缀） |
+
+---
+
 ## 💡 使用建议
 
 ### 如果你知道要什么
