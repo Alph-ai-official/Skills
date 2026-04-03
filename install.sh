@@ -70,7 +70,8 @@ fi
 echo -e "${BLUE}将安装以下 Skills:${NC}"
 echo "  • alphai (主导航 + 认证指南)"
 echo "  • alphai-trading (交易模块 - 54 API)"
-echo "  • alphai-market (行情模块 - 42 API)"
+echo "  • alphai-market (行情模块 - 39 API)"
+echo "  • alphai-websocket (WebSocket推送 - 3 API + 15种订阅类型)"
 echo "  • alphai-user (用户模块 - 67 API)"
 echo "  • alphai-twitter (社媒推特X - 11 API)"
 echo "  • alphai-smart (智能功能 - 31 API)"
@@ -89,7 +90,7 @@ fi
 echo
 echo -e "${BLUE}开始安装...${NC}"
 
-for skill in alphai alphai-trading alphai-market alphai-user alphai-twitter alphai-smart alphai-common; do
+for skill in alphai alphai-trading alphai-market alphai-websocket alphai-user alphai-twitter alphai-smart alphai-common; do
     if [ -d "$SCRIPT_DIR/$skill" ]; then
         echo -e "${GREEN}✓${NC} 安装 $skill"
         cp -r "$SCRIPT_DIR/$skill" "$TARGET_DIR/"

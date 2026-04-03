@@ -10,13 +10,14 @@
 
 ## 包含内容
 
-212 个 API 分为 6 个功能模块 + 1 个主导航：
+212 个 API 分为 7 个功能模块 + 1 个主导航：
 
 | Skill | 说明 | API 数量 |
 |-------|------|----------|
 | `alphai` | 主导航 + 认证指南（dex_cookie / WebSocket / listenKey） | - |
 | `alphai-trading` | 交易模块（买卖、挂单、跟单等） | 54 |
-| `alphai-market` | 行情模块（币价、行情、WS推送、扫链等） | 42 |
+| `alphai-market` | 行情模块（币价、行情、扫链等） | 39 |
+| `alphai-websocket` | WebSocket 实时推送（行情/交易/聪明钱/推特 统一通道） | 3+15种订阅 |
 | `alphai-user` | 用户模块（注册、账户、钱包等） | 67 |
 | `alphai-twitter` | 社媒推特X（KOL监控、推文抓取、WS推送、用户查询、关键词搜索等） | 11 |
 | `alphai-smart` | 智能功能（聪明钱包、追踪等） | 31 |

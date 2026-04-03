@@ -10,13 +10,14 @@ Join our Telegram group for updates, support and discussions:
 
 ## What's Inside
 
-212 APIs organized into 6 functional modules + 1 navigation hub:
+212 APIs organized into 7 functional modules + 1 navigation hub:
 
 | Skill | Description | APIs |
 |-------|-------------|------|
 | `alphai` | Navigation hub + auth guide (dex_cookie / WebSocket / listenKey) | - |
 | `alphai-trading` | Trading (buy/sell, limit orders, copy trading) | 54 |
-| `alphai-market` | Market data (prices, tickers, WS push, on-chain scanning) | 42 |
+| `alphai-market` | Market data (prices, tickers, on-chain scanning) | 39 |
+| `alphai-websocket` | WebSocket real-time push (market, orders, smart money, Twitter — unified channel) | 3+15 types |
 | `alphai-user` | User management (registration, accounts, wallets) | 67 |
 | `alphai-twitter` | Twitter/X monitoring (KOL tracking, tweet scraping, WS push, user lookup, keyword search) | 11 |
 | `alphai-smart` | Smart features (smart wallets, trackers) | 31 |

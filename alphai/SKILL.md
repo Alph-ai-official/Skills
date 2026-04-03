@@ -1,12 +1,12 @@
 ---
 name: alphai
 description: Alph.ai API 主导航 - 帮助查找合适的 API 模块、生成调用代码、提供 API 使用建议。当用户询问 alph.ai 相关功能、需要开发对接 alph.ai 的程序、不确定该调哪个接口、或请求涉及多个模块（如交易+行情+推特）时使用。即使用户只说"alph.ai"或"alphai"也应触发。
-argument-hint: [你的问题或需求]
+argument-hint: "[你的问题或需求]"
 ---
 
 # Alph.ai API 导航中心
 
-欢迎使用 Alph.ai API Skills！本系统包含 **208 个 API**，分为 6 个功能模块。
+欢迎使用 Alph.ai API Skills！本系统包含 **208 个 API**，分为 7 个功能模块。
 
 ## 🔑 认证与连接（必读）
 
@@ -42,24 +42,40 @@ argument-hint: [你的问题或需求]
 
 ---
 
-### 2. `/alphai-market` - 行情模块 (41 个 API)
-**功能**：币种详情、实时行情、热门币种、市场数据、WebSocket 推送
+### 2. `/alphai-market` - 行情模块 (39 个 API)
+**功能**：币种详情、实时行情、热门币种、市场数据、扫链
 **使用场景**：
 - 查询币价和行情
 - 获取热门币种
-- 实时数据推送
-- 扫链数据
+- 扫链数据（新币发现）
 - Gas 费查询
 
 **示例**：
 ```
 /alphai-market 查询 ETH 实时价格接口
-/alphai-market WebSocket 如何订阅行情？
+/alphai-market 获取 BSC 新发代币列表
 ```
 
 ---
 
-### 3. `/alphai-user` - 用户模块 (67 个 API)
+### 3. `/alphai-websocket` - WebSocket 实时推送 (3 个管理接口 + 15 种订阅类型)
+**功能**：平台级统一推送通道，覆盖行情、交易、智能功能、推特监控等所有实时数据
+**使用场景**：
+- K 线、Ticker 实时推送
+- 订单、仓位、挂单、Swap 实时推送
+- 聪明钱交易、Tracker 钱包活动
+- 推特关注账号推文实时推送
+- 新 Token 上线、信号推送
+
+**示例**：
+```
+/alphai-websocket 如何订阅 K 线？
+/alphai-websocket 实时监听我的订单变化
+```
+
+---
+
+### 4. `/alphai-user` - 用户模块 (67 个 API)
 **功能**：注册登录、账户管理、钱包、活动、分销
 **使用场景**：
 - 用户注册和登录
@@ -76,7 +92,7 @@ argument-hint: [你的问题或需求]
 
 ---
 
-### 4. `/alphai-twitter` - 社媒推特(X) (7 个 API)
+### 5. `/alphai-twitter` - 社媒推特(X) (7 个 API)
 **功能**：X 账户监控、热门监控、关注管理、监控配置、翻译
 **使用场景**：
 - 监控 KOL 推特动态（转发、引用、头像更新）
@@ -93,7 +109,7 @@ argument-hint: [你的问题或需求]
 
 ---
 
-### 5. `/alphai-smart` - 智能功能 (31 个 API)
+### 6. `/alphai-smart` - 智能功能 (31 个 API)
 **功能**：聪明钱包、Tracker 追踪、信号源、Bot 机器人
 **使用场景**：
 - 智能钱包分析
@@ -109,7 +125,7 @@ argument-hint: [你的问题或需求]
 
 ---
 
-### 6. `/alphai-common` - 公共模块 (8 个 API)
+### 7. `/alphai-common` - 公共模块 (8 个 API)
 **功能**：公共接口、黑名单、SEO、分享
 **使用场景**：
 - 通用配置接口

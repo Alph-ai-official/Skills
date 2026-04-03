@@ -1,20 +1,21 @@
 ---
 name: alphai-market
-description: Alph.ai 行情数据 API - 代币详情、实时价格、热门币种、K线、市场数据、WebSocket 行情推送、收藏、扫链等。当用户询问代币价格、行情走势、币种信息、合约地址查询、热门币、K线数据、市值、流动性、Gas 费时使用。
+description: Alph.ai 行情数据 API - 代币详情、实时价格、热门币种、K线、市场数据、收藏、扫链等。当用户询问代币价格、行情走势、币种信息、合约地址查询、热门币、K线数据、市值、流动性、Gas 费时使用。WebSocket 实时推送请使用 /alphai-websocket。
 argument-hint: [查询内容/币种名称]
 ---
 
 # Alph.ai 行情模块 API
 
-本模块包含 **42 个行情相关 API**，涵盖：
+本模块包含 **39 个行情相关 API**，涵盖：
 - 币种详情 (18个) ⭐ **新增：代币完整详情接口**
 - 实时行情 (5个)
 - 热门币种 (10个)
-- WS 实时推送 (3个)
 - 收藏功能 (3个)
 - 扫链数据 (7个)
 - Gas 费查询 (1个)
 - 链信息 (1个)
+
+> **WebSocket 实时推送**已独立为 `/alphai-websocket` 模块，支持行情、交易、智能功能、推特等全部订阅类型。
 
 ## ⭐ 推荐接口：代币完整详情
 
@@ -60,27 +61,8 @@ Header: Cookie: dex_cookie=<your_cookie>
 ### 3. 生成调用代码
 ```
 生成调用行情接口的 Python 代码
-用 TypeScript 调用 WebSocket 推送
+用 TypeScript 调用 K 线接口
 ```
-
-## WebSocket 实时推送
-
-行情数据支持通过 WebSocket 实时推送。连接前需要先获取 listenKey。
-
-### 连接流程
-
-```
-1. POST https://b.alph.ai/smart-web-gateway/ws/listenkey
-   Header: Cookie: dex_cookie=<value>
-   Body: {}
-   → 获取 listenKey（1小时过期，需自动续期）
-
-2. 连接 wss://ws.alph.ai/stream/ws?listenKey=<listen_key>
-
-3. 发送订阅消息获取行情推送
-```
-
-> 完整的认证和连接说明见 `/alphai` 主导航的 [auth-guide.md](../alphai/auth-guide.md)
 
 ## 工作流程
 
@@ -93,8 +75,8 @@ Header: Cookie: dex_cookie=<your_cookie>
 2. 从 `apis.json` 中搜索相关 API
 3. 展示 API 的路径、方法、参数、响应格式
 4. 根据需要生成调用代码示例
-5. 提供 WebSocket 连接示例（如果需要），包含 listenKey 获取和自动续期
-6. 提供使用建议和注意事项
+5. 提供使用建议和注意事项
+6. 如需 WebSocket 实时推送，引导使用 `/alphai-websocket`
 
 ## 💡 价格单位说明
 
@@ -251,7 +233,6 @@ POST /snipe/list/new/sol
 | 币种详情 | `apis/token-detail.json` | CoinDetailController (11个) |
 | 热门币种 | `apis/popular.json` | 热门、美股、PopularPage (11个) |
 | 实时行情 | `apis/ticker.json` | 行情接口 (5个) |
-| WS推送 | `apis/websocket.json` | WebSocket 推送 (3个) |
 | 扫链数据 | `apis/scan.json` | 扫链三栏 (7个) |
 | 其他 | `apis/misc.json` | 收藏、Gas费、链信息 (5个) |
 
